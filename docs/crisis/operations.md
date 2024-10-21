@@ -5,7 +5,7 @@ description: Operationalizing your crisis plan begins by making practical change
 
 ## Operationalizing Your Crisis Plan
 
-Operationalizing your crisis plan begins by making practical changes to ensure you have what you need, in the way you need it, and at the time you need it. For example, your broader crisis management plan will be too cumbersome for your team to scan through for answers during a crisis situation. On the other hand, playbooks are more focused versions of your larger plan which make them easier to action, test and maintain. They’re also scenario-driven and provide you with specific parameters, considerations and tasks.
+危機対応計画を実行に移すには、必要なものを、必要な方法で、必要な時に確実に手に入れられるよう、実践的な変更を加えることから始まります。例えば、より広範な危機管理計画は、危機的状況下でチームが答えを探すには扱いにくすぎるでしょう。一方、プレイブックは大規模な計画のより焦点を絞ったバージョンであり、実行、テスト、維持が容易になります。また、シナリオ駆動型で、特定のパラメータ、考慮事項、タスクを提供します。
 
 Once you have these critical resources created, it can be difficult to centralize them and keep track of the most current version. PagerDuty makes this easy with the ability to add your runbooks, playbooks, policies and any other crisis response [documentation links](https://support.pagerduty.com/docs/service-profile#remediate) into your PagerDuty defined service(s).
 

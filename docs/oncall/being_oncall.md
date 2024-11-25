@@ -34,10 +34,6 @@ description: A summary of the expectations and responsibilities of being on-call
     * すぐ取り掛かる必要がない問題で、他の優先度の高い作業がある場合は、JIRAチケットを作成して（適切な深刻度で）追跡してください。
 
 1. **改善**
-    * If a particular issue keeps happening; if an issue alerts often but turns out to be a preventable non-issue – perhaps improving this should be a longer-term task.
-        * Disks that fill up, logs that should be rotated, noisy alerts...
-    * If information is difficult / impossible to find, write it down. Constantly refactor and improve our knowledge base and documentation. Add redundant links and pointers if your mental model of the wiki / codebase does not match the way it is currently organized.
-
     * 特定の問題が繰り返し発生する場合、あるいはアラートが頻繁に鳴るが、実際には防止可能なであることが判明した場合、おそらくこれの改善は長期的なタスクとすべきでしょう。
         * ディスクがいっぱいになる、ログをローテーションすべき、うるさいアラート...
     * 情報を見つけるのが難しい、あるいは不可能な場合は、それを書き留めてください。知識ベースとドキュメントを常に再構築し、改善してください。あなたの頭の中のWikiやコードベースが、現在の構成と一致しない場合は、冗長なリンクやポインタを追加してください。

@@ -15,7 +15,7 @@ description: A summary of the expectations and responsibilities of being on-call
     * ノートパソコンとインターネット環境を常に用意しておく（オフィス、自宅、MiFiドングル、テザリングプラン付きの電話など）。
         * MiFiを充電する方法を用意しておく。
     * チームアラートのエスカレーションは5分以内に行われるため、通知のタイムアウト（プッシュ、SMS、電話など）を適切に設定する。
-        * PagerDuty からのテキストメッセージや電話が [「おやすみモード」の設定を回避] できることを確認してください（https://support.pagerduty.com/main/lang-ja/docs/notification-phone-numbers）
+        * PagerDuty からのテキストメッセージや電話が [「おやすみモード」の設定を回避](https://support.pagerduty.com/main/lang-ja/docs/notification-phone-numbers) できることを確認してください
     * 準備を整えてください（環境が設定され、必要なリポジトリの現在の作業コピーがローカルで機能しており、ワークステーション上の環境は設定およびテスト済みで、サードパーティサービスの認証情報が最新であるなど）。
     * 当社のインシデント対応に関する文書（これです！）をお読みいただき、重大なインシデントへの対応方法、さまざまな役割やコミュニケーション方法などをご確認ください。
     * オンコールの時間（プライマリ、バックアップ）を把握し、出張、休暇、予定などに応じて交代要員を手配してください。

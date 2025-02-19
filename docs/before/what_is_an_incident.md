@@ -1,43 +1,49 @@
 ---
 cover: assets/img/covers/incident.png
-description: Before defining an incident response process, we should first define what an incident (and a major incident) is, along with how we should trigger the response for such incidents.
+description: 
+インシデント対応プロセスを定義する前に、インシデント（そして重大インシデント）とは何か、対応の開始方法とともに定義する必要があります。
 ---
-Before we can define our incident response process, we should first define what an incident (and a major incident) is.
+インシデント対応プロセスを定義する前に、インシデント（そして重大インシデント）とは何かを定義する必要があります。
 
-## What is an incident?
-Any unplanned disruption or degradation of service that is actively affecting customers ability to use PagerDuty.
+## インシデントとは何か？
+顧客のサービス利用に顕著な影響を及ぼす、計画外のサービスの中断や低下を指します。
 
-## What is a major incident?
-Any incident that requires a coordinated response between multiple teams.
+## 重大インシデントとは何か？
+複数のチームによる協調の取れた対応を必要とするインシデントを指します。
 
-## What is incident response?
-An organized approach to addressing and managing an incident. The goal isn't just to solve the incident, but to handle the situation in a way that limits damage and reduces recovery time and costs.
+## インシデント対応とは何か？
+インシデントへ対処しマネジメントを行う、組織的な取り組みです。目的はインシデントを解決するのみならず、損害を最小限に留めつつ回復にかかる時間とコストを減らせる形で状況に対処することです。
 
-## What triggers our incident response process?
-Our incident response process should be initiated for any major incident. It provides a framework for effectively responding and reaching a fast resolution time. Our incident response process can be triggered one of two ways, either via automated monitoring and alerting, or manually via human action.
+## インシデント対応プロセスの契機となるものは何か？
 
-### Automated Monitoring
-Throughout our system, we monitor various metrics to determine if our system is in a state which would require a coordinated human response in order to resolve. To determine which metrics we monitor, and what to monitor them for, we ask ourselves these questions. If the answer to any is "No", then we should trigger our incident response process.
+私たちのインシデント対応プロセスは、あらゆる重大インシデントにおいて開始されます。このプロセスは、効果的な対応を行い早期解決を目指すためのフレームワークをもたらします。インシデント対応プロセスは2つの方法で開始できます。1つは自動化されたモニタリングやアラート、もう1つは手動による人手のアクションです。
 
-1. Can customers perform all incident response functions provided by PagerDuty, across all platforms?
-    * e.g. Can customers acknowledge, reassign, and resolve incidents via every supported method?
-1. Are customers receiving notifications within SLA?
+### 自動化されたモニタリング
 
-### Human Escalation
-Automatic monitoring is only part of the process. We may have parts of our functionality which lack the necessary monitoring. It's important to still be able to trigger a coordinated incident response in those cases. For example, if our Support team starts to receive requests that indicate a system issue, they need to have the power to trigger our response. Any PagerDuty employee has the ability to trigger our incident response process at any time.
+システム全体において、私たちはさまざまな指標をモニタリングし、インシデントを解決する上で、連携の取れた人手の対処をシステムに対して行う必要があるかどうかを判断します。どの指標をモニタリングし、何のためにモニタリングするかを決めるためには、私たちは次のような問いかけを行います。もし、これらのいずれかに対する回答が "No" なのであれば、インシデント対応プロセスを開始すべきです。
 
-We trigger on any unplanned disruption or degradation of service to which any PagerDuty employee deems necessary of requiring coordinated incident response.
+1. 顧客は、すべてのプラットフォーム上で、PagerDutyによって提供されたすべてのインシデント対応機能を利用できるか？
+    * 例：サポートされているすべての方法で、インシデントを確認し、再アサインし、解決することができるか？
+1. 顧客は、SLA内で通知を受け取っているか？
 
-!!! question "Is a response required?"
-    If you are unsure of whether response is required, trigger our incident response process. All you need to do to start the process is page an Incident Commander in Slack with `!ic page`.
+### 人によるエスカレーション
 
-## Incident Severity
-Our [severity definitions](../before/severity_levels.md) determine how severe we _think_ an incident is based on some predefined guidelines. The intent is to guide responders on the type of response they can provide. For example, the higher the severity, the riskier the decisions you can take to return the system to normal.
+自動化されたモニタリングはプロセスの一部に過ぎません。私たちの機能には、本来必要なモニタリングが欠けている箇所があるかもしれません。たとえこのような場合であっても、連携の取れたインシデント対応を開始できることが肝要です。たとえば、サポートチームがシステム上の問題の疑われるリクエストを受け始めたら、インシデント対応を開始できる必要があるでしょう。PagerDutyの社員は誰もが、いつでもインシデント対応プロセスを始めることができます。
 
-Severities are useful to quickly determine whether something requires a more complex response, or whether it requires a coordinated response at all. However, they are not a black and white definition of what constitutes a major incident. If something is not covered by our severity definitions - but you think it requires incident response - then it requires incident response. We only need to know one thing: Is this a major incident? The severity level can be determined later and isn't a requirement of triggering our response process.
+私たちは従業員の誰であっても、協調的なインシデント対応が必要であると捉えた計画外のサービスの中断や低下に対して、対応を開始します。
 
-## Mentality Shift
-One of the more important concepts of our incident response process is the mentality shift that needs to be made during an incident. We typically call this the "Peacetime vs Wartime" mentality shift. The idea is that the decision making process changes when you are in an incident situation, and you are able to take riskier actions than you would normally consider during day-to-day operations. It can be hard for responders to grasp this concept, and your incident response process can be held up by responders who stick to the peacetime way of thinking to avoid proceeding with a potentially risky action. You can read more about peacetime vs wartime in the [Responder Training Guide](../training/subject_matter_expert.md#wartime-vs-peacetime).
+!!! question "対応が必要か？"
+    もし対応が必要なのかはっきりしない場合には、インシデント対応プロセスを開始してください。プロセスの開始に必要なのは、Slackに `!ic page` と打って、インシデントコマンダーに通知を送ることだけです。
 
-!!!info "Normal vs Emergency"
-    Some people don't like the "Peacetime vs Wartime" analogy, in which case you can use any other terms you feel appropriate. "Normal vs Emergency" is a common choice, but you could equally use "OK vs Not OK". It's not terribly important what name you give it, the important part is to make the mentality shift.
+## インシデントの深刻度
+
+私たちの [深刻度の定義](../before/severity_levels.md) では、あらかじめ定義されたガイドラインに基づき、私たちが個々のインシデントをどのくらい深刻であると _考えるか_ を定めたものです。この狙いは、対応者がどのような対応を取れるのかを判断できるようにすることです。例えば、深刻度が高いほど、システムを正常に戻すためならばリスクの高い決定を下せるのです。
+
+深刻度は、より複雑な対応が必要になるかどうかや、そもそも連携の取れた対応が必要なのかどうかを素早く判断するのに有用です。しかしながら、なにをもって重大インシデントとするのかを明確に白黒で判断できるような定義はありません。もし、私たちの深刻度の定義でカバーできていないものがあったとして、あなたがインシデント対応が必要だと考えるならば、インシデント対応が必要なのです。私たちが知る必要があるのは、それが果たして重大インシデントなのかどうかだけです。深刻度のレベルはあとで決めればよく、インシデント対応プロセスの開始に必須のものではありません。
+
+## メンタリティの転換
+
+私たちのインシデント対応プロセスにおけるもうひとつ重要なコンセプトは、インシデント中に必要となるメンタリティの転換です。私たちは「平時と戦時」のメンタリティ転換と呼ぶことが多いです。これは、インシデント下においては意思決定のプロセスが変化するという考え方で、平常時であればリスクが高いと考えるようなアクションも取れるようになるのです。この概念は対応者にとって把握しづらいものかもしれませんが、対応者が平時の考え方に固執して潜在的なリスクのあるアクションへ進むのを避けていると、インシデント対応プロセスが停滞してしまうことだってありえます。平時と戦時の考え方については、[対応者のトレーニングガイド](../training/subject_matter_expert.md#wartime-vs-peacetime) もご覧ください。
+
+!!!info "通常時 vs 緊急時"
+    一部の方々は「平時と戦時」の例えを快く思わないでしょう。その場合は、ご自身で適切だと思う言葉を使ってください。「通常時 vs 緊急時」はよく選択されますが、「OK vs OKでない」も同様に使えます。どのような名前をつけるかはさほど重要ではなく、メンタリティの転換ができることが重要なのです。

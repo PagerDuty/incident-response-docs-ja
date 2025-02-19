@@ -1,51 +1,52 @@
 ---
 cover: assets/img/covers/whos_on-call.png
-description: Organizational structures vary, but these are general guidelines about the way different functions in a business relate to incident response.
+description: 組織の構造はさまざまですが、多様なビジネス上の機能とインシデント対応の関わりかたについて、一般的なガイドラインを紹介します。
 ---
-Organizational structures vary, but these are general guidelines about the way different functions in a business relate to incident response.
+組織の構造はさまざまですが、多様なビジネス上の機能とインシデント対応の関わりかたについて、一般的なガイドラインを紹介します。
 
-Generally speaking, every department should have a primary point of contact, on-call rotation, and clear escalation path. Organizations should always strive to minimize dependencies and empower response teams as much as possible. But, in novel situations, you do not know who you will need to help out. A clear system for recruiting responders from all parts of the business ensures that when the unexpected happens, responders don’t waste time on manual processes or ambiguous points of contact.
+総じて、あらゆる部署は主要なコンタクト先とオンコールローテーション、そして明確なエスカレーションパスを持つ必要があります。組織においては、常に物事の依存関係が最小化され、できるかぎり対応チームが力を発揮できる状態でなければなりません。しかし、なんらかの新たな状況が発生した際には、誰を支援したらいよいのか分からないこともあるでしょう。そこで、ビジネスにおけるすべての部門から対応者を募る明快なシステムを設けると、手動のプロセスや曖昧なコンタクト先に起因して生じる無駄な時間を削減することができます。
 
-## Engineering
+## エンジニアリング
 
-Engineers are typically the primary responders and [subject matter experts](../before/different_roles.md) during incident response.
+エンジニアは通常、インシデントにおける主要な対応者であり、[対象分野の専門家（Subject Matter Expert、以降SME）](../before/different_roles.md) です。
 
-Which engineering teams are involved in which responses varies with a company’s operational model. In some organizations, a designated “Operations” or “Site Reliability Engineering” team may have initial responsibility for triage and assessment of new issues. At PagerDuty, the on-call engineer for an affected service has initial triage and assessment responsibility.
+どのエンジニアリングチームがどの対応に関与するかは、企業の運用モデルによって異なります。一部の組織では「運用チーム」や「SREチーム」が、新たな問題のトリアージと評価を行う初動の責務を担っているかもしれません。PagerDutyの場合は、影響を受けたサービスにアサインされたオンコールのエンジニアが最初のトリアージと評価を行う責務を負っています。
 
-## Customer Support / Customer Success
+## カスタマーサポート / カスタマーサクセス
 
-Support is the voice of the customer during incident response. A member of the Customer Support team is the default [Customer Liaison](../training/customer_liaison.md) within the response team, updating customers and stakeholders about incident status through Twitter, an internal Slack channel, and other channels as needed. They may also serve as an internal liaison to keep stakeholders within the company up to date.
+サポートは、インシデント対応中の顧客の声を代弁します。カスタマーサポートチームのメンバーは、対応チームにおけるデフォルトの [顧客窓口（Customer Liaison、以降カスタマーリエゾン）](../training/customer_liaison.md) となり、インシデントの状況をX（旧Twitter）や社内Slackチャンネル、およびその他のチャンネルで、顧客や関係者に対してアップデートします。また彼らは、社内の関係者が常に最新の情報を得られるよう、連絡役として動くこともあるでしょう。
 
-## Marketing
+## マーケティング
 
-Marketing or Public Relations is the primary response team for any public relations Incident.
+マーケティングおよび広報は、インシデントに関する公式なコミュニケーション担う主要な対応チームです。
 
-Additionally, Marketing or Public Relations should be engaged in any incident of scope or severity such that the company’s brand or image is at risk, or where public updates need to be sent through customer communication channels such as mass email or the company blog.
+加えて、企業のブランドやイメージを損なうリスクのある影響範囲や深刻度のインシデントが発生した場合であったり、マスメールや企業ブログのような顧客とのコミュニケーション手段を通じて公式なアップデートを行う必要がある際も、マーケティングや広報の出番となります。
 
-## Product Management and Design
+## プロダクトマネジメントとデザイン
 
-Product Managers and Designers are often on the hook for helping response teams make decisions when product functionality is impacted across multiple services or products. For example, if the response team has to decide which service to bring back up first, a Product Manager can help decide which one is more customer impacting.
+プロダクトマネージャーやデザイナーは、複数のサービスやプロダクトを横断してプロダクトの機能が影響を受けた際に、インシデント対応チームの意思決定を助けることがよくあります。たとえば、対応チームがどのサービスを先に復旧するかを決める際に、プロダクトマネージャーは、どのサービスが最も顧客影響の大きなものかを判断する支援ができるでしょう。
 
-Product will also be involved in the [postmortem process](../after/post_mortem_process.md), for both scheduling follow-up action against other work, as well as advising on any required product changes due to the issue.
+またプロダクトチームは [ポストモーテムのプロセス](../after/post_mortem_process.md) にも関わり、事後アクションのスケジュール策定に加え、問題の解決のために必要となるプロダクトの変更に関する助言にも関わります。
 
-## Executive Team
+## エグゼクティブチーム
 
-Clear processes for updating the executive team during a major incident response helps ensure organizational leadership has the context and information they need and prevents [executive swoops](../training/glossary.md#executive-swoop). Additionally, while the Incident Commander has final authority during response, occasionally a major incident may require action at the highest levels of a company. For example, a senior executive may want to reach out to an impacted customer or partner to manage their relationship and help assure them the issue is getting the attention it needs.
+主要なインシデントの発生時に、エグゼクティブチームに対して情報アップデートを行う明快なプロセスがあれば、組織のリーダー陣が十分なコンテキストと必要な情報を得られるようになり [偉い人の急襲（executive swoop）](../training/glossary.md#executive-swoop) を防ぐことができます。
+また、インシデント対応中はインシデントコマンダーが最終的な決定権限を持つ一方で、ときに大規模障害時には会社のトップのアクションが必要になる場面もあります。たとえばシニアエグゼクティブは、関係維持のためにも影響を受けた顧客やパートナーへ連絡し、しっかり問題への対処が行われていることを示すとよいでしょう。
 
-## Sales
+## セールス
 
-Sales are generally stakeholders during incident response. Salespeople should be notified when there is any impact to the product that may affect demos or customer conversations, and account owners should understand any potential impact to their accounts.
+セールスは通常、インシデントにおける関係者です。デモや顧客との会話に影響が出るようなプロダクトへの影響があった際にはセールス担当者は知らされていなければなりませんし、アカウントオーナーは担当顧客への潜在的な影響を理解する必要があります。
 
-## Human Resources (HR)
+## 人事（HR）
 
-HR is generally involved in any response to incidents affecting the safety or health of employees. Additionally, during a security incident, the security team may need to coordinate with HR both for management of an internal attacker as well as protection of any affected employees.
+一般的に人事部門は、従業員の安全や健康に影響のあるインシデントが発生した際のあらゆる対応に関わります。さらに、セキュリティインシデントが発生した際は、内部からの攻撃者の管理と影響を受けた従業員保護の両方の目的から、セキュリティチームは人事の協力を仰ぐ必要が出てくるかもしれません。
 
-## Finance
+## 財務
 
-Finance is most often a stakeholder during incident response, and should be kept up to date of any impacts to the platform that may affect billing, accounting, or end-of-month/quarter activities.
+財務部門は多くの場合インシデントの関係者で、請求や会計、および月締めや四半期締めの活動に関わるようなプラットフォームへの影響が生じた場合は、常に最新の情報を入手する必要があります。
 
-However, finance should also have a clear on-call rotation and escalation path as there may be components of incident response that require third-party account management or other related actions.
+しかしながら、サードパーティーの会計管理やその他の関連活動を必要とするインシデント対応の構成要素がある以上、財務部門もまた、明確なオンコールローテーションとエスカレーションパスを設けるべきです。
 
-!!! tip "Consider Your Entire Organization"
+!!! Tip "組織全体について考えましょう！"
 
-    There may be other parts of your organization that need to be part of incident response, either as responders or stakeholders. It is important to identify the different areas of your business and think through situations in which they may need to be involved, as well as ensure that anyone on-call has proper incident response training and understands their responsibilities.
+    あなたの組織においては、対応者にせよ関係者にせよ、インシデント対応への参画が必要な他の部門があるかもしれません。異なるビジネスの領域を特定し、彼らが関わる必要が出てくる可能性のある状況を考えることは、オンコールの担当者の誰もが適切なインシデント対応トレーニングを受け、自身の責務を理解できるようにすることと同様に重要です。

@@ -1,74 +1,72 @@
 ---
-cover: assets/img/covers/alerting_principles.png
-description: We manage how we get alerted based on a simple principle, an alert is something which requires a human to perform an action. Anything else is a notification, which is something that we cannot control, and for which we cannot make any action to affect it. Notifications are useful, but they shouldn't be waking people up under any circumstance.
+cover: assets/img/covers/alerting\_principles.png description:私たちは、単純な原則に基づいてアラートを取得する方法を管理します。アラートは、人間がアクションを実行することを必要とするものです。それ以外は通知であり、それは私たちがコントロールできないものであり、私たちがそれらに影響を与える行動を取ることができないものです。通知は役に立つが、全ての通知が人を叩き起こすべきものではありません。
 ---
-We manage how we get alerted based on a simple principle. **An alert is something which requires a human to perform an action**. Anything else is a notification, which is something that we cannot control, and for which we cannot make any action to affect it. Notifications are useful, but they shouldn't be waking people up under any circumstance.
+私たちは、単純な原則に基づいて、どのようにアラートを受けるかを管理します。**アラートは、人間がアクション**を実行する必要があるものです。それ以外は通知であり、それは私たちがコントロールできないものであり、私たちがそれらに影響を与える行動を取ることができないものです。通知は役に立ちますが、全ての通知が人を叩き起こすべきものではありません。
 
-## Alert Priority
+## アラート優先度
 
-!!! warning "High Priority Alerts"
-    Anything that wakes up a human in the middle of the night should be **immediately human actionable**. If it is none of those things, then we need to adjust the alert to not page at those times.
+!!! warning "優先度の高いアラート"
+    夜中に人間を起こすものは**即座に人間がアクションを取れる**ようなものでなければなりません。該当しない場合には、その時点で通知が行われないようにアラートを調整する必要があります。
 
-| Priority | Alerts | Response |
+| 優先度 | アラート | 応答 |
 | -------- | ------ | -------- |
-| High | High-Priority PagerDuty Alert 24/7/365. | Requires **immediate human action**. |
-| Medium | High-Priority PagerDuty Alert during **business hours only**. | Requires human action within 24 hours. |
-| Low | Low-Priority PagerDuty Alert 24/7/365. | Requires human action at some point. |
-| Notification | Suppressed PagerDuty Event. | No response required. Informational only. |
+| 高 | PagerDuty Alert 24/7/365. |  **即時の人間の行動**が必要. |
+| 中 | 優先度の高いPagerDuty Alert **営業時間のみ**. | 24時間以内の人間の行動が必要 |
+| 低 | 優先度の低いPagerDuty Alert 24/7/365 | ある時点での人間の行動が必要 |
+| 通知 | 抑制されたPagerDuty イベント | 応答不要。情報提供のみ。 |
 
-If you're setting up a new alert/notification, consider the chart above for how you want to alert people. Be mindful of not creating new high-priority alerts if they don't require an immediate response, for example.
+新しいアラート/通知を設定する場合は、上記のチャートを考慮して、ユーザーにアラートを送信する方法を確認します。たとえば、すぐに対応する必要がない場合は、優先度の高い新しいアラートを作成しないように注意してください。
 
-## Priority Examples
+## 優先度の例
 
-#### "Production service is failing for 75% of requests, automation is unable to resolve."_
-This would be a **High** priority page, requiring immediate human action to resolve.
+#### "プロダクションサービスがリクエストの75%で失敗し、自動化では解決できません。"_
+これは、**High** priority ページになり、解決するためにすぐに人間のアクションが必要になります。
 
-![High Urgency](../assets/img/screenshots/high_urgency.png)
+![緊急性が高い](../assets/img/screenshots/high_urgency.png)
 
-#### "Production server disk space is filling, expected to be full in 48 hours. Log rotation is insufficient to resolve."
-This would be a **Medium** priority page, requiring human action soon, but not immediately.
+#### "プロダクション・サーバーのディスク領域がいっぱいになり、48時間でいっぱいになると予想されます。ログのローテーションでは解決できません。"
+これは**Medium** priorityとなり、いずれ人間の行動が必要になりますが、直ちに今すぐというほどではありません。
 
-![Medium Urgency](../assets/img/screenshots/high_business_hours.png)
+![中程度の緊急度](../assets/img/screenshots/high_business_hours.png)
 
-#### "An SSL certificate is due to expire in one week."
-This would be a **Low** priority page, requiring human action some time soon.
+#### "SSL証明書の有効期限が1週間後に迫っています。"
+これは、**Low** priorityになり、いずれ人間の行動が必要になりますが緊急性は低いです。
 
-![Low Urgency](../assets/img/screenshots/low_urgency.png)
+![低緊急度](../assets/img/screenshots/low_urgency.png)
 
-#### "A deployment was successful."
-This would be a **Notification**, and should be sent as a suppressed event. It provides useful context should an incident occur, but does not require notifying a human.
+#### "デプロイが成功しました。"
+これは**Notification**となり、抑制されたイベントとして送信されます。これは、インシデントが発生した場合に有用な情報を提供しますが、人間に通知する必要はありません。
 
-![Notification](../assets/img/screenshots/suppressed.png)
+![通知](../assets/img/screenshots/suppressed.png)
 
 
-## Alert Content
+## アラートの内容
 
-We should ensure that alerts contain enough useful context to quickly identify the issue and any potential remediation steps. Alerts with generic titles or descriptions are not useful and can cause confusion. We have a set of guidelines for the content of alerts, which all our alerts should follow,
+アラートには、問題を迅速に特定し、可能性のある修復手順を特定するのに十分な有用な情報が含まれていることを確認する必要があります。一般的なタイトルまたは説明を含むアラートは有用ではなく、混乱を引き起こす可能性があります。私たちは、すべてのアラートが従うべき、アラートの内容に関する一連のガイドラインを持っています。
 
-#### Make the title/summary descriptive and concise.
-  * <span class="icon bad"></span>  ALERT: Something went wrong.
-  * <span class="icon good"></span> Disk is 80% full on `prod-web-loadbalancer-af5462ce`.
+#### タイトル/要約をわかりやすく簡潔にする。
+  * <span class="icon bad"></span> 警告:何か問題があった。
+  * <span class="icon good"></span> ディスクは `prod-web-loadbalancer-af5462ce` で 80% フルです。
 
-#### Make sure to include the metric which triggered the alert somewhere in the body.
-  * <span class="icon bad"></span>  Diskspace on a disk is filling.
+#### アラートをトリガーしたメトリクスを、アラートの内容に含めるようにしましょう。
+  * <span class="icon bad"></span> ディスクのディスク容量がいっぱいになっています。
   * <span class="icon good"></span> `avg(last_1h):max:system.disk.in_use{env:prod-web-loadbalancer} by {host} > 0.8`
 
-#### The body should also include a description of what the actual problem is, and why it's an issue.
-  * <span class="icon bad"></span>  Disk is full.
-  * <span class="icon good"></span> The disk on this host is at 80% capacity. If it becomes too full it could cause system instability as new files will not be able to be created and current files will not be written to.
+#### アラートの内容には、実際どのような問題なのか、そしてなぜ問題なのかについての説明も含めましょう。
+  * <span class="icon bad"></span> ディスクがいっぱいです。
+  * <span class="icon good"></span> このホストのディスクの容量は80% です。いっぱいになりすぎると、新しいファイルが作成されず、現在のファイルが書き込まれないため、システムが不安定になることがあります。
 
-#### Provide clear steps to resolve the problem, or link to a run book. Alerts with neither of these things are useless.
-  * <span class="icon bad"></span>  Fix it by deleting stuff.
-  * <span class="icon good"></span> Follow the run book here for identifying and resolving disk space issues: https://example.com/runbook/disk. Additionally, you should investigate whether log rotation thresholds are sufficient to prevent this happening again, the following run book has the necessary steps: https://example.com/runbook/log-rotate
+#### 問題を解決するための明確な手順、または手順書へのリンクを提供します。これらのいずれもないアラートは有用ではありません。
+  * <span class="icon bad"></span> 何かを削除して問題を解決しましょう。
+  * <span class="icon good"></span> ディスクスペースの問題を特定して解決するには、次の手順書を参照してください：https://example.com/runbook/disk . さらに、ログローテーションのしきい値でこの問題が再発しないようにできるかどうかを調べる必要があります。以下の手順書には、必要な手順が記載されています：https://example.com/runbook/log-rotate .
 
 
-## Testing Your Alerts
+## アラートのテスト
 
-!!! info "Testing is Critical"
-    An untested alert is equivalent to not having an alert at all. You cannot be sure it will alert you when the time comes. Testing that your alerting actually works is critical to proper service health and should be included in any release planning / deployment efforts.
+!!! info "Testing is Critical"テストされていないアラートは、アラートをまったく持たないことと同等です。時間が来たときにそれがまたアラートを出すか確証を持てません。アラートが実際に機能するかどうかをテストすることは、適切なサービスの健全性にとって重要であり、リリースの計画/デプロイメントの取り組みに含める必要があります。
 
-Make sure to test all new and modified alerts. This is usually covered as part of [Failure Friday](https://www.pagerduty.com/blog/failure-friday-at-pagerduty/) for any new service; however, you should manually test them if you need it more quickly. Some things to test:
+新しいアラートと変更されたアラートをすべてテストするようにしてください。これは通常、新しいサービスの[Failure Friday](https://www.pagerduty.com/blog/failure-friday-at-pagerduty/) の一部として扱われますが、より迅速に必要な場合は手動でテストする必要があります。テストすべき事項は以下のとおりです：
 
-* Test that the threshold is set appropriately. We don't want noisy alerts.
-* Test that you get alerted for the "No Data" condition if applicable. Generally, receiving no data is the same as breaking your threshold.
-* Test that the alert resolves automatically when the metric returns to normal.
+* しきい値が適切に設定されていることをテストします。私たちは必要以上のアラートを望んでいません。
+* 場合によっては、データがない条件でアラートを受信するテストをします。一般的に、データを受信しないことはしきい値を超えたのと同等です。
+* メトリクスが正常に戻ったときにアラートが自動的に解決するかどうかをテストします。

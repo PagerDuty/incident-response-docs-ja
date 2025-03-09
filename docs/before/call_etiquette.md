@@ -1,51 +1,53 @@
 ---
 cover: assets/img/covers/call_etiquette.png
-description: You've just joined an incident call, and you've never been on one before. You have no idea what's going on, or what you're supposed to be doing. This page will help you through your first time on an incident call, and will provide a reference for future calls you may be a part of.
+description: あなたは今、インシデントに関する会議に初めて参加したところです。いったい何が起きているのか、何をすればいいのか分かりません。このページは、初めてのインシデント会議参加を支援するもので、将来的にあなたが参加するであろう会議の参考となるでしょう。
 ---
-You've just joined an incident call and you've never been on one before. You have no idea what's going on or what you're supposed to be doing. This page will help you through your first time on an incident call, and will provide a reference for future calls you may be a part of.
+あなたは今、インシデントに関する会議に初めて参加したところです。いったい何が起きているのか、何をすればいいのか分かりません。このページは、初めてのインシデント会議参加を支援するもので、将来的にあなたが参加することになるであろう会議の参考となるでしょう。
 
-## First Steps
+## 最初のステップ
 
-* If you intend on participating on the incident call you should join both the call, and Slack.
-* Make sure you are in a quiet environment in order to participate on the call. Background noise should be kept to a minimum.
-* Keep your microphone muted until you have something to say.
-* Identify yourself when you join the call; state your name and the system you are the expert for.
-* Speak up and speak clearly.
-* Be direct and factual.
-* Keep conversations/discussions short and to the point.
-* Bring any concerns to the Incident Commander (IC) on the call.
-* Respect time constraints given by the Incident Commander.
+* インシデント会議に参加するつもりならば、会議とSlackの両方に入りましょう。
+* 会議に参加するためには静かな環境にいましょう。周辺の騒音は最低限にしなければなりません。
+* 発言したい時以外はマイクをミュートしておきましょう。
+* 会議に入る時には自分が誰かを述べましょう。名前と、自分が専門とするシステムを明言するとよいです。
+* 声を上げ、明確に発言しましょう。
+* 事実に基づき、直接的な表現を用いましょう。
+* 会話や議論は短くとどめ、要点を押さえましょう。
+* 懸念があれば、会議にいるインシデントコマンダーに伝えましょう。
+* インシデントコマンダーに与えられた時間制限を守りましょう。
 
-## Lingo
-**Use clear terminology, and avoid using acronyms or abbreviations during a call. Clear and accurate communication is more important than quick communication.**
+## 用いる言葉
+**明確な用語を用い、会議中は略語や短縮語の利用を避けましょう。明快で正確なコミュニケーションは、素早くコミュニケーションをとるよりも重要です。**
 
 ![Communication](../assets/img/misc/communicate.png)
 
-Standard radio [voice procedure](https://en.wikipedia.org/wiki/Radiotelephony_procedure#Procedure_words) does not need to be followed on calls. However, you should familiarize yourself with the terms, as you may hear them on a call (or need to use them yourself). The ones in more active use on major incident calls are,
+会議においては、標準的な無線[音声による手順](https://en.wikipedia.org/wiki/Radiotelephony_procedure#Procedure_words)を使う必要はありません。しかし、これらの用語は会議中に耳にするかもしれない（あるいは自分で使う必要が出てくるかもしれない）ので、慣れておくとよいでしょう。英語による重大インシデントの会議では、以下のような用語がよく使われます。
 
-* **Ack/Rog** - "I have received and understood"
-* **Say Again** - "Repeat your last message"
-* **Standby** - "Please wait a moment for the next response"
-* **Wilco** - "Will comply"
+* **Ack/Rog（了解）** - "I have received and understood" - メッセージを受け取り、理解しました。
+* **Say Again（復唱せよ）** - "Repeat your last message" - 最後に言ったことをもう一度言ってください。
+* **Standby（待機せよ）** - "Please wait a moment for the next response" - 次の対応まで少しお待ちください。
+* **Wilco（従おう）** - "Will comply" - 指示に従います。
 
-Do not invent new abbreviations, and always favor being explicit rather than implicit. It is better to make things clearer than to try and save time by abbreviating, only to have a misunderstanding because others didn't know the abbreviation.
+なお、新しい略語を作るのは避け、常に暗黙的であるよりも明示的であることを心がけてください。略語を使って時間を節約しようとして、相手がその略語を知らなかったために誤解が生じるよりも、物事を明確にするほうがよいはずです。
 
-## The Commander
-The Incident Commander (IC) is the leader of the incident response process and is responsible for bringing the incident to resolution. They will announce themselves at the start of the call and will generally be doing most of the talking.
+## コマンダー（指揮官）
+インシデントコマンダー（IC）は、インシデント対応プロセスのリーダーで、インシデントを解決へ導く責務を負っています。会議の冒頭に彼らは名乗り、話の大部分を担うでしょう。
 
-* Follow all instructions from the Incident Commander - without exception.
-* Do not perform any actions unless the Incident Commander has told you to do so.
-* The Incident Commander will typically poll for any strong objections before performing a large action. This is your time to raise any objections if you have them.
-* Once the Incident Commander has made a decision, that decision is final and should be followed, even if you disagreed during the poll.
-* Answer any questions the Incident Commander asks you in a clear and concise way.
-    * Answering that you "don't know" something is perfectly acceptable. Do not try to guess.
-* The Incident Commander may ask you to investigate something and get back to them in X minutes. Make sure you are ready with an answer within that time.
-    * Answering that you need more time is perfectly acceptable, but you need to give the Incident Commander an estimate of how much time.
+* インシデントコマンダーからの指示には、例外なく従いましょう。
+* インシデントコマンダーの指示がないかぎり、いかなるアクションも取ってはなりません。
+* インシデントコマンダーは、影響の大きなアクションを取る前に強い反対がないか参加者の意向を募ることがあります。反対意見があれば、このタイミングで述べましょう。
+* インシデントコマンダーが決定を下したら、それは最終決定であり、たとえ意向調査のタイミングでにあなたが反対していたのだとしても、従わなければなりません。
+* インシデントコマンダーの質問には、明確かつ簡潔に答えましょう。
+    * なにかについて「知らない」と答えることには全く問題ありません。むしろ、推測は避けてください。
+* インシデントコマンダーは何かを調査し、X分以内に報告するように依頼してくるかもしれません。その時間以内に回答を用意するようにしてください。
+    * 時間がもっと必要だと答えても全く問題ありませんが、どのくらいの時間がかかりそうかの見積もりをインシデントコマンダーに伝える必要があります。
 
-## Problems?
+## 問題があったときは
 
-#### There's no incident commander on the call! I don't know what to do!
-Ask on the call if an IC is present. If you have no response, type `!ic page` in Slack. This will page the primary and backup IC to the call.
+#### インシデントコマンダーが会議にいない！ どうすればいいか分からない！
 
-#### I can join the call or Slack, but not both, what should I do?
-You're welcome to join only one of the channels, however you should not actively participate in the incident response if so as it causes disjointed communication. Liaise with someone who is both in Slack and on the call to provide any input you may have so that they can raise it.
+会議内でインシデントコマンダーがいるか聞いてみましょう。返事がなければSlackに `!ic page` とタイプして、プライマリとバックアップのインシデントコマンダーに通知を送り、会議への参加を促します。
+
+#### 会議かSlackのどちらか片方にしか入れない場合、どうしたらいい？
+
+片方のチャンネルへの参加も歓迎ですが、コミュニケーションの分断を招くため、インシデント対応へアクティブに参加することは避けたほうがよいです。Slackと会議の両方に参加している人と連携し、あなたが提供できる情報があれば彼らに取り上げてもらうようにするとよいでしょう。

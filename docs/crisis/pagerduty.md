@@ -4,9 +4,9 @@ description: PagerDuty Operations Cloudは、組織が危機を効果的に管�
 ---
 
 ## PagerDutyの設定
-PagerDutyで危機対応管理インスタンスを設定する方法：
+PagerDutyで危機対応管理インスタンスを設定する方法は以下のとおりです：
 
-[PagerDutyモバイルアプリ](https://support.pagerduty.com/docs/mobile-app) - 最大限の到達可能性を確保するため、各メンバーにモバイルアプリのインストールと設定を依頼します。
+[PagerDutyモバイルアプリ](https://support.pagerduty.com/docs/mobile-app) - 最大限連絡が行き届く状態を確保するため、各メンバーにモバイルアプリのインストールと設定を依頼します。
 
 [ユーザー管理（User Management）](https://support.pagerduty.com/docs/users#add-users) - 経営危機管理チームと危機対応チームのメンバーがシステムに追加されていることを確認します。
 
@@ -14,7 +14,7 @@ PagerDutyで危機対応管理インスタンスを設定する方法：
 
 ![PagerDutyユーザー連絡先情報設定](../assets/img/crisis/09_usercontactinfo.png)
 
-[通知ルール（Notification rules）](https://support.pagerduty.com/docs/user-profile#notification-rules) - 各メンバーにプロフィール内で高緊急度、低緊急度、引き継ぎ、およびサブスクライバー通知ルールを設定するよう依頼します。
+[通知ルール（Notification rules）](https://support.pagerduty.com/docs/user-profile#notification-rules) - 各メンバーにプロフィール内で高緊急度（High Urgency）、低緊急度（Low Urgency）、引き継ぎ、およびサブスクライバー向けの通知ルールを設定するよう依頼します。
 
 ![高緊急度インシデントには複数の連絡方法を使用](../assets/img/crisis/10_highurgencynotifications.png)
 
@@ -28,7 +28,7 @@ PagerDutyで危機対応管理インスタンスを設定する方法：
 
 ![エスカレーションポリシーは連絡を受けるレスポンダーを決定します](../assets/img/crisis/11_escalationpolicy.png)
 
-[統合（Integrations）](https://support.pagerduty.com/docs/services-and-integrations#add-integrations-to-an-existing-service) - インスタントメッセージング、ビデオ会議ツールを追加するか、カスタムメール統合またはアラートをトリガーするための他のシステムへの接続を作成します。
+[インテグレーション（Integrations）](https://support.pagerduty.com/docs/services-and-integrations#add-integrations-to-an-existing-service) - インスタントメッセージング、ビデオ会議ツールを追加するか、カスタムメール統合またはアラートをトリガーするための他のシステムへの接続を作成します。
 
 [スケジュール（Schedules）](https://support.pagerduty.com/docs/schedule-basics#create-a-schedule) - 各危機サービスに関連付けられたチームのオンコールローテーションを作成します。
 
@@ -36,7 +36,7 @@ PagerDutyで危機対応管理インスタンスを設定する方法：
 
 [インシデント優先度（Incident Priority）](https://support.pagerduty.com/docs/incident-priority) - 危機対応エスカレーションレベルのカスタム分類スキームを追加します。
 
-[インシデントワークフロー（Incident workflows）](https://support.pagerduty.com/docs/incident-workflows) - 優先度、ステータス、緊急度などの条件に基づいて、システムテンプレートまたはゼロから各危機のワークフローを作成します。
+[インシデントワークフロー（Incident  Workflows）](https://support.pagerduty.com/docs/incident-workflows) - 優先度、ステータス、緊急度などの条件に基づいて、システムテンプレートまたはゼロから各危機のワークフローを作成します。
 
 ![インシデントワークフローはコミュニケーションと調整に役立ちます](../assets/img/crisis/13_incidentworkflows.png)
 

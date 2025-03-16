@@ -1,24 +1,23 @@
 ---
 cover: assets/img/crisis/cover_crisisresponse.png
-description: Your organization's crisis response plan requires strong leadership. The right kind of crisis leadership is values-driven and maintains the balancing act between carefully and thoughtfully responding to what went wrong and deliberately capturing mindshare or new business based on the effectiveness of your response.
+description: 組織の危機対応計画には強力なリーダーシップが必要です。適切な危機管理のリーダーシップとは、価値観に基づいて行動し、問題に対して慎重かつ思慮深く対応することと、その対応の効果に基づいて意図的にマインドシェアや新規ビジネスを獲得することとのバランスを保つことです。
 hero: assets/img/headers/iStock-1097331490-3992x2242-e4f3f2d.png
 ---
 
-## Introduction to Crisis Response Management Operations
+## 危機対応管理オペレーション入門
 
-A critical partner in your supply chain just went down. An earthquake just hit your main operations hub. Breaking news about your organization just hit social media. A crisis can happen at any time. Are you ready for it? The way you handle your worst day will leave lasting impressions about your brand and its perceived value in the eyes of your current and potential customers.
+サプライチェーンの重要なパートナーが突然停止した。主要な運用拠点で地震が発生した。組織に関する速報がソーシャルメディアに流れた。危機は予期せぬタイミングで発生します。あなたの組織は準備ができていますか？最悪の日の対応の仕方が、現在および潜在的な顧客の目に、あなたのブランドとその価値に関する lasting impression（永続的な印象）を残すことになります。
 
-Bad news first. There's always another crisis or existential threat on the horizon. If you don’t have an established Crisis Response process and team in place, you’re running a high risk of failure. If you do have a process and team, you should be continuously iterating and improving your leadership, plans and practices to guard against mistakes that can cause irreparable damage to your brand. 
+まず悪いニュースから。新たな危機や存続の脅威は常に地平線上に存在します。確立された危機対応プロセスとチームがない場合、失敗のリスクは非常に高くなります。プロセスとチームが存在する場合でも、ブランドに修復不可能なダメージを与える可能性のあるミスを防ぐため、リーダーシップ、計画、実践を継続的に改善する必要があります。
 
-The good news is that this guide is built to bring your Crisis Response Management Operations up to speed using best practices, and leveraging PagerDuty’s Operations Cloud.
+良いニュースは、このガイドが、ベストプラクティスとPagerDuty Operations Cloudを活用して、あなたの危機対応管理オペレーションを最新の状態に引き上げることを目的として作られているということです。
 
-## Audience
-Business leaders responsible for crisis, risk and / or emergency management who want to enhance their crisis response processes and improve their mean time to respond (MTTR).
+## 対象読者
+危機管理、リスク管理、および/または緊急事態管理を担当するビジネスリーダーで、危機対応プロセスを強化し、平均対応時間（MTTR: Mean Time To Respond）を改善したい方々。
 
-## Content of this Guide
-- [Terminology](terms.md) - a list of key terms and concepts used in this guide
-- [Crisis Leadership](leadership.md) - incorporating basic principles and your values in your response
-- [Crisis Response Operations](operations.md) - activating your crisis response plans
-- [Pre-crisis Phase](prework.md) - capitalizing on preparedness activities to keep your teams ready and engaged
-- [PagerDuty for CRMOps](pagerduty.md) - how PagerDuty leverages PagerDuty for crisis response management operations
-
+## このガイドの内容
+- [用語集](terms.md) - このガイドで使用される主要な用語と概念の一覧
+- [危機管理のリーダーシップ](leadership.md) - 対応における基本原則と価値観の組み込み
+- [危機対応オペレーション](operations.md) - 危機対応計画の発動
+- [危機発生前のフェーズ](prework.md) - チームの準備と engagement（関与）を維持するための準備活動の活用
+- [危機対応管理オペレーションにおけるPagerDuty](pagerduty.md) - PagerDutyが危機対応管理オペレーションにPagerDutyをどのように活用しているか

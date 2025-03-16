@@ -1,22 +1,22 @@
 ---
 cover: assets/img/crisis/cover_crisisresponse.png
-description: If crisis response is new to you or your organization, these terms will help you establish a baseline for understanding.
+description: 危機対応があなたや組織にとって新しい概念である場合、これらの用語が基本的な理解の確立に役立ちます。
 ---
 
-The following list of terms will help you navigate the Crisis Response section of this document. You'll find some terms mirror those used in incident response, while some will have slightly different definitions.
+以下の用語集は、本ドキュメントの危機対応セクションを理解する上で役立ちます。インシデント対応で使用される用語と同じものもありますが、一部異なる定義を持つものもあります。
 
-- **Crisis** - an extraordinary event or situation that serves as an existential threat to people, the operational environment, assets or reputation requiring a strategic, adaptive and timely organizational response
-- **Crisis Management** - coordinated activities to lead, direct and control an organization with regards to its response to a crisis
-- **Incident** - a potentially costly yet generally foreseeable event, e.g., availability, performance degradation, market volatility, increased competition, etc., that disrupts normal business processes
-- **Emergent Issue** - a situational problem that does not present a significant impact to strategic objectives, reputation or viability of the organization but may require comment or organized activity to avert an incident or crisis
-- **Emergency** - a sudden, short-lived threat generally involving people or physical assets that requires immediate action or assistance to mitigate
-- **Incident Command System (ICS)** - a standardized emergency management construct created by the U.S. Federal Emergency Management Agency (FEMA) to provide an integrated organizational structure that reflects the complexity and demands of single or multiple incidents
-- **Area Command** - an organizational structure used by the Federal Emergency Management Agency (FEMA) to oversee the management of multiple incidents or oversee the management of a very large or evolving situation with multiple ICS organizations
-- **Incident Commander (IC)** - the individual responsible for incident management having overall authority and responsibility for conducting and managing response operations
-- **Executive Crisis Leadership Team** - a group of Executives who make enterprise-wide strategic decisions for the business during a crisis situation and pre-crisis
-- **Crisis Management Plan** - a document defining the personnel, procedures and resources needed to manage a crisis from beginning to end
-- **Crisis Team Leader** - the equivalent of an Incident Commander for a crisis situation based on their functional area of expertise or charge
-- **Crisis Response** - the immediate actions taken in response to a crisis situation to contain it and the steps taken pre-crisis to develop the capabilities and readiness to do so
-- **Crisis Response Management** - the triage and initial treatment stages of a crisis situation and the effective activations to support the complete crisis management lifecycle
-- **Incident Response** - the process for addressing and solving an incident of varying severity in order to limit damage and reduce recovery time and costs
-- **Emergency Response** - the process of responding to a range of life-safety events and threats to the environment to mitigate damage and loss
+- **危機（Crisis）** - 人、運用環境、資産、または評判に対する存続の脅威となり、戦略的、適応的、かつタイムリーな組織的対応を必要とする特異な出来事または状況
+- **危機管理（Crisis Management）** - 危機への対応に関して、組織を主導、指揮、統制するための調整された活動
+- **インシデント（Incident）** - 可用性の低下、性能劣化、市場の変動、競争の激化など、潜在的にコストがかかるものの、一般的に予見可能な、通常の業務プロセスを妨げる出来事
+- **発生する問題（Emergent Issue）** - 戦略的目標、評判、または組織の存続可能性に重大な影響を及ぼさないが、インシデントや危機を回避するためのコメントや組織的な活動を必要とする可能性のある状況的な問題
+- **緊急事態（Emergency）** - 人または物的資産に関わる突発的で短期的な脅威で、被害を軽減するために即時の行動や支援を必要とするもの
+- **インシデント指揮システム（ICS: Incident Command System）** - 米国連邦緊急事態管理庁（FEMA: Federal Emergency Management Agency）によって作成された標準化された緊急事態管理の枠組みで、単一または複数のインシデントの複雑さと要求に対応する統合的な組織構造を提供するもの
+- **エリアコマンド（Area Command）** - FEMAが使用する組織構造で、複数のインシデントの管理を監督する、または複数のICS組織を持つ非常に大規模または進展する状況の管理を監督するために使用されるもの
+- **インシデントコマンダー（IC: Incident Commander）** - インシデント管理に責任を持ち、対応作戦の実施と管理に関する全体的な権限と責任を持つ個人
+- **経営危機管理チーム（Executive Crisis Leadership Team）** - 危機状況および危機発生前において、企業全体の戦略的決定を行う経営幹部のグループ
+- **危機管理計画（Crisis Management Plan）** - 危機の始まりから終わりまでを管理するために必要な人員、手順、リソースを定義した文書
+- **危機対応チームリーダー（Crisis Team Leader）** - 機能分野の専門知識または担当に基づく、危機状況におけるインシデントコマンダーに相当する役割
+- **危機対応（Crisis Response）** - 危機状況を封じ込めるための即時の行動、およびそのための能力と準備態勢を危機発生前に開発するためのステップ
+- **危機対応管理（Crisis Response Management）** - 危機状況のトリアージと初期対応段階、および完全な危機管理ライフサイクルをサポートするための効果的な活動
+- **インシデント対応（Incident Response）** - 被害を制限し、復旧時間とコストを削減するために、様々な重大度のインシデントに対処し解決するプロセス
+- **緊急対応（Emergency Response）** - 被害と損失を軽減するために、生命の安全に関わる様々な出来事や環境への脅威に対応するプロセス

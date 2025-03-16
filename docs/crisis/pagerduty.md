@@ -1,50 +1,49 @@
 ---
 cover: assets/img/crisis/cover_crisisresponse.png
-description: PagerDuty's Operations Cloud provides various tools and features that will help your organization manage crises effectively.
+description: PagerDuty Operations Cloudは、組織が危機を効果的に管理するのに役立つ様々なツールと機能を提供します。
 ---
 
-## PagerDuty Configuration
-How to set up your Crisis Response Management instance in PagerDuty:
+## PagerDutyの設定
+PagerDutyで危機対応管理インスタンスを設定する方法：
 
-[PagerDuty Mobile app](https://support.pagerduty.com/docs/mobile-app) - Ask each member to install and configure the mobile app for maximum reachability.
+[PagerDutyモバイルアプリ](https://support.pagerduty.com/docs/mobile-app) - 最大限の到達可能性を確保するため、各メンバーにモバイルアプリのインストールと設定を依頼します。
 
-[User Management](https://support.pagerduty.com/docs/users#add-users) - Make sure you’ve added your Executive Crisis Leadership and Crisis Response Team members to the system.
+[ユーザー管理（User Management）](https://support.pagerduty.com/docs/users#add-users) - 経営危機管理チームと危機対応チームのメンバーがシステムに追加されていることを確認します。
 
-[Contact information](https://support.pagerduty.com/docs/user-profile) - Ask each member to log into the web application and update their profile information including their phone, email and SMS contact information especially if they’ve changed devices.
+[連絡先情報（Contact information）](https://support.pagerduty.com/docs/user-profile) - 各メンバーにウェブアプリケーションにログインし、特にデバイスを変更した場合は、電話、メール、SMS連絡先情報を含むプロフィール情報を更新するよう依頼します。
 
-![PagerDuty user contact information settings](../assets/img/crisis/09_usercontactinfo.png)
+![PagerDutyユーザー連絡先情報設定](../assets/img/crisis/09_usercontactinfo.png)
 
-[Notification rules](https://support.pagerduty.com/docs/user-profile#notification-rules) - Ask each member to set their high urgency, low urgency, handoff and subscriber notification rules under their profile.
+[通知ルール（Notification rules）](https://support.pagerduty.com/docs/user-profile#notification-rules) - 各メンバーにプロフィール内で高緊急度、低緊急度、引き継ぎ、およびサブスクライバー通知ルールを設定するよう依頼します。
 
-![Use multiple contact methods for high urgency incidents](../assets/img/crisis/10_highurgencynotifications.png)
+![高緊急度インシデントには複数の連絡方法を使用](../assets/img/crisis/10_highurgencynotifications.png)
 
-[Teams](https://support.pagerduty.com/docs/teams) - Create teams for your Executive Crisis Leadership Team, each of your Crisis Team Leaders, and essential support functions like Crisis Communications, IT or Legal
+[チーム（Teams）](https://support.pagerduty.com/docs/teams) - 経営危機管理チーム、各危機対応チームリーダー、および危機コミュニケーション、IT、法務などの重要なサポート機能のためのチームを作成します。
 
-[Services](https://support.pagerduty.com/docs/services-and-integrations#create-a-service) - Create and configure a service for each of your crisis categories led by your Crisis Team Leaders, e.g., supply chain, human resources, critical infrastructure, geopolitics, physical security, etc.
+[サービス（Services）](https://support.pagerduty.com/docs/services-and-integrations#create-a-service) - 危機対応チームリーダーが主導する各危機カテゴリー（サプライチェーン、人事、重要インフラ、地政学、物理セキュリティなど）のサービスを作成および設定します。
 
-[Urgency](https://support.pagerduty.com/docs/service-settings#notification-urgency) - Set your notification urgency for each service whether high, low, dynamic or based on operating hours
+[緊急度（Urgency）](https://support.pagerduty.com/docs/service-settings#notification-urgency) - 各サービスの通知緊急度を高、低、動的、または運用時間に基づいて設定します。
 
-[Escalation policies](https://support.pagerduty.com/docs/escalation-policies#create-an-escalation-policy) - Decide who gets notified first and how long before the notification escalates to the next team member and configure round robin scheduling if you wish to alternate per crisis
+[エスカレーションポリシー（Escalation policies）](https://support.pagerduty.com/docs/escalation-policies#create-an-escalation-policy) - 誰が最初に通知を受け、次のチームメンバーにエスカレーションされるまでの時間を決定し、危機ごとに交代させたい場合はラウンドロビンスケジューリングを設定します。
 
-![Escalation policies determine which responders are contacted](../assets/img/crisis/11_escalationpolicy.png)
+![エスカレーションポリシーは連絡を受けるレスポンダーを決定します](../assets/img/crisis/11_escalationpolicy.png)
 
-[Integrations](https://support.pagerduty.com/docs/services-and-integrations#add-integrations-to-an-existing-service) - Add your instant messaging, video conferencing tool or create a custom email integration or connections to other systems for triggering alerts
+[統合（Integrations）](https://support.pagerduty.com/docs/services-and-integrations#add-integrations-to-an-existing-service) - インスタントメッセージング、ビデオ会議ツールを追加するか、カスタムメール統合またはアラートをトリガーするための他のシステムへの接続を作成します。
 
-[Schedules](https://support.pagerduty.com/docs/schedule-basics#create-a-schedule) - Create your on-call rotations for the teams associated with each crisis service
+[スケジュール（Schedules）](https://support.pagerduty.com/docs/schedule-basics#create-a-schedule) - 各危機サービスに関連付けられたチームのオンコールローテーションを作成します。
 
-![Using multiple layers in schedules helps teams create full coverage](../assets/img/crisis/12_schedulelayers.png)
+![スケジュールで複数のレイヤーを使用することで、チームは完全なカバレッジを作成できます](../assets/img/crisis/12_schedulelayers.png)
 
-[Incident Priority](https://support.pagerduty.com/docs/incident-priority) - Add your custom classification scheme for your crisis response escalation levels
+[インシデント優先度（Incident Priority）](https://support.pagerduty.com/docs/incident-priority) - 危機対応エスカレーションレベルのカスタム分類スキームを追加します。
 
-[Incident workflows](https://support.pagerduty.com/docs/incident-workflows) - Create your workflows for each crisis based on conditions such as priority, status and urgency using system templates or from scratch
+[インシデントワークフロー（Incident workflows）](https://support.pagerduty.com/docs/incident-workflows) - 優先度、ステータス、緊急度などの条件に基づいて、システムテンプレートまたはゼロから各危機のワークフローを作成します。
 
-![Incident workflows can help with communication and coordination](../assets/img/crisis/13_incidentworkflows.png)
+![インシデントワークフローはコミュニケーションと調整に役立ちます](../assets/img/crisis/13_incidentworkflows.png)
 
-[On-call readiness report](https://support.pagerduty.com/docs/on-call-readiness-reports) - Confirm that your teams are on-call ready and properly configured
+[オンコール準備レポート（On-call readiness report）](https://support.pagerduty.com/docs/on-call-readiness-reports) - チームがオンコールの準備ができており、適切に設定されていることを確認します。
 
-[Postmortem template](https://support.pagerduty.com/docs/postmortems#customize-the-postmortem-template) - Configure your postmortem template to fit your needs post-crisis
+[ポストモーテムテンプレート（Postmortem template）](https://support.pagerduty.com/docs/postmortems#customize-the-postmortem-template) - 危機後のニーズに合わせてポストモーテムテンプレートを設定します。
 
-[Status pages](https://support.pagerduty.com/docs/status-pages) - Configure your status page templates for internal stakeholders
+[ステータスページ（Status pages）](https://support.pagerduty.com/docs/status-pages) - 内部ステークホルダー向けのステータスページテンプレートを設定します。
 
-![Use status updates to communicate with stakeholders](../assets/img/crisis/14_incidentstatusupdates.png)
-
+![ステータス更新を使用してステークホルダーとコミュニケーションを取る](../assets/img/crisis/14_incidentstatusupdates.png)

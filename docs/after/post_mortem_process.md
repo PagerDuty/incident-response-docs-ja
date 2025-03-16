@@ -1,14 +1,23 @@
 ---
 cover: assets/img/covers/post-mortem_process.png
-description: For every major incident (SEV-2/1), we need to follow up with a postmortem. A blame-free, detailed description, of exactly what went wrong in order to cause the incident, along with a list of steps to take in order to prevent a similar incident from occurring again in the future.
+description: すべての重大インシデント（SEV-2/1）に対し、私たちはポストモーテムを行います。他者を責めることなく、なにがうまくいかずインシデントが引き起こされたのかを正確に把握できる詳細な説明と、将来同じようなインシデントが発生するのを防ぐためのステップのリストを設けます。
+
 ---
 For every major incident (SEV-2/1), we need to follow up with a postmortem. A blame-free, detailed description, of exactly what went wrong in order to cause the incident, along with a list of steps to take in order to prevent a similar incident from occurring again in the future. The incident response process itself should also be included.
+
+私たちは、すべての重大インシデント（SEV-2/1）に対しポストモーテムを行います。他者を責めることなく、なにがうまくいかなくてインシデントが引き起こされたのかの詳細な説明と、将来同じようなインシデントが発生するのを防止するステップのリストを設けます。インシデント対応のプロセスそのものも、ポストモーテムの対象となります。
 
 !!! warning "Don't Neglect the Postmortem"
     Don't make the mistake of neglecting a postmortem after an incident. Without a postmortem, you fail to recognize what you're doing right, where you could improve, and most importantly how to avoid making the same exact mistakes next time around. A well-designed, blameless postmortem allows teams to continuously learn and serves as a way to iteratively improve your infrastructure and incident response process.
 
+!!! warning "ポストモーテムを無視しないこと"
+    インシデント後のポストモーテムを無視する失敗をしないようにしましょう。ポストモーテムなしでは、何がうまくできていて、どこに改善の余地があるか、そして何よりも次に同じ失敗をすることを避ける方法に気づけません。うまく設計され、他者を責めることにないポストモーテムを行えば、チームは継続的に学ぶことができ、インフラとインシデント対応プロセスを繰り返し改善することができます。
+
 ## Owner Designation
 The first step is designating a postmortem owner. This is done by the IC either at the end of a major incident call or very shortly after. You will be notified directly by the IC if you are the owner for the postmortem. The owner is responsible for populating the postmortem, looking up logs, managing the follow-up investigation, and keeping all interested parties in the loop. Please use Slack for coordinating follow-up. A detailed list of the steps is available below:
+
+## オーナーの決定
+最初のステップは、ポストモーテムのオーナーを決めることです。オーナーの指名はインシデントコマンダーによって、重大インシデント会議の終わりまたは終了後まもなく行われます。あなたがポストモーテムのオーナーになる場合は、直接インシデントコマンダーから伝えられます。オーナーはポストモーテムを実行し、ログを調べ、事後調査を管理し、関係者全員へ連絡が行き届く状態にします。フォローアップにはSlackを活用してください。以下に詳細なステップを示します：
 
 ## Owner Responsibilities
 As owner of a postmortem, you are responsible for the following,
@@ -21,6 +30,17 @@ As owner of a postmortem, you are responsible for the following,
 * Running through the topics at the postmortem meeting (the IC will "run" the meeting and keep the discussion on track, but you will likely be doing most of the talking).
 * Communicating the results of the postmortem internally.
 
+## オーナーの責務
+ポストモーテムのオーナーとして、あなたは以下のことに責任を持ちます。
+
+* 共有カレンダー上でポストモーテムミーティングを設定し、関係者を招待します。SEV-1については3日以内、SEV-2については5営業以内に設定しなければなりません。
+* インシデントを調査し、他のチームからも調査の支援に必要なあらゆる人を巻き込みます。
+* 必要な内容を網羅する形でページを更新します。
+* フォローアップ用のJIRAチケットを作成します。（_あなたの責務はチケットを作成するところまでであり、解決までは求められません_）
+* ミーティングまでに、ふさわしい関係者とポストモーテムの内容をレビューします。
+* ポストモーテムのミーティングで議題を取り上げていきます。（インシデントコマンダーはミーティングを「実行」して議論が軌道に乗るようにしますが、大半の話はあなたからすることになるでしょう）
+* ポストモーテムの結果を社内に展開します。
+
 ## Status Descriptions
 Our postmortems have a "Status" field which indicates where in our process the postmortem currently is. Here's a description of the values and how we use them.
 
@@ -30,6 +50,17 @@ Our postmortems have a "Status" field which indicates where in our process the p
 | **In Review** | The content of the postmortem has been completed, and is ready to be reviewed during the postmortem meeting. |
 | **Reviewed** | The meeting is over and the content has been reviewed and agreed upon.<br/>If there is an "External Message," the Customer Support team will take the message and update our status page as appropriate. |
 | **Closed** | No further actions are needed on the postmortem (outstanding issues are tracked in JIRA).<br/>If no "External Message," you can skip straight to this once the meeting is over.<br/>If there's an "External Message", then the Support team will update it to this status once the message is posted. |
+
+## ステータスの記述
+私たちのポストモーテムには「ステータス」のフィールドがあり、現在ポストモーテムがプロセスのどの段階にあるのかを示します。以下に、各ステータスの意味と使い方を示します。
+
+| ステータス | 意味 |
+|-|-|
+| **下書き（Draft）** | ポストモーテムの内容が現在も作成中であることを示します。 |
+| **レビュー中（In Review）** | ポストモーテムの内容が作成済で、ポストモーテムのミーティングでレビューする準備ができています。 |
+| **レビュー済（Reviewed）** | ミーティングが終了し、内容がレビューされ同意済の状態です。<br/>もし「対外的なメッセージ」があれば、カスタマーサポートチームがメッセージを受けてステータスページを適切にアップデートします。 |
+| **クローズ（Closed）** | ポストもーてむでこれ以上のアクションは必要とされていません。（未完了の問題はJIRAでトラックされている状態です）<br/>「対外的なメッセージ」がなければ、ミーティングが終わりしだい「クローズ」にして構いません。<br/>もし「対外的なメッセージ」がある場合は、サポートチームがメッセージを投稿した後に「クローズ」にアップデートします。
+
 
 ## Postmortem
 Once you've been designated as the owner of a postmortem, you should start creating one and updating it with all the relevant information.

@@ -1,75 +1,75 @@
 ---
 cover: assets/img/covers/scribe.png
-description: So you want to be a scribe? You've come to the right place! You don't need to be a senior team member to become a Deputy or Scribe, anyone can do it providing you have the requisite knowledge!
+description: 書記官になりたいですか？ここはそのための適切な場所です！副指揮官や書記官になるために上級チームメンバーである必要はありません。必要な知識があれば誰でもなることができます！
 ---
-So you want to be a Scribe? You've come to the right place! You don't need to be a senior team member to become a Deputy or Scribe, anyone can do it providing you have the requisite knowledge!
+書記官になりたいですか？ここはそのための適切な場所です！副指揮官や書記官になるために上級チームメンバーである必要はありません。必要な知識があれば誰でもなることができます！
 
-## Purpose
-The purpose of the Scribe is to maintain a timeline of key events during an incident. Documenting actions, and keeping track of any follow-up items that will need to be addressed.
+## 目的
+書記官の目的は、インシデント中の重要なイベントのタイムラインを維持することです。アクションを文書化し、対処する必要のあるフォローアップ項目を追跡します。
 
-It's important for the rest of the command staff to be able to focus on the problem at hand, rather than worrying about documenting the steps.
+コマンドスタッフの残りのメンバーが、ステップを文書化することを心配するのではなく、目の前の問題に集中できるようにすることが重要です。
 
-Your job as Scribe is to listen to the call and to watch the incident Slack room, keeping track of context and actions that need to be performed, documenting these in Slack as you go. **You should not be performing any remediations, checking graphs, or investigating logs.** Those tasks will be delegated to the subject matter experts (SME's) by the Incident Commander.
+書記官としてのあなたの仕事は、会議を聞き、インシデントのSlackルームを監視し、文脈と実行する必要があるアクションを追跡し、それらをSlackに記録していくことです。**あなたは修復作業を行ったり、グラフを確認したり、ログを調査したりするべきではありません。**これらのタスクはインシデントコマンダーによって主題専門家（SME）に委任されます。
 
 
-## Prerequisites
-Before you can be a Scribe, it is expected that you meet the following criteria. Don't worry if you don't meet them all yet, you can still continue with training!
+## 前提条件
+書記官になる前に、以下の基準を満たしていることが期待されます。まだすべての基準を満たしていなくても心配いりません。トレーニングを続けることはできます！
 
-* Excellent verbal and written **communication skills**.
+* 優れた口頭および文書による**コミュニケーションスキル**。
 
-## Responsibilities
-Read up on our [Different Roles for Incidents](../before/different_roles.md) to see what is expected from a Scribe, as well as what we expect from the other roles you'll be interacting with.
+## 責任
+[インシデントにおける様々な役割](../before/different_roles.md)を読んで、書記官に期待されることと、あなたが関わる他の役割に期待することを確認してください。
 
-## Training Process
-There is no formal training process for this role, reading this page should be sufficient for most tasks. Here's a list of things you can do to train though,
+## トレーニングプロセス
+この役割に対する正式なトレーニングプロセスはありません。このページを読むだけで、ほとんどのタスクには十分でしょう。以下はトレーニングのためにできることのリストです：
 
-* Read the rest of this page, particularly the sections below.
+* このページの残りの部分、特に以下のセクションを読んでください。
 
-* Participate in [Failure Friday](https://www.pagerduty.com/blog/failure-friday-at-pagerduty/) (FF).
-    * Shadow a FF to see how it's run.
-    * Be the Scribe for multiple FF's.
+* [Failure Friday](https://www.pagerduty.com/blog/failure-friday-at-pagerduty/)（FF）に参加してください。
+    * FFをシャドウイングして、どのように運営されているかを見てください。
+    * 複数のFFで書記官を務めてください。
 
-## Scribing
-Scribing is more art than science. The objective is to keep an accurate record of important events that occurred on the call, so that we can look back at the timeline to see what happened. But what exactly is important? There's no overwhelming answer, and it really comes down the judgement and experience. But here are some general things you most definitely want to capture as Scribe.
+## 記録
+記録は科学よりも芸術です。目的は、会議で発生した重要なイベントの正確な記録を保持し、タイムラインを振り返って何が起こったかを確認できるようにすることです。しかし、何が重要なのかは何でしょうか？圧倒的な答えはなく、それは本当に判断と経験に依存します。しかし、書記官として確実に捉えたい一般的なことがいくつかあります。
 
-* The result of any polling decisions.
-    * <span class="icon bad"></span>  This is not "9 people voted yay, 3 voted nay".
-    * <span class="icon good"></span>  It is "Polled for if we should do rolling restart. <USER_A> is proceeding with restart."
-* Any follow-up items that are called out as "We should do this..", "Why didn't this?..", etc.
-    * <span class="icon bad"></span>  This is not "Why isn't the Support representative on the call?"
-    * <span class="icon good"></span>  This is "TODO: Why didn't we get paged for this earlier?"
+* 投票決定の結果。
+    * <span class="icon bad"></span>  これは「9人が賛成、3人が反対」ではありません。
+    * <span class="icon good"></span>  これは「ローリングリスタートを行うかどうかの投票を行いました。<USER_A>がリスタートを進めています。」です。
+* 「これをすべき...」、「なぜこれが...」などと呼ばれるフォローアップ項目。
+    * <span class="icon bad"></span>  これは「なぜサポート担当者が会議にいないのか？」ではありません。
+    * <span class="icon good"></span>  これは「TODO: なぜもっと早くこれについて通知されなかったのか？」です。
 
-## Incident Call Procedures and Lingo
-The [Steps for Scribe](../during/during_an_incident.md) provide a detailed description of what you should be doing during an incident.
+## インシデント会議の手順と用語
+[書記官の手順](../during/during_an_incident.md)には、インシデント中にあなたがすべきことの詳細な説明が記載されています。
 
-Here are some examples of phrases and patterns you should use during incident calls.
+以下は、インシデント会議中に使用すべきフレーズとパターンの例です。
 
-### Status Stalking
-At the start of any major incident call, you should start our status stalking bot, so that it will post to the room an update automatically.
+### ステータスストーキング
+重大なインシデント会議の開始時に、ステータスストーキングボットを起動して、自動的に部屋に更新を投稿するようにする必要があります。
 
 > !status stalk
 
-This will provide the update and allow the IC to see the status without having to keep asking.
+これにより更新が提供され、インシデントコマンダーは毎回尋ねることなくステータスを確認できます。
 
-### Note Important Actions
-During a call, you will hear lots of discussion happening, you should not be documenting all of this in the chat room. You only want to document things which will be important for the final timeline. It's not always obvious what this might be, and it's usually a matter of judgement. You generally want to note any actions the IC has asked someone to perform, along with the result of any polling decisions.
+### 重要なアクションをメモする
+会議中、多くの議論が行われるのを聞くでしょうが、これらすべてをチャットルームに記録するべきではありません。最終的なタイムラインにとって重要になるものだけを記録したいのです。これが何であるかは常に明らかではなく、通常は判断の問題です。一般的に、インシデントコマンダーが誰かに実行するよう依頼したアクションと、投票決定の結果をメモしたいでしょう。
 
-> Polled for decision on whether to perform rolling restart. We are proceeding with restart. [USER_A] to execute.
+> ローリングリスタートを実行するかどうかの決定について投票しました。リスタートを進めています。[USER_A]が実行します。
 
-Some actions might seem important at the time, but end up not being. That's OK. It's better to have more info than not enough, but don't go overboard.
+一部のアクションは当時は重要に思えても、結局そうではないかもしれません。それは大丈夫です。情報が少なすぎるよりも多い方が良いですが、やりすぎないでください。
 
-### Note Follow-up Actions
-Sometimes during the call, someone will either mention something we "should fix", or the IC will specifically ask you to note a followup item. You can do this in Slack by simply prefixing with "TODO", this will make it easier to search for later.
+### フォローアップアクションをメモする
+会議中に、誰かが「修正すべき」ことに言及したり、インシデントコマンダーが特にフォローアップ項目をメモするよう依頼することがあります。これはSlackで単に「TODO」を接頭辞として付けることでできます。これにより、後で検索しやすくなります。
 
-> TODO: Why did we not get paged for the fall in traffic on [X] cluster?
+> TODO: なぜ[X]クラスタのトラフィック低下について通知されなかったのか？
 
-The postmortem owner will find these after and raise tasks for them.
+ポストモーテムの所有者は後でこれらを見つけてタスクを作成します。
 
-### End of Call Notification
-When the IC ends the call, you should post a message into Slack to let everyone know the call is over, and that they should continue discussion elsewhere.
+### 会議終了の通知
+インシデントコマンダーが会議を終了したら、Slackにメッセージを投稿して、会議が終了したこと、そして議論を他の場所で続けるべきことを全員に知らせる必要があります。
 
-> Call is over, thanks everyone. Follow up in Slack.
+> 会議は終了しました、皆さんありがとうございました。フォローアップはSlackで行ってください。
 
-Don't forget to also stop the status stalking.
+また、ステータスストーキングを停止することも忘れないでください。
 
 > !status unstalk

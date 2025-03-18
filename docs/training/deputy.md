@@ -1,42 +1,42 @@
 ---
 cover: assets/img/covers/deputy.png
-description: So you want to be a Deputy? You've come to the right place!
+description: 副指揮官になりたいですか？ここはそのための適切な場所です！
 ---
-So you want to be a Deputy? You've come to the right place!
+副指揮官になりたいですか？ここはそのための適切な場所です！
 
-## Purpose
-The purpose of the Deputy is to support the IC by keeping track of timers, notifying the IC of important information, and paging other people as directed by the IC.
+## 目的
+副指揮官の目的は、タイマーを管理し、重要な情報をインシデントコマンダーに通知し、インシデントコマンダーの指示に従って他の人々に連絡することで、インシデントコマンダーをサポートすることです。
 
-It's important for the IC to focus on the problem at hand, rather than worrying about monitoring timers. The deputy is there to help support the IC and keep them focused on the incident.
+インシデントコマンダーがタイマーの監視を心配するのではなく、目の前の問題に集中することが重要です。副指揮官はインシデントコマンダーをサポートし、インシデントに集中できるようにするために存在します。
 
-As a Deputy, you will be expected to take over command from the IC if they request it.
+副指揮官として、インシデントコマンダーから要請があった場合に指揮を引き継ぐことが期待されます。
 
-**You should not be performing any remediations, checking graphs, or investigating logs**. Those tasks will be delegated to the resolvers by the IC.
+**あなたは修復作業を行ったり、グラフを確認したり、ログを調査したりするべきではありません**。これらのタスクはインシデントコマンダーによって対応者に委任されます。
 
-## Prerequisites
-Before you can be a Deputy, it is expected that you meet the following criteria. Don't worry if you don't meet them all yet, you can still continue with training!
+## 前提条件
+副指揮官になる前に、以下の基準を満たしていることが期待されます。まだすべての基準を満たしていなくても心配いりません。トレーニングを続けることはできます！
 
-* Be trained as an [Incident Commander](../training/incident_commander.md).
+* [インシデントコマンダー](../training/incident_commander.md)としてのトレーニングを受けていること。
 
-## Responsibilities
-Read up on our [Different Roles for Incidents](../before/different_roles.md) to see what is expected from a Deputy, as well as what we expect from the other roles you'll be interacting with.
+## 責任
+[インシデントにおける様々な役割](../before/different_roles.md)を読んで、副指揮官に期待されることと、あなたが関わる他の役割に期待することを確認してください。
 
-## Training Process
-The training process for a Deputy is quite simple.
+## トレーニングプロセス
+副指揮官のトレーニングプロセスはとてもシンプルです。
 
-* Follow our [Incident Commander Training](../training/incident_commander.md).
-* Read this page.
+* [インシデントコマンダートレーニング](../training/incident_commander.md)に従ってください。
+* このページを読んでください。
 
-## Incident Call Procedures and Lingo
-The [Steps for Deputy](../during/during_an_incident.md) provide a detailed description of what you should be doing during an incident.
+## インシデント会議の手順と用語
+[副指揮官の手順](../during/during_an_incident.md)には、インシデント中にあなたがすべきことの詳細な説明が記載されています。
 
-Here are some examples of phrases and patterns you should use during incident calls.
+以下は、インシデント会議中に使用すべきフレーズとパターンの例です。
 
-### Alert IC to Timers
-You are expected to keep track of how long the incident has been running for, and provide callouts to the IC every 10 minutes so they can take actions such as increasing the severity, or asking Support to Tweet out. This is as simple as telling the IC on the call,
+### インシデントコマンダーにタイマーを通知する
+インシデントが発生してからの経過時間を追跡し、10分ごとにインシデントコマンダーに通知して、重大度の引き上げやサポートチームにTwitterでの発信を依頼するなどのアクションを取れるようにすることが期待されます。これは単に会議でインシデントコマンダーに伝えるだけです。
 
-> IC, be advised the incident is now at the 10 minute mark.
+> インシデントコマンダー、インシデントは現在10分経過していることをお知らせします。
 
-Similarly, when the IC asks for someone to get back to them in X minutes, you are expected to keep track of that. You should remind the IC when that time has been reached.
+同様に、インシデントコマンダーが誰かにX分後に報告するよう依頼した場合、あなたはその時間を追跡することが期待されます。その時間が経過したらインシデントコマンダーに通知してください。
 
-> IC, be advised the timer for [TEAM]'s investigation is up.
+> インシデントコマンダー、[チーム]の調査のタイマーが終了しました。

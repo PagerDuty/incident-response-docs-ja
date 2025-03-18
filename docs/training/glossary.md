@@ -1,38 +1,38 @@
 ---
 cover: assets/img/covers/definitions.png
-description: Ever wonder what all of those strange words you sometimes see in our documentation mean? This page is here to help.
+description: 私たちのドキュメントに時々出てくる奇妙な言葉の意味が気になりますか？このページがお役に立ちます。
 ---
-Ever wonder what all of those strange words you sometimes see in our documentation mean? This page is here to help.
+私たちのドキュメントに時々出てくる奇妙な言葉の意味が気になりますか？このページがお役に立ちます。
 
-### Incident Commander / IC
-The Incident Commander is the person responsible for bringing any major incident to resolution. They are the highest ranking individual on any major incident call, regardless of their day-to-day rank. Their decisions made as Incident Commander are final. [More info](../before/different_roles.md).
+### インシデントコマンダー / IC
+インシデントコマンダーは、重大なインシデントを解決に導く責任者です。彼らは日常的な役職に関係なく、重大なインシデント会議における最高位の個人です。インシデントコマンダーとしての決定は最終的なものです。[詳細情報](../before/different_roles.md)
 
-### Deputy
-Typically the backup IC. The deputy's job is to support the IC during the call, providing them with any help they need. [More info](../before/different_roles.md).
+### 副指揮官
+通常はバックアップのインシデントコマンダーです。副指揮官の仕事は、会議中にインシデントコマンダーをサポートし、必要な援助を提供することです。[詳細情報](../before/different_roles.md)
 
-### Scribe
-The Scribe's job is to keep a log of all activities performed during the call in a written chat log on Slack. [More info](../before/different_roles.md).
+### 書記官
+書記官の仕事は、会議中に実行されたすべての活動のログをSlackの文字チャットログに記録することです。[詳細情報](../before/different_roles.md)
 
-### Resolver
-A person on the incident call who is able to help resolve issues within a particular system. Also referred to as an SME (see below). [More info](../before/different_roles.md).
+### 対応者
+特定のシステムの問題を解決するのを手伝うことができるインシデント会議の参加者です。SME（以下参照）とも呼ばれます。[詳細情報](../before/different_roles.md)
 
 ### SME
-"Subject Matter Expert", someone who is an expert in a particular service or subject who can provide information to the IC, and perform resolution actions for a particular system. [More info](../before/different_roles.md).
+「Subject Matter Expert（主題専門家）」の略で、特定のサービスや主題の専門家であり、インシデントコマンダーに情報を提供し、特定のシステムの解決アクションを実行できる人です。[詳細情報](../before/different_roles.md)
 
-### Command Staff
-The Command Staff consists of the Incident Commander, Deputy, and Scribe.
+### コマンドスタッフ
+コマンドスタッフは、インシデントコマンダー、副指揮官、書記官で構成されています。
 
-### CAN Report
-CAN stands for "Conditions" "Actions" "Needs", if an IC asks you for a CAN report, you should provide the current state of your service (condition), what actions need to be taken to return it to a healthy state (actions), and what support you need in order to perform the actions (needs).
+### CANレポート
+CANは「Conditions（状況）」「Actions（アクション）」「Needs（ニーズ）」の略です。インシデントコマンダーがCANレポートを求めた場合、あなたはサービスの現在の状態（状況）、それを健全な状態に戻すために取るべきアクション（アクション）、そしてそのアクションを実行するために必要なサポート（ニーズ）を提供する必要があります。
 
-### Severity / Sev
-How severe the incident is. The "sev" of an incident determines the type of response we give. The higher the severity, the higher the likelihood of making risky actions to resolve the situation. [More info](../before/severity_levels.md).
+### 重大度 / Sev
+インシデントの深刻さを表します。インシデントの「sev（重大度）」によって、私たちが提供する対応の種類が決まります。重大度が高いほど、状況を解決するためにリスクの高いアクションを取る可能性が高くなります。[詳細情報](../before/severity_levels.md)
 
-### Span of Control
-Refers to the number of direct reports you have. For example, if the IC has 10 people as direct reports on a call, they have a large span of control. We aim to make the span of control as minimal as we can while still being productive.
+### 管理範囲
+直属の部下の数を指します。例えば、インシデントコマンダーが会議で10人を直接指揮している場合、管理範囲が大きいと言えます。私たちは生産性を維持しながらも、管理範囲をできるだけ最小限に抑えることを目指しています。
 
-### Grenade Thrower
-Someone who joins the call at a late time in the game, and provides information that completely derails the current thinking. They then leave almost immediately.
+### 手榴弾投げ
+会議の後半に参加し、現在の考え方を完全に脱線させる情報を提供する人のことです。そして、ほぼすぐに退席します。
 
-### Executive Swoop
-When an executive comes on the call and drops some sort of bombshell. A version of grenade throwing.
+### エグゼクティブスウープ
+幹部が会議に参加し、何らかの爆弾発言をすることです。手榴弾投げの一種です。

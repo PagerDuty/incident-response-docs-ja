@@ -3,32 +3,13 @@ cover: assets/img/covers/post-mortem_process.png
 description: すべての重大インシデント（SEV-2/1）に対し、私たちはポストモーテムを行います。他者を責めることなく、なにがうまくいかずインシデントが引き起こされたのかを正確に把握できる詳細な説明と、将来同じようなインシデントが発生するのを防ぐためのステップのリストを設けます。
 
 ---
-For every major incident (SEV-2/1), we need to follow up with a postmortem. A blame-free, detailed description, of exactly what went wrong in order to cause the incident, along with a list of steps to take in order to prevent a similar incident from occurring again in the future. The incident response process itself should also be included.
-
 私たちは、すべての重大インシデント（SEV-2/1）に対しポストモーテムを行います。他者を責めることなく、なにがうまくいかなくてインシデントが引き起こされたのかの詳細な説明と、将来同じようなインシデントが発生するのを防止するステップのリストを設けます。インシデント対応のプロセスそのものも、ポストモーテムの対象となります。
-
-!!! warning "Don't Neglect the Postmortem"
-    Don't make the mistake of neglecting a postmortem after an incident. Without a postmortem, you fail to recognize what you're doing right, where you could improve, and most importantly how to avoid making the same exact mistakes next time around. A well-designed, blameless postmortem allows teams to continuously learn and serves as a way to iteratively improve your infrastructure and incident response process.
 
 !!! warning "ポストモーテムを無視しないこと"
     インシデント後のポストモーテムを無視する失敗をしないようにしましょう。ポストモーテムなしでは、何がうまくできていて、どこに改善の余地があるか、そして何よりも次に同じ失敗をすることを避ける方法に気づけません。うまく設計され、他者を責めることにないポストモーテムを行えば、チームは継続的に学ぶことができ、インフラとインシデント対応プロセスを繰り返し改善することができます。
 
-## Owner Designation
-The first step is designating a postmortem owner. This is done by the IC either at the end of a major incident call or very shortly after. You will be notified directly by the IC if you are the owner for the postmortem. The owner is responsible for populating the postmortem, looking up logs, managing the follow-up investigation, and keeping all interested parties in the loop. Please use Slack for coordinating follow-up. A detailed list of the steps is available below:
-
 ## オーナーの決定
 最初のステップは、ポストモーテムのオーナーを決めることです。オーナーの指名はインシデントコマンダーによって、重大インシデント会議の終わりまたは終了後まもなく行われます。あなたがポストモーテムのオーナーになる場合は、直接インシデントコマンダーから伝えられます。オーナーはポストモーテムを実行し、ログを調べ、事後調査を管理し、関係者全員へ連絡が行き届く状態にします。フォローアップにはSlackを活用してください。以下に詳細なステップを示します：
-
-## Owner Responsibilities
-As owner of a postmortem, you are responsible for the following,
-
-* Scheduling the postmortem meeting (on the shared calendar) and inviting the relevant people (this should be **scheduled within 3 calendar days** for a SEV-1 and **5 business days** for a SEV-2).
-* Investigating the incident and pulling in whomever you need from other teams to assist in the investigation.
-* Updating the page with all of the necessary content.
-* Creating follow-up JIRA tickets (_You are only responsible for creating the tickets, not following them up to resolution_).
-* Reviewing the postmortem content with appropriate parties before the meeting.
-* Running through the topics at the postmortem meeting (the IC will "run" the meeting and keep the discussion on track, but you will likely be doing most of the talking).
-* Communicating the results of the postmortem internally.
 
 ## オーナーの責務
 ポストモーテムのオーナーとして、あなたは以下のことに責任を持ちます。
@@ -41,16 +22,6 @@ As owner of a postmortem, you are responsible for the following,
 * ポストモーテムのミーティングで議題を取り上げていきます。（インシデントコマンダーはミーティングを「実行」して議論が軌道に乗るようにしますが、大半の話はあなたからすることになるでしょう）
 * ポストモーテムの結果を社内に展開します。
 
-## Status Descriptions
-Our postmortems have a "Status" field which indicates where in our process the postmortem currently is. Here's a description of the values and how we use them.
-
-| Status | Description |
-|-|-|
-| **Draft** | Indicates that the content of the postmortem is still being worked on. |
-| **In Review** | The content of the postmortem has been completed, and is ready to be reviewed during the postmortem meeting. |
-| **Reviewed** | The meeting is over and the content has been reviewed and agreed upon.<br/>If there is an "External Message," the Customer Support team will take the message and update our status page as appropriate. |
-| **Closed** | No further actions are needed on the postmortem (outstanding issues are tracked in JIRA).<br/>If no "External Message," you can skip straight to this once the meeting is over.<br/>If there's an "External Message", then the Support team will update it to this status once the message is posted. |
-
 ## ステータスの記述
 私たちのポストモーテムには「ステータス」のフィールドがあり、現在ポストモーテムがプロセスのどの段階にあるのかを示します。以下に、各ステータスの意味と使い方を示します。
 
@@ -59,8 +30,7 @@ Our postmortems have a "Status" field which indicates where in our process the p
 | **下書き（Draft）** | ポストモーテムの内容が現在も作成中であることを示します。 |
 | **レビュー中（In Review）** | ポストモーテムの内容が作成済で、ポストモーテムのミーティングでレビューする準備ができています。 |
 | **レビュー済（Reviewed）** | ミーティングが終了し、内容がレビューされ同意済の状態です。<br/>もし「対外的なメッセージ」があれば、カスタマーサポートチームがメッセージを受けてステータスページを適切にアップデートします。 |
-| **クローズ（Closed）** | ポストもーてむでこれ以上のアクションは必要とされていません。（未完了の問題はJIRAでトラックされている状態です）<br/>「対外的なメッセージ」がなければ、ミーティングが終わりしだい「クローズ」にして構いません。<br/>もし「対外的なメッセージ」がある場合は、サポートチームがメッセージを投稿した後に「クローズ」にアップデートします。
-
+| **クローズ（Closed）** | ポストモーテムにおいて、これ以上のアクションは必要とされていません。（未完了の問題はJIRAでトラックされている状態です）<br/>「対外的なメッセージ」がなければ、ミーティングが終わりしだい「クローズ」にして構いません。<br/>もし「対外的なメッセージ」がある場合は、サポートチームがメッセージを投稿した後に「クローズ」にアップデートします。
 
 ## Postmortem
 Once you've been designated as the owner of a postmortem, you should start creating one and updating it with all the relevant information.
@@ -69,6 +39,52 @@ Once you've been designated as the owner of a postmortem, you should start creat
 
 1. Schedule a postmortem meeting for within **3 calendar days** for a SEV-1 and **5 business days** for a SEV-2. You should schedule this before filling in the postmortem, just so it's on the calendar.
     * Create the meeting on the "Incident Postmortem Meetings" shared calendar.
+
+1. Begin populating the page with all of the information you have.
+    * The timeline should be the main focus to begin with.
+        * The timeline should include important changes in status/impact and key actions taken by responders.
+    * Go through the history in Slack to identify the responders and add them to the page.
+        * Identify the Incident Commander and Scribe in this list.
+
+1. Populate the postmortem with more detailed information.
+    * For each item in the timeline, identify a metric, or some third-party page where the data came from. This could be a link to a Datadog graph, a SumoLogic search, a tweet, etc. Anything which shows the data point you're trying to illustrate in the timeline.
+    * Add a link to the incident call recording.
+
+1. Perform an analysis of the incident.
+    * Capture all available data regarding the incident. What caused it, how many customers were affected, etc.
+        * Any commands or queries you use to look up data should be posted in the page so others can see how the data was gathered.
+    * Capture the impact to customers (generally in terms of event submission, delayed processing, and slow notification delivery)
+    * Identify the underlying cause of the incident (what happened and _why_ did it happen).
+
+1. Write the external message that will be sent to customers. This will be reviewed during the postmortem meeting before it is sent out.
+    * Avoid using the word "outage" unless it really was a full outage, use the word "incident" or "service degradation" instead. Customers generally see "outage" and assume the worst.
+    * Look at other examples of previous postmortems to see the kind of thing you should send.
+
+1. Post a link to the postmortem into Slack to be reviewed for style and content by internal parties, you should try to do this about **24 hours before** the meeting is scheduled.
+    * Experienced postmortem writers will give you feedback on the level of detail and content of the postmortem. This avoids wasted time during the meeting.
+
+1. Attend the postmortem meeting (see below section for more information).
+
+1. Create any follow-up action JIRA tickets (or note down topics for discussion if we need to decide on a direction to go before creating tickets),
+    * Go through the history in Slack to identify any TODO items.
+    * Label all tickets with their severity level and date tags.
+    * Any actions which can reduce reoccurrence of the incident.
+        * (There may be some trade-off here, and that's fine. Sometimes the ROI isn't worth the effort that would go into it).
+    * Identify any actions which can make our incident response process better.
+    * Be careful with creating too many tickets. Generally we only want to create things that are P0/P1's. Things that absolutely should be dealt with.
+
+1. Communicate internally so we can learn from the incident.
+    * Send out an internal email to the relevant stakeholders describing the results and key learnings.
+    * Include a link to the postmortem.
+
+## ポストモーテム
+ポストモーテムのオーナーとして指名されたら、文書の作成を開始し関連情報で更新していく必要があります。
+
+1. （もしインシデントコマンダーがまだ実施していなければ）対象インシデント向けに新しいポストモーテムを作成します。
+
+1. ポストモーテムのミーティングを、SEV-1の場合は3日以内に、SEV-2の場合は5営業日以内に設定します。カレンダー上の話ですから、スケジュール設定はポストモーテムを書き終わる前にやっておきましょう。
+    * 共有カレンダー「インシデントポストモーテムミーティング（Incident Postmortem Meetings）」上にミーティングを作成しましょう。
+
 
 1. Begin populating the page with all of the information you have.
     * The timeline should be the main focus to begin with.
@@ -134,8 +150,8 @@ A general agenda for the meeting would be something like,
 1. Discuss customer impact. Any comments from customers, etc.
 1. Review action items that have been created, discuss if appropriate, or if more are needed, etc.
 
-## Examples
-Here are some examples of postmortems from other companies as a reference,
+## 実例
+以下に、他社が実施しているポストモーテムを実施している実例を挙げます：
 
 * [LastPass](https://blog.lastpass.com/2015/06/lastpass-security-notice/)
 * [AWS](https://aws.amazon.com/message/5467D2/)
@@ -145,7 +161,7 @@ Here are some examples of postmortems from other companies as a reference,
 * [GOV.UK Rail Accident Investigation](https://www.gov.uk/government/publications/kyle-beck-safety-digest/near-miss-at-kyle-beck-3-august-2016)
 * [A List of Postmortems!](https://github.com/danluu/post-mortems)
 
-## Useful Resources
+## 参考情報
 
 * [Advanced PostMortem Fu and Human Error 101 (Velocity 2011)](https://www.slideshare.net/jallspaw/advanced-postmortem-fu-and-human-error-101-velocity-2011)
 * [Blame. Language. Sharing.](https://fractio.nl/2015/10/30/blame-language-sharing/)

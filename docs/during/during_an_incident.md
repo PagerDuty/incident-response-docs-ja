@@ -24,7 +24,8 @@ cover: assets/img/covers/dont\_panic.png description:重大インシデント発
       </tbody>
     </table>
 
-!!! 警告 "セキュリティインシデント?"これがセキュリティインシデントである場合、[Security Incident Response](../during/security_incident_response.md)プロセスに従う必要があります。
+!!! warning "セキュリティインシデント？"
+    これがセキュリティインシデントである場合、[Security Incident Response](../during/security_incident_response.md)プロセスに従う必要があります。
 
 ## 落ち着いて!
 

@@ -2,7 +2,7 @@
 cover: assets/img/covers/customer_liaison.png
 description: So you want to be a customer liaison? You've come to the right place!
 ---
-So you want to be a Customer Liaison? You've come to the right place!
+カスタマーリエゾンになりたいですか？ ここはそのための適切な場所です！
 
 ## 目的
 
@@ -12,56 +12,56 @@ So you want to be a Customer Liaison? You've come to the right place!
 
 カスタマーリエゾンとしてのあなたの仕事は、通話を聞き、インシデントのSlackルームを監視し、入ってくるカスタマーサポートリクエストを追跡し、何が起こっているのか、インシデントがどの程度進行しているのか（まだ調査中か、解決間近か）を把握することです。インシデントコマンダーは、顧客にインシデントを通知し、通話中のさまざまな時点で最新情報を提供するよう指示します。あなたはメッセージを作成し、ICの承認を得て、そのメッセージを顧客に広める必要がある。
 
-## Prerequisites
-Before you can be a Customer Liaison, it is expected that you meet the following criteria. Don't worry if you don't meet them all yet, you can still continue with training!
+## 前提条件
+カスタマーリエゾンになる前に、以下の基準を満たしていることが期待されます。まだすべての基準を満たしていなくても心配いりません。トレーニングを続けることはできます！
 
-* Excellent verbal and written **communication skills**.
-* Be a member of the **Customer Support team**, or have had customer support training.
+* 優れた口頭および文書による**コミュニケーションスキル**
+* **カスタマーサポートチーム**のメンバーであるか、カスタマーサポートのトレーニングを受けていること
 
-## Responsibilities
-Read up on our [Different Roles for Incidents](../before/different_roles.md) to see what is expected from a Customer Liaison, as well as what we expect from the other roles you'll be interacting with.
+## 責任
+[インシデントにおける様々な役割](../before/different_roles.md)を読んで、カスタマーリエゾンに期待されることと、あなたが関わる他の役割に期待することを確認してください。
 
-## Training Process
-There is no formal training process for this role, you should feel free to contact our Customer Support team to learn more.
+## トレーニングプロセス
+この役割に対する正式なトレーニングプロセスはありません。詳しく知りたい場合は、お気軽にカスタマーサポートチームにお問い合わせください。
 
-## Customer Liaison
-The objective of a Customer Liaison is to keep our customers informed during an incident as to what is happening, and to act as a voice for our customers to the Incident Commander. It is important for customers to have visibility into how they are impacted by an incident we are having, and to have insight into the fact that the problem is actively being worked on. Crafting a public message for customers is tricky, especially on platforms such as Twitter where the number of characters you can use are limited. But here are some general tips for crafting a public message,
+## カスタマーリエゾン
+カスタマーリエゾンの目的は、インシデント発生時に何が起きているのかをお客様に知らせ続け、インシデントコマンダーに対してお客様の声を代弁することです。お客様にとって、インシデントによってどのような影響を受けているのか、また問題が積極的に対処されているという事実を把握できることが重要です。お客様向けの公開メッセージを作成することは難しく、特にTwitterのような文字数が制限されているプラットフォームではより困難です。しかし、以下に公開メッセージを作成するための一般的なヒントを示します：
 
-* Prepare a default message in advance.
-    * One that can be used for the initial update if the scope of the issue is unknown.
-* Be honest.
-    * Never lie, and never guess. Work with the incident commander if you are unsure as to what is actually happening.
-    * Provide transparent information to customers. If we are dropping the ball, be upfront about it.
-* Describe our progress in resolving the incident.
-    * _"We are aware of an incident..."_
-    * _"We are investigating delayed notifications..."_
-    * _"A fix has been applied and is currently being deployed..."_
-    * _"The issue has been resolved..."_
-* Be clear about how the incident is affecting customers. This is the primary piece of information customers will care about.
-    * Are notifications delayed? Is the website loading slowly but still working?
-* Provide any workarounds customers can use until the incident is resolved.
-* <span class="icon bad"></span>  Don't estimate resolution times.
-    * Never say something like _"We expect this incident to be resolved in 10 minutes"_. Something else could happen, and customers get angry when you set an expectation you can't keep.
-* <span class="icon bad"></span>  Don't provide **too much** detail.
-    * Customers don't care if `application-server-123` is having issues, they care that they are not getting notifications. Make sure the information you provide is relevant and not just noise.
+* デフォルトメッセージを事前に準備しておく
+    * 問題の範囲が不明な場合に、最初の更新で使用できるメッセージを用意する
+* 正直であること
+    * 嘘をつかず、推測もしない。実際に何が起きているのか不確かな場合は、インシデントコマンダーと協力して確認する
+    * お客様に透明性のある情報を提供する。もし対応に手間取っている場合は、それを率直に伝える
+* インシデント解決の進捗状況を説明する
+    * _「インシデントを認識しています...」_
+    * _「通知の遅延について調査中です...」_
+    * _「修正が適用され、現在デプロイ中です...」_
+    * _「問題は解決されました...」_
+* インシデントがお客様にどのような影響を与えているのかを明確にする。これはお客様が最も気にする重要な情報です
+    * 通知が遅延していますか？ウェブサイトの読み込みは遅いですが動作していますか？
+* インシデントが解決するまでの間、お客様が使用できる回避策を提供する
+* <span class="icon bad"></span>  解決時間の見積もりは提示しない
+    * _「このインシデントは10分以内に解決される見込みです」_のような発言は避ける。予期せぬことが起こる可能性があり、守れない期待を設定するとお客様は怒りを感じます
+* <span class="icon bad"></span>  **過度に**詳細な情報は提供しない
+    * お客様は`application-server-123`に問題があることは気にしません。通知が届かないことを気にします。提供する情報が関連性があり、ノイズではないことを確認してください
 
-## Incident Call Procedures and Lingo
-The [Steps for Customer Liaison](../during/during_an_incident.md) provide a detailed description of what you should be doing during an incident.
+## インシデント会議の手順と用語
+[カスタマーリエゾンの手順](../during/during_an_incident.md)には、インシデント中にあなたがすべきことの詳細な説明が記載されています。
 
-Here are some examples of phrases and patterns you should use during incident calls.
+以下は、インシデント会議中に使用すべきフレーズとパターンの例です。
 
-### Gaining Message Approval
-After you have crafted the public message, you should gain approval from the IC before posting it publicly. Simply copy the message into Slack and wait for verbal/written confirmation from the IC before proceeding.
+### メッセージの承認を得る
+公開メッセージを作成した後、公開する前にICの承認を得る必要があります。メッセージをSlackにコピーし、ICから口頭または文書による確認を得てから進めてください。
 
-> (You) Message for customers: "We are currently experiencing delayed notifications and are actively investigating the issue."
+> (あなた) お客様向けメッセージ：「現在、通知の遅延が発生しており、積極的に調査を行っています。」
 
-> (IC): Looks good, go ahead and post.
+> (IC): 良いですね、投稿してください。
 
-It's important to get sign-off from the IC before posting as the nature of the incident may have changed while you were crafting the message, and new information might now be known and need to be included.
+メッセージを作成している間にインシデントの性質が変わっている可能性があり、新しい情報が判明して含める必要があるかもしれないため、投稿前にICの承認を得ることが重要です。
 
-### Notification of Customer Response
-You may be receiving calls and emails from customers during the incident. This provides useful context for the Incident Commander, as it gives an indication of the scope of the incident. You should keep the IC apprised of any relevant information from customers.
+### お客様の反応の通知
+インシデント中、お客様からの電話やメールを受け取ることがあります。これはインシデントの範囲を示す指標となるため、インシデントコマンダーにとって有用な文脈を提供します。お客様からの関連情報は、ICに常に報告する必要があります。
 
-> We've had 6 customers call so far and say they haven't received notifications for the last several minutes.
+> これまでに6人のお客様から、ここ数分間通知を受け取っていないという連絡がありました。
 
-This can provide the IC with information which affects which areas we investigate first, or an indication of how the incident is progressing.
+これにより、ICは最初に調査すべき領域に影響を与える情報や、インシデントの進行状況の指標を得ることができます。

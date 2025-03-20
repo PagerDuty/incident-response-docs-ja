@@ -32,123 +32,77 @@ description: すべての重大インシデント（SEV-2/1）に対し、私た
 | **レビュー済（Reviewed）** | ミーティングが終了し、内容がレビューされ同意済の状態です。<br/>もし「対外的なメッセージ」があれば、カスタマーサポートチームがメッセージを受けてステータスページを適切にアップデートします。 |
 | **クローズ（Closed）** | ポストモーテムにおいて、これ以上のアクションは必要とされていません。（未完了の問題はJIRAでトラックされている状態です）<br/>「対外的なメッセージ」がなければ、ミーティングが終わりしだい「クローズ」にして構いません。<br/>もし「対外的なメッセージ」がある場合は、サポートチームがメッセージを投稿した後に「クローズ」にアップデートします。
 
-## Postmortem
-Once you've been designated as the owner of a postmortem, you should start creating one and updating it with all the relevant information.
-
-1. (If not already done by the IC) Create a new postmortem for the incident.
-
-1. Schedule a postmortem meeting for within **3 calendar days** for a SEV-1 and **5 business days** for a SEV-2. You should schedule this before filling in the postmortem, just so it's on the calendar.
-    * Create the meeting on the "Incident Postmortem Meetings" shared calendar.
-
-1. Begin populating the page with all of the information you have.
-    * The timeline should be the main focus to begin with.
-        * The timeline should include important changes in status/impact and key actions taken by responders.
-    * Go through the history in Slack to identify the responders and add them to the page.
-        * Identify the Incident Commander and Scribe in this list.
-
-1. Populate the postmortem with more detailed information.
-    * For each item in the timeline, identify a metric, or some third-party page where the data came from. This could be a link to a Datadog graph, a SumoLogic search, a tweet, etc. Anything which shows the data point you're trying to illustrate in the timeline.
-    * Add a link to the incident call recording.
-
-1. Perform an analysis of the incident.
-    * Capture all available data regarding the incident. What caused it, how many customers were affected, etc.
-        * Any commands or queries you use to look up data should be posted in the page so others can see how the data was gathered.
-    * Capture the impact to customers (generally in terms of event submission, delayed processing, and slow notification delivery)
-    * Identify the underlying cause of the incident (what happened and _why_ did it happen).
-
-1. Write the external message that will be sent to customers. This will be reviewed during the postmortem meeting before it is sent out.
-    * Avoid using the word "outage" unless it really was a full outage, use the word "incident" or "service degradation" instead. Customers generally see "outage" and assume the worst.
-    * Look at other examples of previous postmortems to see the kind of thing you should send.
-
-1. Post a link to the postmortem into Slack to be reviewed for style and content by internal parties, you should try to do this about **24 hours before** the meeting is scheduled.
-    * Experienced postmortem writers will give you feedback on the level of detail and content of the postmortem. This avoids wasted time during the meeting.
-
-1. Attend the postmortem meeting (see below section for more information).
-
-1. Create any follow-up action JIRA tickets (or note down topics for discussion if we need to decide on a direction to go before creating tickets),
-    * Go through the history in Slack to identify any TODO items.
-    * Label all tickets with their severity level and date tags.
-    * Any actions which can reduce reoccurrence of the incident.
-        * (There may be some trade-off here, and that's fine. Sometimes the ROI isn't worth the effort that would go into it).
-    * Identify any actions which can make our incident response process better.
-    * Be careful with creating too many tickets. Generally we only want to create things that are P0/P1's. Things that absolutely should be dealt with.
-
-1. Communicate internally so we can learn from the incident.
-    * Send out an internal email to the relevant stakeholders describing the results and key learnings.
-    * Include a link to the postmortem.
-
 ## ポストモーテム
-ポストモーテムのオーナーとして指名されたら、文書の作成を開始し関連情報で更新していく必要があります。
+ポストモーテムのオーナーとして指名されたら、文書の作成を開始し、関連情報を更新していく必要があります。
 
 1. （もしインシデントコマンダーがまだ実施していなければ）対象インシデント向けに新しいポストモーテムを作成します。
 
 1. ポストモーテムのミーティングを、SEV-1の場合は3日以内に、SEV-2の場合は5営業日以内に設定します。カレンダー上の話ですから、スケジュール設定はポストモーテムを書き終わる前にやっておきましょう。
     * 共有カレンダー「インシデントポストモーテムミーティング（Incident Postmortem Meetings）」上にミーティングを作成しましょう。
 
+1. 持っている情報すべてをページに書き出し始めましょう。
+    * まずはタイムラインに注力しましょう。
+        * タイムラインには、ステータスや影響における重要な変化、そして対応者によって行われた重要なアクションを含めましょう。
+    * Slackの履歴に目を通して対応者を特定し、ページに追加します。
+        * リストの中で、インシデントコマンダーと書記官を明らかにしましょう。
 
-1. Begin populating the page with all of the information you have.
-    * The timeline should be the main focus to begin with.
-        * The timeline should include important changes in status/impact and key actions taken by responders.
-    * Go through the history in Slack to identify the responders and add them to the page.
-        * Identify the Incident Commander and Scribe in this list.
+1. ポストモーテムへさらに詳細な情報を記載しましょう。
+    * タイムラインにおける各項目において、指標を特定するか、データの発生元であるサードパーティのページを明記しましょう。実際にはDatadogへのグラフ、SumoLogicの検索、Xのポストなどといったものが考えられます。タイムライン上で描こうとしているデータポイントを示すものであれば、なんでも構いません。
+    * インシデント会議のレコーディングへのリンクを追加します。
 
-1. Populate the postmortem with more detailed information.
-    * For each item in the timeline, identify a metric, or some third-party page where the data came from. This could be a link to a Datadog graph, a SumoLogic search, a tweet, etc. Anything which shows the data point you're trying to illustrate in the timeline.
-    * Add a link to the incident call recording.
+1. インシデントの分析を行いましょう。
+    * インシデントに関するあらゆる情報を収集しましょう。何がインシデントを引き起こし、どのくらいの顧客が影響を受けたかといった情報です。
+        * データを調べるために実行したコマンドやクエリがページに記載され、どうやってデータが集められたのか他の人たちが見られるようにします。
+    * 顧客への影響を把握しましょう。（一般的にはイベントの送信、処理の遅れ、通知の遅延などです）
+    * インシデント発生の根底にあった原因を特定しましょう。なにが起きたのかに加えて _なぜ_ 起きたのかが大切です。
 
-1. Perform an analysis of the incident.
-    * Capture all available data regarding the incident. What caused it, how many customers were affected, etc.
-        * Any commands or queries you use to look up data should be posted in the page so others can see how the data was gathered.
-    * Capture the impact to customers (generally in terms of event submission, delayed processing, and slow notification delivery)
-    * Identify the underlying cause of the incident (what happened and _why_ did it happen).
+1. 顧客向けに送信される対外メッセージを書きましょう。これは送信前にポストモーテムミーティング中にレビューされます。
+    * 本当に全面停止が発生していないかぎり「機能停止（outage）」という言葉の使用は避け、「インシデント（incident）」または「サービス低下（service degradation）」を使いましょう。顧客は「機能停止」を目にすると最悪のケースを想定します。
+    * 以前のポストモーテムの例を参照し、どのようなものを送信すべきかを見てみましょう。
 
-1. Write the external message that will be sent to customers. This will be reviewed during the postmortem meeting before it is sent out.
-    * Avoid using the word "outage" unless it really was a full outage, use the word "incident" or "service degradation" instead. Customers generally see "outage" and assume the worst.
-    * Look at other examples of previous postmortems to see the kind of thing you should send.
+1. ポストモーテムへのリンクをSlackに投稿し、文体や内容を内部関係者にレビューしてもらいます。ミーティング予定の24時間前にできるとよいでしょう。
+    * 経験あるポストモーテムの執筆者は、ポストモーテムの詳細レベルや内容についてフィードバックしてくれるでしょう。これにより、ミーティング中の時間の無駄を防ぐことができます。
 
-1. Post a link to the postmortem into Slack to be reviewed for style and content by internal parties, you should try to do this about **24 hours before** the meeting is scheduled.
-    * Experienced postmortem writers will give you feedback on the level of detail and content of the postmortem. This avoids wasted time during the meeting.
+1. ポストモーテムミーティングに参加します。（詳しくは下のセクションを参照してください）
 
-1. Attend the postmortem meeting (see below section for more information).
+1. フォローアップアクション用のJIRAチケットを作成します。（または、チケットを作成する前に方向性を決定する必要がある場合は、ディスカッションのトピックを書き出しましょう）
+    * Slackの履歴を見て、TODO項目になりそうなものを特定します。
+    * すべてのチケットに重大度レベルと日付のタグを付与します。
+    * あらゆるアクションはインシデントの再発を減らす可能性があるものです。
+        * ある程度のトレードオフがあるかもしれませんが、構いません。その労力にROIが見合わない場合もあります。
+    * インシデント対応をよりよいものにするであろうアクションを特定します。
+    * チケットを作りすぎないように注意してください。通常、私たちが作成対象とするのは、確実に取り組む必要があるP0やP1のもののみです。
 
-1. Create any follow-up action JIRA tickets (or note down topics for discussion if we need to decide on a direction to go before creating tickets),
-    * Go through the history in Slack to identify any TODO items.
-    * Label all tickets with their severity level and date tags.
-    * Any actions which can reduce reoccurrence of the incident.
-        * (There may be some trade-off here, and that's fine. Sometimes the ROI isn't worth the effort that would go into it).
-    * Identify any actions which can make our incident response process better.
-    * Be careful with creating too many tickets. Generally we only want to create things that are P0/P1's. Things that absolutely should be dealt with.
+1. インシデントから学べるよう、内部でのコミュニケーションを取ります。
+    * 結果と重要な学びを記述して内部の関係者向けにメールします。
+    * ポストモーテムへのリンクを記載しましょう。
 
-1. Communicate internally so we can learn from the incident.
-    * Send out an internal email to the relevant stakeholders describing the results and key learnings.
-    * Include a link to the postmortem.
+## ポストモーテムミーティング
+ミーティングは通常15分から30分くらいで、ポストモーテムプロセスを締めくくる意図で行われます。なにが起きたのか、もっと上手くできる余地のあったことはなにか、そして必要なフォローアップアクションを議論する必要があります。事実や分析、推奨されるアクションに齟齬がないかを洗い出し、信頼性の問題を引き起こしている問題に対するより広範な認識を得ることが目的です。
 
-## Postmortem Meeting
-These meetings should generally last 15-30 minutes and are intended to be a wrap up of the postmortem process. We should discuss what happened, what we could've done better, and any follow-up actions that we need to take. The goal is to suss out any disagreement on the facts, analysis, or recommended actions, and to get some wider awareness of the problems that are causing reliability issues for us.
+ポストモーテムミーティングには、以下の人たちを招待しましょう。
 
-You should invite the following people to the postmortem meeting,
+* 必須
+    * インシデントコマンダー
+    * インシデントコマンダーをシャドーイングしていた人（もしいれば）
+    * インシデントに関与したサービスオーナー。
+    * インシデントに関与した主要なエンジニアや対応者
+    * 影響を受けたシステムのエンジニアリングマネージャー
+    * 影響を受けたシステムのプロダクトマネージャー
+* 任意
+    * カスタマーリエゾン（SEV-1のインシデントのみ）
 
-* Always
-    * The Incident Commander.
-    * The Incident Commander Shadowee (if there was one).
-    * Service owners involved in the incident.
-    * Key engineer(s)/responders involved in the incident.
-    * Engineering manager for impacted systems.
-    * Product manager for impacted systems.
-* Optional
-    * Customer Liaison. (Only SEV-1 incidents)
+インシデントコマンダーはミーティングを進行し、議論の焦点がブレることなく軌道に乗るようにします。ただし、ポストモーテムのレポートを説明するため、大部分の話はポストモーテムのオーナーがすることになるでしょう。
 
-The Incident Commander will run the meeting, keeping the discussion focused and on track. However the postmortem owner will likely be doing most of the talking as they walk through the postmortem report.
+一般的なアジェンダは以下のようなものです。
 
-A general agenda for the meeting would be something like,
-
-1. Recap the timeline, to make sure everyone agrees and is on the same page.
-1. Recap important points, and any unusual items.
-1. Discuss how the problem could've been caught.
-    * Did it show up in [canary](https://www.pagerduty.com/blog/continuous-build-break-fix-fast#canary-releases)?
-    * Could it have been caught in tests, or loadtest environment?
-1. Discuss customer impact. Any comments from customers, etc.
-1. Review action items that have been created, discuss if appropriate, or if more are needed, etc.
+1. タイムラインを総括し、全員が合意のうえ同じ認識を持っていることを確認します。
+1. 重要なポイントや、通常と異なるような項目をまとめます。
+1. 問題をどのように発見できたかを議論します。
+    * 問題は [canary](https://www.pagerduty.com/blog/continuous-build-break-fix-fast#canary-releases) で顕在化しましたか？
+    * テストや、負荷テスト環境で発見できた可能性のあるものですか？
+1. 顧客影響を議論します。顧客からのコメントがあれば、それも含めましょう。
+1. 作成されたアクションアイテムをレビューし、それが適切か、あるいは他のアクションも必要かを議論します。
 
 ## 実例
 以下に、他社が実施しているポストモーテムを実施している実例を挙げます：

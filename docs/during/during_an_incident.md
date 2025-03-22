@@ -1,11 +1,10 @@
 ---
-cover: assets/img/covers/dont_panic.png
-description: Information on what to do during a major incident.
+cover: assets/img/covers/dont\_panic.png description:重大インシデント発生時の対処方法に関する情報。
 ---
-Information on what to do during a major incident. See our [severity level descriptions](../before/severity_levels.md) for what constitutes a major incident.
+重大インシデント発生時の対処方法に関する情報。重大インシデントの構成については、[重大度レベルの説明](../before/severity_levels.md)を参照してください。
 
-!!! note "Documentation"
-    For your own internal documentation, you should make sure that this page has all of the necessary information prominently displayed. Such as: phone bridge numbers, Slack rooms, important chat commands, etc. Here is an example,
+!!! note ”ドキュメンテーション"
+    ご自身の内部ドキュメントとして利用される場合は、このページに必要な情報がすべて網羅されていることを確認してください。たとえば、電話会議の番号、Slackチャンネル、重要なチャットコマンドなどです。次に例を示します。
 
     <table class="custom-table" id="contact-summary">
       <thead>
@@ -14,119 +13,119 @@ Information on what to do during a major incident. See our [severity level descr
         <tr>
           <td><a href="#">#incident-chat</a></td>
           <td><a href="#">https://a-voip-provider.com/incident-call</a></td>
-          <td><a href="#">+1 555 BIG FIRE</a> (+1 555 244 3473) / PIN: 123456</td>
+          <td><a href="#">+1 555 BIG FIRE</a> (+1 555 244 3473) / PIN:123456</td>
         </tr>
         <tr>
-          <td colspan="3" class="centered">Need an IC? Do <code>!ic page</code> in Slack</td>
+          <td colspan="3" class="centered">インシデントコマンダーに連絡しますか？ コマンド <code>!ic page</code> をSlack上で実行してください</td>
         </tr>
         <tr>
-          <td colspan="3"><em>For executive summary updates only, join <a href="#">#executive-summary-updates</a>.</em></td>
+          &quot= "3"<><em>エグゼクティブサマリー更新のみ、join<hra="#">#エグゼクティブサマリー更新</a>/em></td>/td>/
         </tr>
       </tbody>
     </table>
 
-!!! warning "Security Incident?"
-    If this is a security incident, you should follow the [Security Incident Response](../during/security_incident_response.md) process.
+!!! warning "セキュリティインシデント？"
+    これがセキュリティインシデントである場合、[Security Incident Response](../during/security_incident_response.md)プロセスに従う必要があります。
 
-## Don't Panic!
+## 落ち着いて!
 
-1. Join the incident call and chat (see links above).
-    * Anyone is free to join the call or chat to observe and follow along with the incident.
-    * If you wish to participate however, you should join both. If you can't join the call for some reason, you should have a dedicated proxy for the call. Disjointed discussions in the chat room are ultimately distracting.
+1. インシデントコールとチャットに参加します(上記のリンクを参照)。
+    * だれでも、電話やチャットに参加して、インシデントを観察し、フォローすることができます。
+    * しかし、積極関与を希望する場合は、両方に参加する必要があります。何らかの理由でコールに参加できない場合は、専属の代理人が必要です。チャットルームでの分裂した話し合いは、最終的にはまとまりがなくなることがほとんどです。
 
-1. Follow along with the call/chat and add any comments you feel are appropriate, but keep the discussion relevant to the problem at hand.
-    * If you are not an SME, try to filter any discussion through the primary SME for your service. Too many people discussing at once can become overwhelming, so we should try to maintain a hierarchical structure to the call if possible.
+1. 通話/チャットと一緒にフォローし、適切と感じるコメントを追加しますが、問題に関連する議論は手元に残しておきます。
+    * 中小企業でない場合は、サービスの主要な中小企業を通じて、議論を絞り込んでみてください。一度に話し合う人が多すぎると、収拾がつかなくなる可能性があるので、可能であれば、呼び出しの階層構造を維持するようにする必要があります。
 
-1. Follow instructions from the Incident Commander.
-    * **Is there no IC on the call?**
-        * Manually page them via Slack, with `!ic page` in Slack. This will page the primary and backup IC's at the same time.
-        * Never hesitate to page the IC. It's much better to have them and not need them than the other way around.
+1. インシデントコマンダー(* IC)の指示に従います。
+    * **会議にインシデントコマンダーがいませんか?**
+        * Slackコマンド`!ic page` を使用して、Slack 経由で手動でページ化します。これにより、プライマリIC とバックアップIC が同時に呼び出されます。
+        * 決してインシデントコマンダーのページを見ないでください。持っているが実際にはそれを必要としない方が、他の方法よりはるかにましです。
 
-## Steps for Incident Commander
-Resolve the incident as quickly and as safely as possible, use the Deputy to assist you. Delegate any tasks to relevant experts at your discretion.
+## インシデントコマンダーの手順
+できるだけ早く、できるだけ安全に、インシデントを解決し、副担当者を使って支援してください。貴社の裁量により、関連する各担当者にタスクを委任します。
 
-1. Announce on the call and in Slack that you are the incident commander, who you have designated as deputy (usually the backup IC), and scribe.
+1. 電話とSlackで、あなたが事件の司令塔であり、あなたが代理(通常はバックアップIC)に指定し、書記をしていることをお知らせします。
 
-1. Identify if there is an obvious cause to the incident (recent deployment, spike in traffic, etc.), delegate investigation to relevant experts,
-    * Use the service experts on the call to assist in the analysis. They should be able to quickly provide confirmation of the cause, but not always. It's the call of the IC on how to proceed in cases where the cause is not positively known. Confer with service owners and use their knowledge to help you.
+1. 事件の明らかな原因(最近の展開、トラフィックの急増など)があるかどうかを特定し、関連する専門家に調査を委託する。
+    * コールのサービスエキスパートを使用して、分析を支援します。彼らは原因の確認を迅速に提供できるはずだが、必ずしもそうではない。原因が明確に分からない場合の進め方については、インシデントコマンダーに尋ねましょう。知見を持っているサービスオーナーの助けを借りましょう。
 
-1. Identify investigation & repair actions (roll back, rate-limit services, etc) and delegate actions to relevant service experts. Typically something like this (obviously not an exhaustive list),
-    * **Bad Deployment:** Roll it back.
-    * **Web Application Stuck/Crashed:** Do a rolling restart.
-    * **Event Flood:** Validate automatic throttling is sufficient, adjust manually if not.
-    * **Data Center Outage:** Validate automation has removed bad data center. Force it to do so if not.
-    * **Degraded Service Behavior without load:** Gather forensic data (heap dumps, etc), and consider doing a rolling restart.
+1. 調査&修理アクション(ロールバック、レートリミットサービスなど)を特定し、アクションを関連サービス担当者に委任します。典型的にはこのようなもの(明らかに完全なリストではない)で、
+    * **デプロイメント不良:**　ロールバックします。
+    * **Web アプリケーションのスタック/クラッシュ:**　ローリング再起動を実行します。
+    * **イベントフラッド:**　自動スロットリングで十分であることを確認し、十分でない場合は手動で調整します。
+    * **データセンターの停止:**　自動化により、不良なデータセンターがされたことを確認します。そうでない場合は、強制的に停止します。
+    * **負荷なしのサービス水準低下:**　フォレンジックデータ(ヒープダンプなど) を収集し、ローリング再起動を検討します。
 
-1. Listen for prompts from your Deputy regarding severity escalations, decide whether we need to announce publicly, and instruct Customer Liaison accordingly.
-    * Announcing publicly is at your discretion as IC. If you are unsure, then announce publicly ("If in doubt, tweet it out").
+1. 重要度のエスカレーションに関する副担当者からのプロンプトを聞き、公に発表する必要があるかどうかを判断し、それに応じてカスタマーリエゾンに指示します。
+    * 公表はインシデントコマンダーとして貴社の裁量で行う。不明な場合は、一般に公表します("不明な場合は、tweet out")。
 
-1. Keep track of your [span of control](../training/glossary.md#span-of-control). If the response starts to become larger, or the incident increases in complexity, consider [splitting off sub-teams](../before/complex_incidents.md#spinning-off-sub-teams) in order to get a more effective response.
+1. [制御範囲](../training/glossary.md#span-of-control)を追跡します。応答が大きくなり始めたり、インシデントが複雑になったりする場合は、より効果的な応答を得るために、[サブチームを分割することを検討してください](../before/complex_incidents.md#spinning-off-sub-teams)。
 
-1. Once the incident has recovered or is actively recovering, you can announce that the incident is over and that the call is ending. This usually indicates there's no more productive work to be done for the incident right now.
-    * Move the remaining, non-time-critical discussion to Slack.
-    * Follow up to ensure the customer liaison wraps up the incident publicly.
-    * Identify any post-incident clean-up work.
-    * You may need to perform debriefing/analysis of the underlying contributing factor.
+1. インシデントが復旧したか、アクティブに復旧したら、インシデントが終了し、コールが終了したことを通知できます。これは、通常、インシデントに対して現在実行すべき作業がないことを示しています。
+    * 急を要さない議論はSlack に移動します。
+    * 顧客のリエゾンがインシデントを公開するようにフォローアップする。
+    * インシデント後のクリーンアップ作業を特定します。
+    * 根底にある要因について、振り返り/分析を行う必要があるかもしれない。
 
-1. Once the call is over, you can start to follow the steps from [After an Incident](../after/after_an_incident.md).
+1. コールが終了したら、[インシデント](../after/after_an_incident.md)の後からステップを開始できます。
 
-## Steps for Deputy
-You are there to support the IC in whatever they need.
+## 代理人の手順
+インシデントコマンダーをサポートする必要があるものは何でもあります。
 
-1. Monitor the status of the incident, and notify the IC if/when the incident escalates in severity level.
+1. インシデントのステータスを監視し、インシデントが重大度レベルでエスカレートした場合は、インシデントコマンダーに通知します。
 
-1. Follow instructions from the Incident Commander.
+1. インシデントコマンダーの指示に従います。
 
-1. Once the call is over, you can start to follow the steps from [After an Incident](../after/after_an_incident.md).
+1. コールが終了したら、[インシデント](../after/after_an_incident.md)の後からステップを開始できます。
 
-## Steps for Scribe
-You are there to document the key information from the incident in Slack.
+## スクライブ（書記官）の手順
+Slack にあるインシデントからの重要な情報を文書化する必要があります。
 
-1. Update the Slack room with who the IC is, who the Deputy is, and that you're the scribe (if not already done).
-    * e.g. "IC: Bob Boberson, Deputy: Deputy Deputyson, Scribe: Writer McWriterson"
+1. Slack room を、インシデントコマンダーが誰で、Deputy が誰で、あなたがスクライブであるかで更新します(まだ行われていない場合)。
+    * 例"インシデントコマンダー:ボブ・ボバーソン副会長 代理人:副社長:記録者　McWriterson"
 
-1. Start our status monitoring bot so that all responders can see the current state without needing to ask.
-    * OfficerURL can help you to monitor the status on Slack,
-        * `!status` - Will tell you the current status.
-        * `!status stalk` - Will continually monitor the status and report it to the room every 30s.
+1. すべてのレスポンダが現在の状態を確認できるように、ステータス監視ボットを起動します。
+    * OfficerURL は、Slack のステータスを監視するのに役立ちます。
+        * `!status` \- 現在のステータスを表示します。
+        * `!status stalk` \- 継続的にステータスを監視し、30 秒ごとに部屋に報告します。
 
-1. You should add notes to Slack when significant actions are taken, or findings are determined. You don't need to wait for the IC to direct this - use your own judgment.
-    * You should also add `TODO` notes to the Slack room that indicate follow-ups slated for later.
+1. 重要なアクションが実行された場合、または結果が決定された場合は、Slack にメモを追加する必要があります。インシデントコマンダーがこれを指示するのを待つ必要はありません。独自の判断を使用してください。
+    * また、Slack ルームに`TODO` のメモを追加して、後で予定されているフォローアップを示す必要があります。
 
-1. Follow instructions from the Incident Commander.
+1. インシデントコマンダーの指示に従います。
 
-1. Once the call is over, you can start to follow the steps from [After an Incident](../after/after_an_incident.md).
+1. コールが終了したら、[インシデント](../after/after_an_incident.md)の後からステップを開始できます。
 
-## Steps for Subject Matter Experts
-You are there to support the Incident Commander in identifying the cause of the incident, suggesting and evaluation repair actions, and following through on the repair actions.
+## 事象の主担当者のためのステップ
+あなたの使命は、インシデントの原因を特定し、修理処置を提案し、評価し、修理処置をフォローする際に、インシデントコマンダーを支援することです。
 
-1. Investigate the incident by analyzing any graphs or logs at your disposal. Announce all findings to the incident commander.
-    * If you are unsure of the cause, that is fine. Simply state that you are investigating and provide regular updates to the IC.
+1. 任意のグラフまたはログを分析して、インシデントを調査します。すべての知見をインシデントコマンダーに発表する。
+    * 原因がわからない場合は、それでも構いません。調査中であることを示し、インシデントコマンダーに定期的なアップデートを提供してください。
 
-1. Announce all suggestions for resolution to the Incident Commander, it is their decision on how to proceed, do not follow any actions unless told to do so!
+1. インシデントコマンダーへの解決のためのすべての提案を発表する。それは、どのように進めるかについての彼らの決断であり、そうするように指示されない限り、いかなる行動にも従わない!
 
-1. Follow instructions from the Incident Commander.
+1. インシデントコマンダーの指示に従います。
 
-1. Once the call is over, you can start to follow the steps from [After an Incident](../after/after_an_incident.md).
+1. 会議が終了したら、[インシデント後](../after/after_an_incident.md)のステップを開始できます。
 
-## Steps for Customer Liaison
-Be on stand-by to post public-facing messages regarding the incident.
+## カスタマーリエゾンの手順
+インシデントに関する公的なメッセージを投稿するために、待機してください。
 
-1. You will typically be required to update the status page and to send tweets from our various accounts at certain times during the call.
+1. 通常は、ステータスページを更新し、通話中の特定の時間にさまざまなアカウントからツイートを送信する必要があります。
 
-1. Follow instructions from the Incident Commander.
+1. インシデントコマンダーの指示に従います。
 
-1. Once the call is over, you can start to follow the steps from [After an Incident](../after/after_an_incident.md).
+1. 会議が終了したら、[インシデント後](../after/after_an_incident.md)のステップを開始できます。
 
-## Steps for Internal Liaison
-You are there to provide updates to internal stakeholders and to mobilize additional internal responders as necessary.
+## インターナルリエゾンの手順
+内部の利害関係者にアップデートを提供し、必要に応じて追加の内部対応者を動員することができます。
 
-1. Be prepared to page other people as directed by the Incident Commander.
+1. インシデントコマンダーの指示に従い、他の人物を呼び出す準備をする。
 
-1. Notify internal stakeholders as necessary, adding subscribers to the PagerDuty incident. We have predefined teams called "SEV-1 Stakeholders" and "SEV-2 Stakeholders" which can be used.
+1. 必要に応じて内部の利害関係者に通知し、PagerDuty インシデントにサブスクライバー（購読者）を追加します。私たちは、"SEV-1 Stakeholders"および"SEV-2 Stakeholders"という定義済みのチームを使用できます。
 
-1. Provide regular status updates in Slack (roughly every 30mins) to the executive team, giving an executive summary of the current status. Keep it short and to the point, and use `@here`.
+1. エグゼクティブチームにSlack(およそ30分ごと)で定期的なステータスアップデートを提供し、現在のステータスのエグゼクティブサマリーを提供します。なるべく簡潔にして、`@here` を使用します。
 
-1. Follow instructions from the Incident Commander.
+1. インシデントコマンダーの指示に従います。
 
-1. Once the call is over, you can start to follow the steps from [After an Incident](../after/after_an_incident.md).
+1. 会議が終了したら、[インシデント後](../after/after_an_incident.md)のステップを開始できます。

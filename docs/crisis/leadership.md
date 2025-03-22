@@ -1,98 +1,95 @@
 ---
 cover: assets/img/crisis/cover_crisisresponse.png
-description: Your organization's crisis response plan requires strong leadership. The right kind of crisis leadership is values-driven and maintains the balancing act between carefully and thoughtfully responding to what went wrong and deliberately capturing mindshare or new business based on the effectiveness of your response.
+description: 組織の危機対応計画には、強力なリーダーシップが必要です。適切な危機管理のリーダーシップとは、価値観に基づいて行動し、問題に対して慎重かつ思慮深く対応することと、その対応の効果に基づいて意図的にマインドシェアや新規ビジネスを獲得することとのバランスを保つことです。
 ---
 
+効果的な危機管理にはリーダーシップが不可欠です。危機管理のリーダーシップ（Crisis Leadership）は、組織の価値観を危機のすべての段階にどのように適用するかを示します。
 
-Effective crisis management requires leadership. Crisis Leadership underlines how your corporate leaders apply your organization’s values to all stages of a crisis.
+## なぜ組織にとって危機管理のリーダーシップが重要なのか
+すべての危機には、危険と機会が存在します。企業の歴史的における重要な瞬間において、適切なリーダーシップは不可欠です。適切な危機管理のリーダーシップはバリューに基づいており、何が間違っていたのかに対して慎重かつ思慮深く対応することと、その対応の効果に基づいて意図的にマインドシェア（顧客の心の中における自社ブランドの占有度合い）や新規ビジネスを獲得することとのバランスを保ちます。
 
-## Why is Crisis Leadership important for your organization
-With every crisis, there is danger and opportunity. The right kind of leadership is vital in the critical moments of your company’s history. The right kind of crisis leadership is values-driven and maintains the balancing act between carefully and thoughtfully responding to what went wrong and deliberately capturing mindshare or new business based on the effectiveness of your response. 
+企業のバリューが最前線にあれば、関係者とのコミュニケーションや公式声明は一貫性を保てます。しかし確立された見解から後退したり、むやみに強い勢力へ追従したりすると、聴衆は常に見抜きます。状況を悪化させることは、一貫性を保つことによって避けられます。危機は二つとして同じものはなく、組織も同様です。危機管理のリーダーシップの根幹は、他者ではなく、あなた自身が一つの危機から次の危機へと、組織のストーリーを関係者に伝えることにあるのです。
 
-When your company’s values are at the forefront, your stakeholder communications and public statements remain consistent. Your audience can always tell when you’re backpedaling from established viewpoints or bandwagoning. You avoid compounding the situation by being consistent. No two crises are alike just as no two organizations are alike. Crisis Leadership centers on you—not others—telling your constituents your organization’s story from one crisis to the next.
+## 危機管理リーダーの考慮事項
 
-## Considerations for Crisis Leaders 
+危機は予測不可能かつ流動的であるため、状況認識が必要になります。何を知っていて何を知らないのかを把握することが重要です。状況を継続的にモニタリングし、状態を予測し、変化する環境に対応する準備をすることで、企業は危機対応に長けるようになり、チームに目的を提供します。つまり、全員が同じ認識を持ち、同じ目標に向かって働くことができます。
 
-The unpredictable and fluid nature of a crisis requires situational awareness. Being aware of what you know and don't know is crucial. Continually monitoring the situation, predicting statuses and being prepared to roll with the changing environment makes your company adept at crisis response and provides your team with purpose, i.e., everyone is in sync and working towards the same goal.
+危機管理のリーダーシップにおいて、自分自身と自チームのケアはますます重要になってきています。危機対応チームのメンバーは、事象の影響を受けながらも解決に向けて作業を続けている可能性があります。チームの中には24時間起きていて、誰かに休憩の許可を必要としている人もいるかもしれません。疲労が蓄積している可能性もあります。PagerDutyのプラットフォームに組み込まれた機能を活用して、オンコール（on-call）のローテーション、引き継ぎを確立し、ZoomやTeamsなどのビデオ会議技術を統合することで、長期化する可能性のある状況に対応しながら、チームのための安全で健全な[オンコール文化](https://goingoncall.pagerduty.com/culture/)を作ることができます。
 
-An increasingly important aspect of Crisis Leadership is taking care of yourself and your team. Members of your crisis response team may have been impacted by the events but are still working to resolve it. Some of your team may have been awake for 24 hours needing someone to give them permission to step away. Fatigue may be setting in and so forth. Leveraging the functionality built into the PagerDuty platform to establish on-call rotations, hand-offs and integrate video conferencing technology like Zoom or Teams can help create a safe and healthy [on call culture](https://goingoncall.pagerduty.com/culture/) for your teams while responding to what could be a protracted situation.
+![曜日と時間帯によるオンコール制限](../assets/img/crisis/01_oncallrestrictions.png)
 
-![On-call Restrictions by day and hour](../assets/img/crisis/01_oncallrestrictions.png)
+## 危機をリードする際のDo's and Don'ts（すべきことと避けるべきこと）
+成功した企業の危機対応と失敗した企業の危機対応は、私たちの周りに常に存在します。実際、このガイドを読んでいる時点でも、それぞれの例が一つずつニュースで報じられている可能性が高いでしょう。重要なのは、公開された他者の失敗から学び、Do's and Don'tsのリストという形で、あなたの基本原則を作成していくことです。いくつかは明白かもしれませんが、それでも文書化する価値があります。以下に一般的な例をいくつか示します：
 
-## Do's and Don'ts when Leading A Crisis
-Successful and unsuccessful corporate responses to crises are all around us. In fact, the chances are high that there’s one of each happening in the news at the time you're reading this guide. What’s important is that you learn from the very public mistakes of others and develop your core principles in the form of a do's and don'ts list. Some of them may be obvious but they’re still worth documenting. Here are a few common examples:
+- **すべきこと** 特定の状況（ベンダーの破産、サイバーインシデント、製品リコール、著名人の退職など）に合わせて容易にカスタマイズできる、一般的な暫定声明を用意しておく
 
-- **DO** have a set of generic holding statements ready to go that can be easily customized for specific situations (e.g., vendor bankruptcy, cyber incident, product recall, high profile departure, etc.)
+- **すべきこと** コメントする前にニュースが流出するリスクが常にあるため、いつどのように対応するかについて慎重を期す
 
-- **DO** be cautious about when and how you respond, as there is always a risk that the news could break before you’ve commented
+- **すべきこと** 対応は慎重に行い、すべての否定的な投稿、問い合わせ、攻撃に対応しようとする「もぐらたたき」状態を避ける
 
-- **DO** be measured in your response and avoid playing whack a mole trying to respond to every negative post, inquiry or attack
+- **避けるべきこと** 同時に発生する複数の危機やインシデントが関連していると決めつける
 
-- **DON’T** assume multiple crises or incidents happening at the same time are related
+- **避けるべきこと** コピー＆ペーストを行う—あなたの組織の価値観、歴史、リスクプロファイルに固有の、そして能力に基づく行動を取らないと、より大きなリスクにさらされる
 
-- **DON’T** copy and paste—i.e., take actions that are unique to your organization’s values, history, and risk profile, and within your capabilities or you’ll risk greater exposure
+- **避けるべきこと** 義務的ではなく自発的に行う公式声明を出すことにリスクがないと決めつける—この点については法務チームと慎重に検討する必要がある
 
-- **DON’T** assume that making proactive non-obligatory public statements are not without great risk—you need to carefully weigh your decision with your Legal team in this regard
+- **避けるべきこと** 社内や一部の顧客または投資家に伝えたことが公になることはないと決めつける
 
-- **DON’T** assume that what you've said internally or to a subset of customers or investors won’t go public
+## 危機シナリオ計画
 
-## Crisis Scenario Planning
+危機管理リーダーは、企業の最悪の日が現実となる前に、常に計画を立てておく必要があります。2020年のパンデミックがあなたの最初の存続の危機だった場合、マーフィーの法則によれば、再び起きることもあり得るでしょう。組織での在任中には、複数の危機を経験する可能性が高いです。計画を立てる際に企業の過去の危機を参照することは、パズルの一片に過ぎません。しかし、シナリオ計画は将来を見据えたもので、組織にとって最も可能性が高く、最も被害が大きい危機シナリオに焦点を当て、チーム、計画、プレイブックを事前に開発します。選択できるシナリオは無数にありますが、以下にいくつかの例を示します：
 
-Crisis Leaders should always plan for the company’s worst day before it becomes a reality. If the 2020 pandemic was your first existential crisis, Murphy’s Law says it won’t be your last. It’s likely you’ll experience multiple crises during your tenure at an organization. Referencing your company’s historical crises while planning is one piece of the puzzle. However, scenario planning is forward-looking and hones in on the most likely and most damaging crisis scenarios for your organization to proactively develop teams, plans and playbooks. There are a myriad of scenarios to choose from but here are a few examples:
+- 重要インフラへの攻撃（電力、水道、交通機関など）
+- サイバーインシデント（ランサムウェア、データ漏洩など）
+- パンデミック（感染症など）
+- 環境災害（地震、ハリケーン、干ばつなど）
+- 人事危機（労働組合のストライキ、ウォークアウト、労働力不足など）
+- 地政学的災害（戦争、クーデターなど）
+- テロリズム（政治的暴力、妨害工作など）
+- 経済災害（株式市場の暴落、通貨危機など）
+- 産業事故（ガス漏れ、建物の崩壊など）
 
-- Critical infrastructure attack (e.g., power, water, transportation)
-- Cyber incident (e.g., ransomware, data breach)
-- Pandemics (e.g., contagions)
-- Environmental disaster (e.g., earthquake, hurricane, drought)
-- Human resources crisis (e.g., union strikes, walk-outs, labor shortage)
-- Geopolitical disaster (e.g., war, coup d’etat)
-- Terrorism (e.g., political violence, sabotage)
-- Economic disaster (e.g., stock market crash, currency crisis)
-- Industrial accident (e.g., gas leak, building collapse)
+時間が無限で世界が静的であれば、世界のすべてのシナリオに対して計画を立てることができるでしょう。しかし、目標はリストから数個のシナリオを選択し、より広範な危機に備えるための他の場面でも適用可能な原則とスキルを構築することです。もう一つの方法は、シナリオ全体にわたる結果に焦点を当て、プレイブック、手順書、または事前に定義された戦術的対応チームなどのコントロールを追加することで、それらの能力のギャップを解決することです。また、運用環境の変化に伴い重要度の順序が変化する可能性があるため、トップシナリオと関連する計画やチームの定期的なレビューが重要です。
 
-If time was infinite and the world was static, you could plan for all of the scenarios in the world. However, the goal is to select a handful of scenarios from your list and build transferable principles and skills that prepare you for a wider range of crises. Another way to do that is by focusing on the consequences across your scenarios and solving for those capability gaps by adding controls such as playbooks, runbooks or predefined tactical response teams. You may also find that the order of criticality changes as the operating environment changes so periodic review of your top scenarios and the associated plans and teams is important.
+## 経営危機管理チーム（Executive Crisis Leadership Team）の編成
 
-## Assembling An Executive Crisis Leadership Team
+危機対応チームの範囲、規模、役割を検討する際の良い出発点は、経営危機管理チームを編成することです。このグループは、広報から法務、人事などに至るまで、組織のすべての領域の機能別ビジネスオーナーで構成されます。以下の機能的役割の一部または全部から始めることを検討してください：
 
-Developing an Executive Crisis Leadership Team is a good starting point when considering the scope, scale and role of your Crisis Response team. This group will consist of functional business owners from all areas of your organization from Communications to Legal to Human Resources and so on. Consider starting with some or all of the following functional roles:
+-   最高経営責任者（Chief Executive Officer）
+-   最高法務責任者（Chief Legal Officer）
+-   最高広報責任者（Chief Communications Officer）
+-   最高財務責任者（Chief Financial Officer）
+-   最高情報セキュリティ責任者（Chief Information Security Officer）
+-   最高人事責任者（Chief Human Resource Officer）
+-   最高執行責任者（Chief Operating Officer）
+-   最高情報責任者（Chief Information Officer）
+-   最高レジリエンス責任者（Chief Resilience Officer）
+-   最高収益責任者（Chief Revenue Officer）
+-   最高マーケティング責任者（Chief Marketing Officer）
+-   最高セキュリティ責任者（Chief Security Officer）
 
--   Chief Executive Officer
--   Chief Legal Officer
--   Chief Communications Officer
--   Chief Financial Officer
--   Chief Information Security Officer
--   Chief Human Resource Officer
--   Chief Operating Officer
--   Chief Information Officer
--   Chief Resilience Officer
--   Chief Revenue Officer
--   Chief Marketing Officer
--   Chief Security Officer
+一つのサイズがすべてに適合するわけではなく、経営危機管理チームにこれらの役割すべてが必要とは限りません。また、取締役会（Board of Directors）がある場合は、経営危機管理チームの拡張として考慮することも重要です。同様に、広報/危機管理会社、災害復旧サービス、保険会社、デジタルフォレンジック（デジタル機器に保存されている電子情報を解析する技術）の専門家、地方/連邦当局などの外部リソースも、必須の連絡先として文書化することを忘れてはいけません。
 
-There’s no one size fits all and you may not need all of these roles in your Executive Crisis Leadership Team. It’s also important to consider your Board of Directors—if you have one—as an extension of your Executive Crisis Leadership Team. Similarly, external resources like Public Relations/Crisis Management firms, Disaster Recovery services, insurance providers, Digital Forensic Specialists or Local/Federal authorities should not be overlooked as essential contacts to document.
+## 危機対応チームリーダー（Crisis Team Leaders）
 
-## Crisis Team Leaders
+危機に際しては、顔を出し一つの声を与えることが重要です。危機対応チームリーダーは、専門分野に基づいて全体的な責任を持ち、組織を危機から導く責任を負う個人です。彼らは危機状況におけるインシデントコマンダーに似ています。ただし、複雑な状況で複数のインシデントコマンダーを監督する必要がある場合、危機対応チームリーダーはエリアコマンダーとしてより機能する可能性があります。
 
-It’s important to put a face and single voice to a crisis. A Crisis Team Leader is the individual responsible for leading the organization through a crisis having overall responsibility based on their area(s) of expertise. They’re similar to an Incident Commander for a crisis situation. However, a Crisis Team Leader may function more as an Area Commander if there are multiple Incident Commanders to oversee in a complex situation. 
+数個のシナリオを構築したら、次のステップは、組織のメンバーをチームリーダーとして、そしてそのバックアップとして割り当てることです。以下の表を例として参照してください：
 
-Once you’ve built your handful of scenarios, assigning members of your organization as the team leader along with their backup is the next step. See the below table as an example:
-
-| **Crisis Scenario** | **Scenario Examples** | **Crisis Team Leader** | **Potential Backup** |
+| **危機シナリオ** | **シナリオ例** | **危機対応チームリーダー** | **潜在的なバックアップ** |
 | ------------------- | --------------------- | ---------------------- | -------------------- |
-| Critical infrastructure attack | Energy grid, water supply, telecommunications | Chief Operating Office | Logistics Chief |
-| Environmental disaster | Earthquake, hurricane, volcano | Chief Resilience Officer | Safety Chief |
-| Human resources crisis | Labor strike, protests, labor violation | Chief Human Resource Officer | Operations Chief |
-| Marketing campaign failure | Typo, untrue product claim, wrong tone | Chief Digital Officer | Communications Chief |
+| 重要インフラへの攻撃 | 電力網、水道、通信 | 最高執行責任者 | ロジスティクス責任者 |
+| 環境災害 | 地震、ハリケーン、火山 | 最高レジリエンス責任者 | 安全責任者 |
+| 人事危機 | 労働ストライキ、抗議活動、労働法違反 | 最高人事責任者 | オペレーション責任者 |
+| マーケティングキャンペーンの失敗 | タイプミス、誤った製品主張、不適切なトーン | 最高デジタル責任者 | コミュニケーション責任者 |
 
+PagerDutyを使用すると、プラットフォーム内で[オンコールスケジュール](https://support.pagerduty.com/docs/schedule-basics)を構築でき、危機状況が発生した場合にビジネスのどの領域で誰がオンコールであるかについての可視性と説明責任を把握できます。また、一定時間経過後に次の担当者に通知するエスカレーションポリシーを使用して、バックアップの担当者を追加することもできます。
 
-Using PagerDuty, you can build your [on-call schedule](https://support.pagerduty.com/docs/schedule-basics) right inside the platform providing visibility and accountability about who’s on call for what area of the business if a crisis situation takes place. You can also add backups using an escalation policy that alerts the next person up after a custom time delay.
+![エスカレーションタイムアウトの設定](../assets/img/crisis/02_escalationtimeout.png)
 
-![Set escalation timeouts](../assets/img/crisis/02_escalationtimeout.png)
+オンコールチームの負荷を分散したい場合は、[ラウンドロビンスケジューリング](https://support.pagerduty.com/docs/round-robin-scheduling)を使用して、各危機通知に対して通知される主要チームメンバーを交代させることができます。
 
+![ラウンドロビンスケジューリングの使用](../assets/img/crisis/03_roundrobin.png)
 
-If you want to balance the load for your on-call team, the [round robin scheduling](https://support.pagerduty.com/docs/round-robin-scheduling) can help by alternating who’s the primary team member that’s notified for each crisis notification.
-
-![Use round-robin scheduling](../assets/img/crisis/03_roundrobin.png)
-
-## Succession planning
-As you examine the makeup of your Executive Crisis Leadership Team, Crisis Team Leaders and their backups, you should view it through the lens of succession planning or failover mapping. Depending on the makeup of your organization and geographical concentrations, you may want to further diversify your members to spread the risk. If everyone is positioned close together, an impact to that region will lead to failure and extended MTTRs. You will want your PagerDuty rotations and/or escalation policies to reflect this strategy.
+## 後継者計画（Succession planning）
+経営危機管理チーム、危機対応チームリーダー、およびそのバックアップの構成を検討する際は、後継者計画またはフェイルオーバーマッピングの観点から見る必要があります。組織の構成と地理的な集中度によっては、メンバーをさらに多様化させてリスクを分散したい場合があるでしょう。全員が近接して配置されていると、その地域に何か影響があった場合にMTTR（平均対応時間）の延長につながるからです。PagerDutyのローテーションやエスカレーションポリシーにはこの戦略を反映させるとよいでしょう。

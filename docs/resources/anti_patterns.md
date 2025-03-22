@@ -1,101 +1,100 @@
----
 cover: assets/img/covers/anti-patterns.png
-description: These are some processes that we've found do not work well. We've either tried them in the past and regretted it, or spent considerable time thinking about them and ultimately rejected them. We want to document them to make sure we don't repeat mistakes or wonder why a decision was made later down the line.
+description: これらは、うまく機能しないと判明したプロセスです。過去に試してみて後悔したか、十分に検討した上で最終的に却下したものです。私たちは、同じ過ちを繰り返さないようにするため、また後になって決定がなぜ行われたのか疑問に思わないようにするために、これらを文書化したいと考えています。
 ---
-!!! warning "Process Anti-Patterns"
-    These are some processes that we've found do not work well. We've either tried them in the past and regretted it, or spent considerable time thinking about them and ultimately rejected them. We want to document them to make sure we don't repeat mistakes or wonder why a decision was made later down the line. The list is in no particular order.
+!!! warning "プロセスのアンチパターン"
+    これらは、うまく機能しないと判明したプロセスです。過去に試してみて後悔したか、十分に検討した上で最終的に却下したものです。私たちは、同じ過ちを繰り返さないようにするため、また後になって決定がなぜ行われたのか疑問に思わないようにするために、これらを文書化したいと考えています。このリストに特定の順序はありません。
 
-## Getting everyone on the call.
+## 全員を会議に参加させる
 
-Believe it or not, we used to page every single engineer at PagerDuty when we had a SEV-2 incident. If a SEV-2 happened at 3am, then we'd be paging the entire engineering department at 3am. There a few reasons we went down this path,
+信じられないかもしれませんが、PagerDutyでは以前、SEV-2インシデントが発生すると、すべてのエンジニアに連絡していました。SEV-2が午前3時に発生した場合、エンジニア部門全体に午前3時に連絡することになっていました。このような方法を取った理由はいくつかあります。
 
-1. When the company was smaller, there were only a few engineers. So this process worked well, since you really did need every engineer on the call.
-1. Rather than triaging an incident and then having to page in additional people, if everyone is on the call to begin with then the thinking was that we'd get a faster response.
+1. 会社が小規模だった頃は、エンジニアの数も少なかったため、このプロセスはうまく機能していました。実際に全エンジニアが会議に必要だったからです。
+1. インシデントをトリアージしてから追加の人員に連絡するのではなく、最初から全員が会議に参加していれば、より迅速な対応ができるという考えでした。
 
-As we grew our engineer department, this did not scale well at all, and problems quickly became apparent,
+エンジニア部門が成長するにつれて、このやり方はまったくスケールせず、問題がすぐに明らかになりました。
 
-1. Most of the people on the call had nothing to do. They'd been woken up for no reason.
-1. Paging people has a cost impact. Both in employee health, and in finance. Waking up your entire engineering department at 3am means nothing productive is going to be done the next day, across the entire department.
-1. People who weren't on-call would still get paged.
+1. 会議に参加している人の大半は何もすることがありませんでした。彼らは理由もなく起こされていたのです。
+1. 人に連絡することにはコスト影響があります。従業員の健康面でも、財政面でも。エンジニア部門全体を午前3時に起こすということは、翌日は部門全体で生産的なことが何もできないということです。
+1. オンコールではない人にも連絡が行くことになります。
 
-It's important to maintain an **effective span of control** on any incident response. If you have more than 7 or 8 people directly reporting to the [Incident Commander]() things can quickly get overwhelming. We now will only page the engineers who are on-call for a specific service, rather than the entire team. If more responders are required, then they will be mobilized by the [Internal Liaison]() to join the response. 9 times out of 10 we don't need additional responders, so the rest of the engineering department can get some rest without interference. This results in a happier engineering department and a more streamlined response process.
+インシデント対応では**効果的な管理範囲**を維持することが重要です。[インシデントコマンダー]()に直接報告する人が7〜8人以上いると、状況はすぐに手に負えなくなる可能性があります。現在では、チーム全体ではなく、特定のサービスに対してオンコールしているエンジニアにのみ連絡します。さらに対応者が必要な場合は、[インターナルリエゾン]()によって対応に参加するよう動員されます。10回中9回は追加の対応者は必要ないため、エンジニア部門の残りのメンバーは邪魔されることなく休息を取ることができます。これにより、エンジニア部門はより幸せになり、対応プロセスも合理化されます。
 
-## Forcing everyone to stay on the call.
+## 全員に会議に残ることを強制する
 
-Our original thinking was that if you've been mobilized onto a response call, then we would need you to stick around until the end, since if you were needed at one point, chances are you'll be needed again before the incident is resolved. Unfortunately, we've since found that that's never really the case. Typically someone will be mobilized to investigate a specific system, or perform a specific action, after which time there would be nothing further required from them. We'd have a call full of people who weren't doing anything and could've gone back to sleep. This can also encourage 'hero' mentalities where individuals feel pressured that they have to stay on a call.
+当初の考えでは、対応会議に動員された場合、最後まで残る必要があるとされていました。一度必要とされた場合、インシデントが解決するまでに再び必要になる可能性が高いと考えられていたからです。しかし、実際にはそのようなことはほとんどないとわかりました。通常、対応者は特定のシステムを調査したり、特定のアクションを実行したりするために動員され、その後は彼らに必要なことは何もありません。何もすることがなく、睡眠に戻れたはずの人々で会議が満たされていました。これはまた、個人が会議に残らなければならないというプレッシャーを感じる「ヒーロー」的な考え方を助長することもあります。
 
-Now we ask people to leave the call if they're no longer needed. Once the Incident Commander has ascertained which systems are impacted, they let representatives for the other systems leave the call so they can get some rest. You can always mobilize them again if they're really needed. Most of the time they won't be needed again, so we're optimizing for the 99% case.
+現在では、もう必要ない場合は会議から退出するよう依頼しています。インシデントコマンダーが影響を受けているシステムを確認した後、他のシステムの担当者には会議から退出して休息を取るよう伝えます。本当に必要になれば、再び動員することもできます。ほとんどの場合、彼らが再び必要になることはないので、99%のケースに最適化しています。
 
-## Too frequent status updates.
+## あまりにも頻繁なステータスアップデート
 
-Executives need to know what's going on and want to be provided status updates every 5 minutes to keep them in the loop. The problem with this is that you'll spend the entire time providing status updates rather than resolving the incident.
+経営陣は何が起きているのかを知る必要があり、常に最新情報を得るために5分ごとにステータスアップデートを提供してほしいと思っています。問題は、インシデントを解決するよりも、ステータスアップデートの提供に時間を費やすことになってしまうことです。
 
-We've found that providing status updates every 20-30 minutes during a major incident is a typical cadence that works. This ensures we're not just providing updates for the sake of providing updates, but that they're more likely to have some actual useful information in them. That's not to say you can't provide updates more frequently if there really is new information to share, but it shouldn't be a requirement. We want to spend as much time fixing the incident as we can, but we also want to make sure we keep stakeholders in the loop. It's a delicate balance that's easy to get wrong.
+大きなインシデント中は、20〜30分毎のステータスアップデート提供が、通常うまく機能するペースであることがわかりました。これにより、単にアップデートのためのアップデートを提供するのではなく、実際に有用な情報が含まれる可能性が高くなります。もちろん、本当に新しい情報を共有する必要がある場合は、より頻繁にアップデートを提供することもできますが、それが要件であるべきではありません。インシデントの修正にできるだけ多くの時間を費やしたいのと同時に、関係者へ最新情報を提供することも確実にしたいものです。これは間違えやすい繊細なバランスです。
 
-## Assuming silence means no progress.
+## 沈黙＝進捗がないと思い込む
 
-It can be common to assume silence on an incident call means that nothing is being done, however this is rarely the case. When joining a call, be aware that a chatterless session can be acceptable and reasonable. Silence usually means everyone is working on fixing the problem rather than talking and providing updates. We're not playing a game of "Keep Talking and Nobody gets Fired." The Incident Commander is the one who should be doing most of the talking on a call. They will typically fill silence with a status update if appropriate, but others within the organization need to be trained to know that silence on a call isn't a bad thing, and doesn't mean that progress has stalled. Making sure staff are aware of this ahead of time will prevent awkward conversations during an incident call, which would be ultimately distracting from resolving the incident.
+インシデント会議で沈黙が発生すると、何も行われていないのではないかと思い込むことがよくありますが、実際にはそうではないことがほとんどです。会議に参加する際は、会話のない状態が許容され、合理的であることを認識してください。沈黙は通常、全員が話したり更新を提供したりするのではなく、問題の解決に取り組んでいることを意味します。私たちは「話し続けなければ誰かが解雇されてしまう」ゲームをしているわけではありません。インシデントコマンダーが会議で最も多く話すべき人です。彼らは通常、適切であれば沈黙の代わりに状況アップデートを行いますが、組織内の他のメンバーは、会議での沈黙が悪いことではなく、進捗が停滞していることを意味するものではないことを事前に認識しておく必要があります。皆がこれを事前に認識していれば、インシデント会議中の気まずい会話を防ぎ、最終的にはインシデントの解決から注意をそらすことを防ぐことができます。
 
-## Litigating severities during the incident call.
+## インシデント会議中に重大度について議論する
 
-The start of a lot of incident calls in PagerDuty's past consisted of a discussion around whether we were really in a SEV-2 situation, or whether it was a smaller issue that could be handled without an incident call. This discussion would usually take up quite a bit of time, as everyone wanted to weigh in. The problem was that while you're having this discussion, the incident is still going on behind the scenes, and by the time you've finished it has become a SEV-1 and you've just wasted 10 minutes discussing severities.
+PagerDutyの過去の多くのインシデント会議の冒頭では、本当にSEV-2の状況なのか、それともインシデント会議なしで対処できる小さな問題なのかについての議論が行われていました。この議論は通常かなりの時間を要し、全員が意見を述べたがりました。問題は、この議論をしている間にもインシデントは裏で進行しており、議論が終わる頃にはSEV-1になってしまい、重大度について10分を無駄にしてしまったことです。
 
-We now have a rule: **We do not discuss incident severity during an incident call**, we always assume it's the higher severity and treat it as such. So if we're not sure if it's a SEV-2 or SEV-3, we treat it like a SEV-2 and move on. We've already spun up the gears of incident response and paged responders, so even if it turns out to be a SEV-3, we may as well continue with the process and treat it as practice if nothing else.
+現在は、ルールがあります：**インシデント会議中にインシデントの重大度について議論しない**、常により高い重大度を想定し、それに応じて対処します。つまり、SEV-2かSEV-3か確信が持てない場合は、SEV-2として扱い、先に進みます。すでにインシデント対応の歯車を回し対応者に連絡している以上、結果的にSEV-3だったとしてもプロセスを継続し、少なくとも練習として扱うのが良いでしょう。
 
-## Hesitating to escalate to other responders.
+## 他の対応者へのエスカレーションをためらう
 
-If it's 3am and you're responding to an incident, we have had cases where a Subject Matter Expert (SME) would be stuck attempting to debug an issue, and they would be reluctant to involve another member of their team due to the time of day. This would end up causing our incident to last longer than it needed to.
+午前3時にインシデントに対応していたときに、SME（対象領域の専門家）が問題のデバッグに行き詰まったものの、時間帯を考慮してチームの他のメンバーを巻き込むことをためらうケースがありました。これにより、インシデントが必要以上に長引くことになりました。
 
-**"Never hesitate to escalate"** is now one of our mantras. If you're stuck on a problem and it's 3am, don't hesitate to page someone more knowledgable to help resolve the situation. Don't go too far with this and page everyone, otherwise you fall into the earlier anti-pattern. But you should never feel like you can't page someone if you need help.
+**「エスカレーションをためらわないこと」**が現在の私たちのマントラの一つです。問題に行き詰まったら、たとえ午前3時であっても、事態を解決するためにより知識のある人に連絡することをためらわないでください。ただし全員に連絡するのはやりすぎで、前述のアンチパターンに陥ります。しかし助けが必要な場合は、誰かに連絡してはだめだと感じるべきではありません。
 
-## Discussing process and policy decisions during the incident call.
+## インシデント会議中にプロセスとポリシーの決定について議論する
 
-There are occasions where responders don't agree with the incident response policies and processes we might use. Sometimes this will cause a discussion during the incident call, which ends up derailing the process for everyone and causing the underlying incident to last longer, hindering the response. It is absolutely OK to have disagreements with the process and to want to make changes (in fact, this is something we encourage, as it allows us to iteratively improve our process), however during an incident is not the time to have that discussion.
+対応者がインシデント対応のポリシーやプロセスに同意しないことがあります。これがインシデント会議中に議論を引き起こし、全員のプロセスを脱線させ、根本的なインシデントが長引いて対応を妨げることがあります。プロセスに不満を持ち、変更を望むこと自体は全く問題ありません（実際、これは私たちが奨励していることであり、プロセスを反復的に改善することができます）。しかし、インシデント中はその議論をする時ではありません。
 
-**Policy and processes should not be discussed during an incident**, just like with severities. The current process should be followed during an incident, and any concerns should be raised afterwards, either during a post-mortem or directly to the team managing the incident response process.
+重大度と同様に、**ポリシーとプロセスはインシデント中に議論すべきではありません**。インシデント中は現在のプロセスに従うべきであり、懸念事項はポストモーテム中か、インシデント対応プロセスを管理するチームに直接提起すべきです。
 
-## Neglecting the postmortem and followup activities.
+## ポストモーテムとフォローアップ活動を怠る
 
-It's tempting once an incident is resolved to not bother with the postmortem. Either you feel like the cause is well known, or you don't feel that it's worth it. Don't fall into this trap! A postmortem is always worthwhile. People were mobilized to respond to an incident, which had a cost associated with it. We want to be sure that we understand why that happened, so we can avoid that cost in future.
+インシデントが解決したら、ポストモーテムを行わないという誘惑に駆られることがあります。原因がよく知られていると感じたり、価値がないと感じたりするかもしれません。この罠に陥らないでください！ ポストモーテムは常に価値があります。インシデントに対応するために人々が動員され、それにはコストがかかったのです。将来そのコストを避けるために、なぜそれが起こったのかを確実に理解したいと思います。
 
-Don't make the mistake of neglecting a postmortem after an incident. Without a postmortem you fail to recognize what you're doing right, where you could improve, and most importantly, how to avoid making the same exact mistakes next time around. A well-designed, blameless postmortem allows teams to continuously learn, and serves as a way to iteratively improve your infrastructure and incident response process.
+インシデント後にポストモーテムを怠るという誤りを避けましょう。ポストモーテムがなければ、何が正しく行われているか、どこを改善できるか、そして最も重要なことに、次回同じ間違いを避ける方法を認識できません。適切に設計された、非難のないポストモーテムにより、チームは継続的に学習し、インフラストラクチャとインシデント対応プロセスを反復的に改善する方法として機能します。
 
-If you mobilize responders and determine it's not a "real" incident, you should still conduct a post-mortem. Because the next time you're going to mobilize responders again and waste time. Find out why incident response was triggered when it may not have been needed, and fix that problem.
+対応者を動員して「本当の」インシデントではないと判断した場合でも、ポストモーテムを実施すべきです。なぜなら、次回も対応者を動員して時間を無駄にすることになるからです。インシデント対応が必要ではなかったかもしれない場合に、なぜプロセスが開始されたのかを調査し、その問題を修正してください。
 
-## Being too focussed on the problem in front of you.
+## 目の前の問題に過度に集中する
 
-As a responder to an incident, you would typically be focussed on the specific task in front of you. The Incident Commander generally being the person who has the bigger picture of what is going on. There can be a tendency for SME's to become too focussed on the problem they see in front of them, rather than taking the bigger picture into account. This usually presents itself on an incident call with an SME constantly bringing up the same issue without listening to instructions from the Incident Commander, and having tunnel vision for the specific issue on their system.
+インシデントの対応者として、通常は目の前の特定のタスクに集中します。インシデントコマンダーは一般的に何が起きているかの全体像を把握している人です。SMEが、インシデントコマンダーからの指示を聞かずに同じ問題を繰り返し持ち出し、自分のシステム上の特定の問題に対する視野狭窄に陥る傾向があります。
 
-Instructions from the Incident Commander should always be followed, as they will typically have more overall context on what is going on. Try not to fall into the trap of being hyper-focused on the problem in front of you, so much so that you derail the process. We want to treat the cause, not a symptom of the incident.
+インシデントコマンダーからの指示は常に従うべきです。彼らは通常、何が起きているかについてより全体的なコンテキストを把握しています。目の前の問題に過度に集中し、プロセスを脱線させるような罠に陥らないようにしてください。私たちはインシデントの症状ではなく、原因を治療したいのです。
 
-## Being averse to policy and process changes.
+## ポリシーとプロセスの変更に抵抗する
 
-Once a stable process is in place, and incidents are getting resolved, there can be lots of hesitation and resistance to changing that process. "If it ain't broke don't fix it", etc. As your company grows, your response will need to change. Holding on to your old processes and practices for too long can hinder your incident response going forward. Don't be reckless, of course, but try to introduce sensible changes and **don't be afraid to make changes which might slow things down in the short-term, but will make things faster in the long-run**. These are the hardest changes to make, but usually the most worthwhile.
+安定したプロセスが整い、インシデントが解決されると、そのプロセスを変更することに対して多くの躊躇や抵抗が生じることがあります。「壊れていないなら修正するな」などの考えです。会社が成長するにつれて、対応も変化する必要があります。古いプロセスや慣行を長く維持することは、今後のインシデント対応を妨げる可能性があります。もちろん、無謀にはならないようにしてください。しかし、**短期的には物事を遅くするかもしれないが、長期的には物事を速くする変更を恐れないでください**。これらは最も難しい変更であると同時に、多くの場合、最も価値のある変更です。
 
-## Trying to take on multiple roles.
+## 複数の役割を引き受けようとする
 
-In past PagerDuty incidents, we've had instances where the Incident Commander has started to assume the Subject Matter Expert role and attempted to solve the problem themselves. This usually happens when the IC is an engineer in their day-to-day role. They are in an incident where the cause appears to be a system they know very well and have the requisite knowledge to fix. Wanting to solve the incident quickly, the IC will start to try and solve the problem. Sometimes you might get lucky and it will resolve the incident, but most of the time the immediately visible issue isn't necessarily the underlying cause of the incident. By the time that becomes apparent, you have an Incident Commander who is not paying attention to the other systems and is just focussed on the one problem in front of them. This effectively means there's no Incident Commander, as they would be busy trying to fix the problem. Inevitably, the problem turns out to be much bigger than anticipated and the response has become completely derailed.
+過去のPagerDutyのインシデントでは、インシデントコマンダーがSMEの役割を引き受け、自分で問題を解決しようとした例がありました。これは通常、インシデントコマンダーが普段エンジニアである場合に発生します。彼らは自分のよく知っているシステムに原因があり、修正するための必要な知識を持っているインシデントに遭遇します。インシデントを迅速に解決したいと思い、インシデントコマンダーは問題の解決を試み始めます。運が良ければインシデントが解決することもありますが、ほとんどの場合、すぐに見える問題がインシデントの根本的な原因であるとは限りません。それが明らかになる頃には、他のシステムに注意を払わず、目の前の一つの問題だけに集中しているインシデントコマンダーがいることになります。これは事実上、インシデントコマンダーがいないのと同等で、彼らは見えている問題の修正にかかりっきりです。必然的に、問題は予想よりもはるかに大きくなり、対応は完全に脱線してしまいます。
 
-**You cannot take on another role at the same time as being an Incident Commander**. It can be a difficult to be an IC when you want to jump in as an SME, but you must resist the temptation to abandon the role of IC. If you really are the only person able to solve the problem, you should handover to another Incident Commander and then assume the role of SME. This ensures that the response process remains on track with a dedicated Incident Commander.
+**インシデントコマンダーであると同時に別の役割を引き受けることはできません**。SMEとして参加したい場合、インシデントコマンダーであることは難しい場合がありますが、インシデントコマンダーの役割を放棄する誘惑に抵抗しなければなりません。本当に問題を解決できる唯一の人物である場合は、別のインシデントコマンダーに引き継ぎ、SMEの役割を引き受けるべきです。これにより、専任のインシデントコマンダーが対応プロセスを軌道に乗せ続けることができます。
 
-Remember that the job of an IC also includes preparing backup plans in case the current action doesn't resolve the incident. If you're acting as an SME fixing on a particular issue, you're not considering the backup plan.
+インシデントコマンダーの仕事には、現在のアクションがインシデントを解決しない場合のバックアッププランの準備も含まれることを忘れないでください。特定の問題の修正にSMEとして行動している場合、バックアッププランを考慮していません。
 
-## Trying to be a hero.
+## ヒーローになろうとする
 
-It can be tempting to try and solve every issue yourself if you're acting as a Subject Matter Expert. Every request that comes up, you want to jump on it and say you'll take care of it. You'll be the indispensable one who solves all the problems. As noble as the intent is, it rarely leads to an efficient outcome. You want to avoid as much multi-tasking as possible during an incident, and focus on one problem at a time. **Don't try to solve everything yourself**. If multiple requests are coming up for your area of expertise, delegate them to other experts, even paging backup responders if required.
+SMEとして行動している場合、すべての問題を自分で解決しようとする誘惑に駆られることがあります。出てくるすべてのリクエストに飛びつき、自分が対処すると言いたくなります。あなたはすべての問題を解決する不可欠な存在になるでしょう。意図は高潔ですが、効率的な結果につながることはほとんどありません。インシデント中はできるだけマルチタスクを避け、一度に一つの問題に集中するのがよいです。**すべてを自分で解決しようとしないでください**。あなたの専門分野に関する複数のリクエストが出てきた場合、それらを他の専門家に委任し、必要であればバックアップの対応者に連絡してください。
 
-Likewise, if another SME has been assigned a task, don't do the task on their behalf without consulting with them first. While you are trying to help, it will end up hindering the response as you'll have two people working on the same issue, and they may be interfering with each other in unexpected ways.
+同様に、別のSMEにタスクが割り当てられている場合、最初に彼らと相談せずに彼らの代わりにタスクを実行しないでください。あなたは助けようとしていますが、結局は二人の人が同じ問題に取り組み、予期せぬ方法で互いに干渉する可能性があるため、対応を妨げることになります。
 
-## Not disseminating policy changes to responders.
+## ポリシー変更を対応者に周知しない
 
-We've fallen into the trap in the past of making policy and process changes by simply updating our internal documentation (i.e. this), assuming everyone would read the documentation before an incident. Which of course, never happens.
+過去には、内部文書（つまりこれ）を更新するだけでポリシーとプロセスの変更を行い、インシデント前に全員が文書を読むと想定するという罠に陥りました。もちろん、それは決して起こりません。
 
-**Any policy changes need to be appropriately disseminated to your responders ahead of time** so that there are no surprises during an incident. This can be in the form of an email, or an update into a chat room, but big policy changes should never be a surprise to responders.
+**ポリシーの変更は、インシデント中に驚きがないように、事前に適切に対応者に周知する必要があります**。これはメールやチャットルームへの更新の形で行うことができますが、大きなポリシー変更が対応者にとって驚きであってはなりません。
 
-## Requiring Incident Commanders to have deep technical knowledge.
+## インシデントコマンダーに深い技術的知識を要求する
 
-This is a trap we fell into in our early days of incident response. We had several strong technical requirements for any new Incident Commanders, aiming to only have IC's with deep technical expertise, the intention being that they could diagnose issues very quickly. When it became apparent that we would need a large selection of IC's in order to maintain an effective on-call rotation, we soon realised that we had artificially restricted our pool of potential IC candidates.
+これは、インシデント対応の初期段階で陥った罠です。新しいインシデントコマンダーに対していくつかの強い技術的要件を設け、深い技術的専門知識を持つインシデントコマンダーのみを目指していました。その意図は、彼らが問題を非常に迅速に診断できるようにするためでした。効果的なオンコール交代を維持するために多数のインシデントコマンダーが必要であることが明らかになったとき、私たちは潜在的なインシデントコマンダー候補のプールを人為的に制限していたことにすぐに気づきました。
 
-**Incident Commanders can come from all across your organization, and don't need to be technical experts**. Since Incident Commanders only coordinate the response, they don't need deep technical knowledge of the system in order to perform their role. The Subject Matter Experts are the ones who need the deep technical knowledge. The Incident Commanders only require a high-level knowledge of how the system works. Where data flows in, how systems use it, and where data flows out. The technical details can be left to the SMEs, with the IC asking relevant questions.
+**インシデントコマンダーは組織全体から募ることができ、技術的な専門家である必要はありません**。インシデントコマンダーは対応を調整するだけなので、役割を果たすためにシステムの深い技術的知識は必要ありません。深い技術的知識を必要とする人たちはSMEです。インシデントコマンダーはシステムの動作に関する高レベルの知識だけが必要です。データがどこから流れ込み、システムがそれをどのように使用し、データがどこに流れ出るか。技術的な詳細はSMEに任せ、インシデントコマンダーは関連する質問をします。
 
-By dropping our strong technical requirements for Incident Commanders, we've been able to dramatically increase our pool of IC's, maintain a high level of quality and efficiency in our response, and help spread empathy for on-call workload to a larger portion of the company.
+インシデントコマンダーに対する強い技術的要件を緩和することで、インシデントコマンダーのプールを劇的に増やし、対応の質と効率の高いレベルを維持し、オンコール業務への共感を会社のより大きな部分へ広げることができました。

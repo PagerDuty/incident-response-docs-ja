@@ -1,55 +1,55 @@
 ---
 cover: assets/img/covers/sme.png
-description: If you are on-call for any team at PagerDuty, you may be paged for a major incident and will be expected to respond as a subject matter expert (SME) for your service. This page details everything you need to know in order to be prepared for that responsibility.
+description: PagerDutyのどのチームでも、オンコール担当になっている場合、重大なインシデントのためにページングを受け、自分のサービスのSME（Subject Matter Expert：対象領域の専門家）として対応することが期待されます。このページでは、その責任に備えるために知っておく必要があるすべてを詳しく説明します。
 ---
-If you are on-call for any team at PagerDuty, you may be paged for a major incident and will be expected to respond as a subject matter expert (SME) for your service. This page details everything you need to know in order to be prepared for that responsibility. If you are interested in becoming an Incident Commander, take a look at the [Incident Commander Training page](../training/incident_commander.md).
+PagerDutyのどのチームでも、オンコール担当になっている場合、重大なインシデントのためにページングを受け、自分のサービスのSME（Subject Matter Expert：対象領域の専門家）として対応することが期待されます。このページでは、その責任に備えるために知っておく必要があるすべてを詳しく説明します。インシデントコマンダーになることに興味がある場合は、[インシデントコマンダーのトレーニングページ](../training/incident_commander.md)を参照してください。
 
-## On-Call Expectations
-If you are on-call for your team, there are certain expectations of you as that on-call. This applies to both the primary and secondary on-calls. Getting paged about a SEV-3 or SEV-4 in your system comes with different expectations than getting paged with a major SEV-2.
+## オンコールの期待事項
+チームのオンコール担当者である場合、オンコール担当者としていくつか期待される事項があります。これは、一次および二次のオンコール担当者の両方に適用されます。自分のシステムでSEV-3またはSEV-4についてページングを受けることは、重大なSEV-2でページングを受けることとは異なる期待事項があります。
 
-### Before Going On-Call
+### オンコール前の準備
 
-1. Be prepared, by having already familiarized yourself with our incident response policies and procedures. In particular,
-    1. [Different Roles for Incidents](../before/different_roles.md) - You will be acting as a "Resolver" or "SME". But you should familiarize yourself with the other roles and what they will be doing.
-    1. [Incident Call Etiquette](../before/call_etiquette.md) - How to behave during an incident call.
-    1. [During an Incident](../during/during_an_incident.md) - What to do during an incident. You are specifically interested in the "Resolver" steps, but you should familiarize yourself with the entire document.
-    1. [Glossary](../training/glossary.md) - Familiarize yourself with the terminology that may be used during the call.
-1. Make sure you have set up your alerting methods, and that PagerDuty can [bypass your "Do Not Disturb" settings](https://support.pagerduty.com/docs/notification-phone-numbers).
-1. Check you can join the incident call. You may need to install a browser plugin. You don't want to be doing that the first time you get paged.
-1. Be aware of your upcoming on-call time and arrange swaps around travel, vacations, appointments, etc.
-1. If you are an Incident Commander, make sure you are not on-call for your team at the same time as being on-call as Incident Commander.
+1. インシデント対応のポリシーと手順に事前に精通しておくことで、準備を整えてください。特に、
+    1. [インシデントにおける異なる役割](../before/different_roles.md) - あなたは「対応者」または「SME」として行動します。しかし、他の役割とそれらが何をするかについても熟知しておくべきです。
+    1. [インシデント会議のエチケット](../before/call_etiquette.md) - インシデント会議中の行動方法。
+    1. [インシデント発生中](../during/during_an_incident.md) - インシデント中にすべきこと。あなたは特に「対応者」のステップに関心がありますが、文書全体に精通しておくべきです。
+    1. [用語集](../training/glossary.md) - 会議中に使用される可能性のある用語に精通しておいてください。
+1. アラート方法を設定し、PagerDutyが[「おやすみモード」設定をバイパス](https://support.pagerduty.com/docs/notification-phone-numbers)できることを確認してください。
+1. インシデント会議に参加できることを確認してください。ブラウザプラグインのインストールが必要な場合があります。初めてページングを受けたときにそれをする必要がないようにしましょう。
+1. 今後のオンコール時間を把握し、旅行、休暇、予定などの周りで交代を手配してください。
+1. インシデントコマンダーである場合は、インシデントコマンダーとしてオンコール中に同時にチームのオンコール担当にならないようにしてください。
 
-### During On-Call Period
+### オンコール期間中
 
-1. Have your laptop and Internet with you at all times during your on-call period (office, home, a MiFi, a phone with a tethering plan, etc).
-1. If you have important appointments, you need to get someone else on your team to cover that time slot in advance.
-1. When you receive an alert for a major incident, you are expected to join the incident call and Slack as quickly as possible (within minutes).
-    1. You will be asked questions or given actions by the Incident Commander. Answer questions concisely, and follow all actions given (even if you disagree with them).
+1. オンコール期間中は常にノートパソコンとインターネットを持ち歩いてください（オフィス、自宅、MiFi、テザリングプラン付きの電話など）。
+1. 重要な予定がある場合は、事前にチームの他のメンバーにその時間枠をカバーしてもらう必要があります。
+1. 重大なインシデントのアラートを受け取ったら、できるだけ早く（数分以内に）インシデント会議とSlackに参加することが期待されます。
+    1. インシデントコマンダーから質問されたり、行動を指示されたりします。質問に簡潔に答え、（たとえ同意しなくても）指示されたすべての行動に従ってください。
 
-## Response Mobilization
-When an incident occurs, you must be mobilized or assigned to become part of the incident response. In other words, until you are mobilized to the incident via a page or being directly asked by someone else on the incident, you remain in your everyday role. After being mobilized, your first task is to check in and receive an assignment. While it's tempting to see an incident happening and want to jump in and help, when resources show up that have not been requested, the management of the incident can be compromised.
+## 対応の動員
+インシデントが発生した場合、あなたはインシデント対応の一部となるために動員または割り当てられる必要があります。言い換えれば、通知を通じて、または他の誰かから直接依頼されてインシデントに動員されるまで、あなたは日常の役割にとどまります。動員された後、最初のタスクはチェックインして割り当てを受けることです。インシデントが発生しているのを見て飛び込んで助けたい気持ちにかられるかもしれませんが、要請されていないリソースが現れると、インシデントの管理が損なわれる可能性があります。
 
-## "Never Hesitate to Escalate"
-If you're not sure about something, it is perfectly acceptable to bring in other SMEs from your team that you believe know a given system better than you. Don't let your ego keep you from bringing in additional help. Our motto is "Never hesitate to escalate", you will never be looked down upon for escalating something because you didn't know how to handle it.
+## 「エスカレーションを躊躇しない」
+何かについて確信が持てない場合は、特定のシステムについてあなたよりも詳しいと思われるチームの他のSMEを呼び込むことは完全に許容されます。自分のエゴが追加の助けを求める妨げにならないようにしてください。私たちのモットーは「エスカレーションを躊躇しない」です。対処方法がわからなかったためにエスカレーションしたことで、見下されるようなことはありません。
 
-## Blameless
-There will be incidents. Some will be caused by you, some will be caused by others... some will just happen. Our entire incident response process is completely blameless. Blaming people is counter productive and just distracts from the problem at hand. No matter how an incident started, they all need to get solved as quickly as possible.
+## 非難しない
+インシデントは発生します。あなたが原因となるものもあれば、他の人が原因となるものもあります...単に発生するものもあります。私たちのインシデント対応プロセス全体は完全に非難を伴わないものです。人を非難することは非生産的であり、目の前の問題から注意をそらすだけです。インシデントがどのように始まったとしても、すべてのインシデントはできるだけ早く解決する必要があります。
 
-## Wartime vs Peacetime
-Behavior during a major incident is very different to any other alert you may have received in the past. We call a major incident "wartime", and make a distinction between that and normal everyday operations ("peacetime").
+## 戦時 vs 平時
+重大なインシデント中の行動は、過去に受け取った他のアラートとは非常に異なります。私たちは重大なインシデントを「戦時」と呼び、通常の日常業務（「平時」）とは区別しています。
 
-### Peacetime
-The organizational structure is generally based on seniority. The more senior members of a team will lead discussions, and managers or team leads will have the final say. Decisions are made after careful consideration of all options, and to minimize potential risk to customers.
+### 平時
+組織構造は一般的にメンバーのシニア度合いに基づいています。チームのよりシニアなメンバーが議論をリードし、マネージャーやチームリーダーが最終決定権を持ちます。すべてのオプションを慎重に検討した後に決定が下され、顧客への潜在的なリスクを最小限に抑えます。
 
-### Wartime
-Wartime is different, and you will notice on our major incident calls that there's a different organizational structure.
+### 戦時
+戦時は異なり、重大なインシデント会議では異なる組織構造があることに気づくでしょう。
 
-* The Incident Commander is in charge. No matter their rank during peacetime, they are now the highest ranked individual on the call, higher than the CEO.
-* Primary responders (folks acting as primary on-call for a team/service) are the highest ranked individuals for that service.
-* Decisions will be made by the IC after consideration of the information presented. Once that decision is made, it is final.
-* Riskier decisions can be made by the IC than would normally be considered during peacetime.
-    * For example, the IC may decide to drop events for a particular customer in order to maintain the integrity of the system for everyone else.
-* The IC may go against a consensus decision. If a poll is done, and 9/10 people agree but 1 disagrees. The IC may choose the disagreement option despite a majority vote.
-    * Even if you disagree, the IC's decision is final. During the call is not the time to argue with them.
-* The IC may use language or behave in a way you find rude. This is wartime, and they need to do whatever it takes to resolve the situation, so sometimes rudeness occurs. This is never anything personal, and something you should be prepared to experience if you've never been in a wartime situation before.
-* You may be asked to leave the call by the IC, or you may even be forceable kicked off a call. It is at the IC's discretion to do this if they feel you are not providing useful input. Again, this is nothing personal and you should remember that wartime is different than peacetime.
+* インシデントコマンダーが責任者です。平時の彼らの階級に関係なく、彼らは今、会議で最も高い階級の個人であり、CEOよりも上位です。
+* 一次対応者（チーム/サービスの一次オンコール担当者として行動する人々）は、そのサービスの最高ランクの個人です。
+* 決定は、提示された情報を検討した後、インシデントコマンダーによって下されます。その決定が下されると、それは最終的なものです。
+* インシデントコマンダーは、平時中に通常考慮されるよりもリスクの高い決定を下すことがあります。
+    * 例えば、インシデントコマンダーは他のすべての人のためにシステムの完全性を維持するために、特定の顧客のイベントをドロップすることを決定することがあります。
+* インシデントコマンダーはコンセンサスの決定に反することがあります。投票が行われ、10人中9人が同意しても1人が反対する場合、インシデントコマンダーは多数決にもかかわらず反対意見を選ぶことがあります。
+    * たとえあなたが同意しなくても、インシデントコマンダーの決定は最終的なものです。会議中は彼らと議論する時間ではありません。
+* インシデントコマンダーはあなたが失礼だと感じる言葉を使ったり、行動したりすることがあります。これは戦時であり、彼らは状況を解決するために必要なことは何でもする必要があるため、時には失礼が発生します。これは決して個人的なものではなく、戦時の状況を経験したことがない場合に備えておくべきことです。
+* インシデントコマンダーによって会議から退出するよう求められたり、強制的に会議から追い出されたりすることがあります。あなたが有用な意見を提供していないとインシデントコマンダーが感じた場合、これはインシデントコマンダーの裁量で行われます。繰り返しますが、これは個人的なものではなく、戦時は平時とは異なることを覚えておくべきです。

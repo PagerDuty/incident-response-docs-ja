@@ -43,44 +43,42 @@ NIMSについてもっと学びたい場合は、[ICS-100](https://training.fema
 ## 世界中のインシデント対応
 NIMSは米国のインシデント対応フレームワークですが、多くの国々が独自の類似したフレームワークを持っています。一部は米国のシステムに基づいていますが、多くは独自に開発されました。世界中の国々で使用されている方法やフレームワークを調査することで、さらに多くの追加情報を学ぶことができます。
 
-「[比較緊急管理：世界中の災害政策、組織、イニシアチブの理解](https://training.fema.gov/hiedu/aemrc/booksdownload/compemmgmtbookproject/)」という本（[FEMAのウェブサイト](https://training.fema.gov/hiedu/aemrc/)から入手可能）は、約30の異なる国々で使用されているシステムを比較しており、世界中で使用されている緊急管理フレームワークに関する情報の素晴らしいコレクションです。
+「[Comparative Emergency Management: Understanding Disaster Policies, Organizations, and Initiatives from Around the World](https://training.fema.gov/hiedu/aemrc/booksdownload/compemmgmtbookproject/)」という本（[FEMAのウェブサイト](https://training.fema.gov/hiedu/aemrc/)から入手可能）は、約30の異なる国々で使用されているシステムを比較しており、世界中で使用されている緊急管理フレームワークに関する情報の素晴らしいコレクションです。
 
 以下は、PagerDutyでの私たち自身のプロセスを適応し改善するために、より詳細に調査したシステムのいくつかです。
 
 ### イギリス
 
-イギリスの緊急サービスは、主要な作戦のために[**ゴールド-シルバー-ブロンズコマンド構造**](https://en.wikipedia.org/wiki/Gold%E2%80%93silver%E2%80%93bronze_command_structure)と呼ばれるコマンド階層を使用しています。このフレームワークには、戦略的（ゴールド）、戦術的（シルバー）、運用的（ブロンズ）コマンド決定を担当する3つのレベルが含まれています。
+イギリスの緊急サービスは、主要な作戦のために[** Gold-Silver-Bronze Command Structure **](https://en.wikipedia.org/wiki/Gold%E2%80%93silver%E2%80%93bronze_command_structure)と呼ばれるコマンド階層を使用しています。このフレームワークには、戦略的（ゴールド）、戦術的（シルバー）、運用的（ブロンズ）コマンド決定を担当する3つのレベルが含まれています。
 
 もっと学びたい場合は、以下の有用な読み物があります：
 
-* [UK.GOV - 緊急対応と回復](https://www.gov.uk/guidance/emergency-response-and-recovery)。
-* [UK.GOV - インシデントコマンド - 第3版（2008）](https://www.gov.uk/government/publications/fire-and-rescue-manual-volume-1-incident-command)。
-* [UK Home Office - 重大インシデント管理](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/735103/critical-incident-management-v12.0ext.pdf)（PDF）。
+* [UK.GOV - Emergency Response and Recovery](https://www.gov.uk/guidance/emergency-response-and-recovery)。
+* [UK.GOV - Incident Command - 3rd Edition (2008)](https://www.gov.uk/government/publications/fire-and-rescue-manual-volume-1-incident-command)。
+* [UK Home Office - Critical Incident Management](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/735103/critical-incident-management-v12.0ext.pdf)（PDF）。
 
 
 ### ニュージーランド
 
-ニュージーランドのシステムは[**調整インシデント管理システム（CIMS）**](https://en.wikipedia.org/wiki/Coordinated_Incident_Management_System)と呼ばれ、米国で使用されているインシデントコマンドシステムに基づいています。CIMSの特に気に入った点の一つは、共通の用語に焦点を当てていることです。これはインシデント中の混乱を防ぎ、より迅速で効果的な対応を可能にします。一部の用語はICSから変更されていますが（例えば、管理機能を説明するために「コマンド」の代わりに「コントロール」）、それでも馴染みがあるはずです。
+ニュージーランドのシステムは[Coordinated Incident Management System (CIMS) ](https://en.wikipedia.org/wiki/Coordinated_Incident_Management_System)と呼ばれ、米国で使用されているインシデントコマンドシステムに基づいています。CIMSの特に気に入った点の一つは、共通の用語に焦点を当てていることです。これはインシデント中の混乱を防ぎ、より迅速で効果的な対応を可能にします。一部の用語はICSから変更されていますが（例えば、管理機能を説明するために「コマンド」の代わりに「コントロール」）、それでも馴染みがあるはずです。
 
 もっと学びたい場合は、以下の有用な読み物があります：
 
-* [民間防衛・緊急管理省 - ニュージーランド調整インシデント管理システム（CIMS）](https://www.civildefence.govt.nz/resources/coordinated-incident-management-system-cims-third-edition/)（[PDF](https://www.civildefence.govt.nz/assets/Uploads/CIMS-3rd-edition-FINAL-Aug-2019.pdf)）。
-* [Devereux-Blum Training & Development - 緊急管理トレーニング](https://www.emergencymanagement.co.nz/)
+* [Ministry of Civil Defence & Emergency Management - New Zealand Coordinated Incident Management System (CIMS)](https://www.civildefence.govt.nz/resources/coordinated-incident-management-system-cims-third-edition/)（[PDF](https://www.civildefence.govt.nz/assets/Uploads/CIMS-3rd-edition-FINAL-Aug-2019.pdf)）。
+* [Devereux-Blum Training & Development - Emergency Management Training](https://www.emergencymanagement.co.nz/)
 
 ### オーストラリア
 
-オーストラリアは[**オーストラレーシア機関間インシデント管理システム（AIIMS）**](https://en.wikipedia.org/wiki/Australasian_Inter-Service_Incident_Management_System)と呼ばれるシステムを使用しています。これは米国で使用されているNIMSフレームワークの派生物です。ICSに基づいていますが、AIIMSは他のフレームワークよりも_管理範囲_に大きな焦点を当てています。ニュージーランドのシステムと同様に、使用されている用語にはいくつかの違いがあります（例えば、「インシデントコマンダー」の代わりに「インシデントコントローラー」）が、ICSを知っている人にはまだ馴染みがあるはずです。
+オーストラリアは[** Australasian Inter-Service Incident Management System (AIIMS) **](https://en.wikipedia.org/wiki/Australasian_Inter-Service_Incident_Management_System)と呼ばれるシステムを使用しています。これは米国で使用されているNIMSフレームワークの派生物です。ICSに基づいていますが、AIIMSは他のフレームワークよりも_管理範囲_に大きな焦点を当てています。ニュージーランドのシステムと同様に、使用されている用語にはいくつかの違いがあります（例えば、「インシデントコマンダー」の代わりに「インシデントコントローラー」）が、ICSを知っている人にはまだ馴染みがあるはずです。
 
 もっと学びたい場合は、以下の有用な読み物があります：
 
-* [オーストラレーシア機関間インシデント管理システム、第3版](https://training.fema.gov/hiedu/docs/cem/comparative%20em%20-%20session%2021%20-%20handout%2021-1%20aiims%20manual.pdf)（PDF）。
-* [オーストラリアのインシデント管理ハンドブック](https://knowledge.aidr.org.au/resources/handbook-14-incident-management-in-australia/)
+* [Incident Management in Australia Handbook](https://knowledge.aidr.org.au/resources/handbook-14-incident-management-in-australia/)
 
 ### カナダ
 
-カナダは独自の[**インシデントコマンドシステム**](https://www.icscanada.ca/images/upload/ICS%20OPS%20Description2012.pdf)（PDF）を使用しています。その標準は[ICS Canada](https://www.icscanada.ca/en/home.html)と呼ばれる組織のネットワークによって維持されています。彼らのウェブサイトには、州に応じてカナダでのローカルトレーニングコースを見つける方法に関する情報のコレクションがあります。
+カナダは独自の[** インシデントコマンドシステム **](https://www.icscanada.ca/images/upload/ICS%20OPS%20Description2012.pdf)（PDF）を使用しています。その標準は[ICS Canada](https://www.icscanada.ca/en/home.html)と呼ばれる組織のネットワークによって維持されています。彼らのウェブサイトには、州に応じてカナダでのローカルトレーニングコースを見つける方法に関する情報のコレクションがあります。
 
 もっと学びたい場合は、以下の有用な読み物があります：
 
-* [ICSCanada - I-100 インシデントコマンドシステム入門](https://www.svffa.ca/s/ICS100-Self-Paced-Student-Workbook_2016.pdf)（PDF）。
-* [カナダICSフォーム](https://www.icscanada.ca/en/Forms.html) - _ダウンロードして独自のインシデントで使用できる標準ICSフォーム（[FEMAには米国の同等品があります](https://training.fema.gov/icsresource/icsforms.aspx)）。_
+* [Canada ICS Forms](https://www.icscanada.ca/en/Forms.html) - _ダウンロードして独自のインシデントで使用できる標準ICSフォーム（[FEMAには米国における同等の内容があります](https://training.fema.gov/icsresource/icsforms.aspx)）。_

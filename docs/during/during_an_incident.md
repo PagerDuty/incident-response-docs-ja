@@ -19,7 +19,7 @@ cover: assets/img/covers/dont\_panic.png description:重大インシデント発
         <td colspan="3" class="centered">インシデントコマンダーに連絡しますか？ コマンド <code>!ic page</code> をSlack上で実行してください</td>
     </tr>
     <tr>
-        &quot= "3"<><em>エグゼクティブサマリー更新のみ、join<hra="#">#エグゼクティブサマリー更新</a>/em></td>/td>/
+      <td colspan="3"><em>エグゼクティブサマリー更新のみ必要な場合は、<a href="#">#executive-summary-updates</a></em> にjoinしてください。</td>
     </tr>
     </tbody>
 </table>

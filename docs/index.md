@@ -28,14 +28,14 @@ hero_alt_text: Incident Response at PagerDuty
 
 ## インシデント発生中
 
-重大インシデント発生中におけるプロセスおよび情報。
+重大インシデント発生中におけるプロセスおよび情報です。
 
 * [During an Incident](during/during_an_incident.md) - _インシデント発生時に何をすべきか、建設的に貢献する方法に関する情報_
-* [Security Incident Response](during/security_incident_response.md) - _セキュリティインシデントは、通常の運用インシデントとは異なる方法で対応されます。_
+* [Security Incident Response](during/security_incident_response.md) - _セキュリティインシデントは、通常の運用インシデントとは異なる方法で対応されます_
 
 ## インシデント解決後
 
-過ちを繰り返さないための取り組み、常に改善を続けるためのフォローアップのプロセス。
+過ちを繰り返さないための取り組み、常に改善を続けるためのフォローアップのプロセスです。
 
 * [After an Incident](after/after_an_incident.md) - _インシデント解決後に取るべき対応に関する情報_
 * [Postmortem Process](after/post_mortem_process.md) - _ポストモーテムのプロセス、その内容、およびポストモーテムレポートの作成方法に関する情報_
@@ -44,11 +44,11 @@ hero_alt_text: Incident Response at PagerDuty
 
 ## 危機対応
 
-インシデント対応は、技術的なインシデントへの対処だけではありません。危機はいつでも起こり得ます。あなたはそれに対して備えができていますか？ 最悪の事態への対処の仕方によって、現在の顧客や潜在顧客の目には、貴社のブランドやその価値がどう映るかが決まります。
+インシデント対応は、技術的なインシデントへの対処だけではありません。危機はいつでも起こり得ます。あなたはそれに対して備えができていますか？ 最悪の事態への対処の仕方によって、現在の顧客や潜在顧客の目には、自社のブランドやその価値がどう映るかが決まります。
 
 * [Introduction](crisis/crisis_intro.md) - _危機対応の概要と、この文書の対象者について_
 * [Terminology](crisis/terms.md) - _このガイドで使用される主な用語と概念の一覧_
-* [Crisis Leadership](crisis/leadership.md) - _基本原則と貴社の価値観を対応に組み込むことについて_
+* [Crisis Leadership](crisis/leadership.md) - _基本原則と自社の価値観を対応に組み込むことについて_
 * [Crisis Response Operations](crisis/operations.md) - _危機対応計画の実行_
 * [Pre-crisis Phase](crisis/prework.md) - _準備のための活動を最大限に活用し、チームを常に準備万端にしておくことについて_
 * [PagerDuty for CRMOps](crisis/pagerduty.md) - _当社がPagerDutyを危機対応管理オペレーションに活用している方法_
@@ -75,7 +75,7 @@ hero_alt_text: Incident Response at PagerDuty
 
 ## その他の情報
 
-インシデント対応に関連する外部の有用な資料や情報
+インシデント対応に関連する外部の有用な資料や情報です。
 
 * [Reading](resources/reading.md) - _インシデント対応に関連する推奨読み物_
 * [ChatOps](resources/chatops.md) - _この文書で参照しているチャットボットコマンドの説明_

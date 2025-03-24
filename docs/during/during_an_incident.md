@@ -6,23 +6,23 @@ cover: assets/img/covers/dont\_panic.png description:重大インシデント発
 !!! note "ドキュメンテーション"
     ご自身の内部ドキュメントとして利用される場合は、このページに必要な情報がすべて網羅されていることを確認してください。たとえば、電話会議の番号、Slackチャンネル、重要なチャットコマンドなどです。次に例を示します。
 
-<table class="custom-table" id="contact-summary">
-    <thead>
-    </thead>
-    <tbody>
-    <tr>
-        <td><a href="#">#incident-chat</a></td>
-        <td><a href="#">https://a-voip-provider.com/incident-call</a></td>
-        <td><a href="#">+1 555 BIG FIRE</a> (+1 555 244 3473) / PIN:123456</td>
-    </tr>
-    <tr>
-        <td colspan="3" class="centered">インシデントコマンダーに連絡しますか？ コマンド <code>!ic page</code> をSlack上で実行してください</td>
-    </tr>
-    <tr>
-      <td colspan="3"><em>エグゼクティブサマリー更新のみ必要な場合は、<a href="#">#executive-summary-updates</a></em> にjoinしてください。</td>
-    </tr>
-    </tbody>
-</table>
+    <table class="custom-table" id="contact-summary">
+        <thead>
+        </thead>
+        <tbody>
+        <tr>
+            <td><a href="#">#incident-chat</a></td>
+            <td><a href="#">https://a-voip-provider.com/incident-call</a></td>
+            <td><a href="#">+1 555 BIG FIRE</a> (+1 555 244 3473) / PIN:123456</td>
+        </tr>
+        <tr>
+            <td colspan="3" class="centered">インシデントコマンダーに連絡しますか？ コマンド <code>!ic page</code> をSlack上で実行してください</td>
+        </tr>
+        <tr>
+        <td colspan="3"><em>エグゼクティブサマリー更新のみ必要な場合は、<a href="#">#executive-summary-updates</a></em> にjoinしてください。</td>
+        </tr>
+        </tbody>
+    </table>
 
 !!! warning "セキュリティインシデント？"
     これがセキュリティインシデントである場合、[Security Incident Response](../during/security_incident_response.md)プロセスに従う必要があります。

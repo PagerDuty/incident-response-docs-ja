@@ -1,70 +1,70 @@
 ---
 cover: assets/img/covers/whos_on-call.png
-description: Information on how to manage external communications
+description: インシデント中の外部コミュニケーション管理に関する情報
 ---
 
-Information on how to manage external communications during an incident. See our [role descriptions](../before/different_roles/) for information about who is responsible for external communications.
+インシデント中の外部コミュニケーションを管理する方法に関する情報です。外部コミュニケーションの責任者については、[役割の説明](../before/different_roles/)を参照してください。
 
-## When to communicate publicly
+## 対外コミュニケーションのタイミング
 
-Before you decide to communicate an incident, it’s important to have an agreed-upon set of criteria for when a major incident is communicated. False alarms and short-lived issues can sometimes kick off incident calls, so knowing when communication is appropriate will help your customers avoid widespread panic. This can be tied to your organization’s definition of [what an incident is](https://response.pagerduty.com/before/what_is_an_incident/), and/or your [severity levels](https://response.pagerduty.com/before/severity_levels/).
+インシデントについてコミュニケーションを行う前に、重大なインシデントをいつ伝えるべきかについて、合意された基準を持つことが重要です。インシデント会議は誤報や短期間の問題を起点に開始されることがあるため、適切なコミュニケーションのタイミングを知ることで、顧客に対し広範なパニックを引き起こすのを避けることができます。これは組織の[インシデントの定義](https://response.pagerduty.com/before/what_is_an_incident/)や[重大度レベル](https://response.pagerduty.com/before/severity_levels/)と関連付けることができます。
 
-You might consider the following criteria as well: 
+以下の基準も考慮するとよいでしょう：
 
-1. Which products are affected?
-1. How badly is the usage affected?
-1. How many customers are affected?
-1. How noticeable is the impact?
-1. Is the impact something a customer may want to have contingencies for?
+1. どのプロダクトが影響を受けていますか？
+1. サービスの利用にどの程度の影響がありますか？
+1. 何人の顧客が影響を受けていますか？
+1. 影響はどれくらい顕著なものですか？
+1. その影響は顧客が対策を講じたいと思うようなものですか？
 
-We also recommend coming up with a set of templates for different stages of an incident, including options for the communications below as well as special situations (long-running incidents, small or limited customer impact, incidents opened with immediate resolution, etc.) 
+また、インシデントの各段階に対応するテンプレートセットを作成することをお勧めします。これには、後述するコミュニケーションのオプションや特別な状況（長期間続くインシデント、小規模または限定的な顧客への影響、オープンされて即時解決されたインシデントなど）が含まれます。
 
-## How to communicate
+## コミュニケーション方法
 
-### Initial communication:
+### 初期コミュニケーション：
 
-The first communication should indicate that an incident is under investigation. The goal here is to avoid a customer experiencing symptoms of the incident, checking status pages or Twitter accounts, and not seeing awareness of the issue from the business. 
+最初のコミュニケーションでは、インシデントが調査中であることを示す必要があります。ここでの目標は、インシデントの症状を経験している顧客がステータスページやX（旧Twitter）アカウントを確認した際に、企業側の問題認識が見られないという状況を避けることです。
 
-- Decision and posting of initial communication happens within 5 minutes of kicking off the incident call.
-- These messages should be entirely templated for ease of action.
-- These messages can be minimal in revealing scope which might not be known yet, but should indicate that scope will be coming soon. 
+- 最初のコミュニケーションの決定と投稿は、インシデント会議の開始から5分以内に行われます。
+- これらのメッセージは、アクションが取りやすいように完全にテンプレート化しておきましょう。
+- これらのメッセージは、まだ判明していない可能性のある範囲の開示を最小限に抑えることができますが、範囲がもうじき明らかになることを示す必要があります。
 
-### Second communication: Initial Scoping of Impact
+### 2回目のコミュニケーション：影響範囲の初期特定
 
-This is a message that should be delivered within 5 minutes of the first communication, once some scope of impact is known. This post should outline: 
+これは、最初のコミュニケーションから5分以内に、影響範囲がある程度判明した時点で配信する必要のあるメッセージです。この投稿では以下を概説する必要があります：
 
-- Customer impact
-- An update of which components and/or functionality are impacted
-- Which regions are affected.
+- 顧客への影響
+- 影響を受けるコンポーネントや機能の更新情報
+- 影響を受ける地域
 
-### Updates
+### 更新情報
 
-Depending on the length of the incident, periodic updates will be necessary. These updates should be delivered **at least** every 20 minutes from the scoping update during the first two hours of an incident. After two hours, you may choose to update with reduced frequency and shift to a long incident communication model (see below). Regardless of expected frequency, when the degree of impact has meaningfully changed, updates should be posted. These updates should:
+インシデントの継続時間の長さによっては、定期的なアップデートが必要になります。インシデントの最初の2時間は、有意なアップデートが**少なくとも**20分ごとに配信されるべきです。2時間後は、更新頻度を減らし、長期インシデントコミュニケーションモデル（次のセクション参照）に移行することを選択できます。予想される頻度に関わらず、影響の程度が大きく変化した場合は、アップデートを投稿する必要があります。この際には以下を行うべきです：
 
-- Indicate any changes to impact and/or scope
-- Indicate if we believe we have shifted into recovery and/or mitigation steps. 
-- Provide an expectation of when the next update will be posted.
+- 影響や範囲の変化を示します。
+- 回復やリスク軽減ステップに移行したと考えられる場合はそれを示します。
+- 次の更新がいつ投稿されるかの予想を提供します。
 
-Customers with special contracts around their Customer Support or Customer Success, such as a customer on a Premium Support plan, should also receive communication of impact delivered individually, whether through a Customer Liaison or their account team.
+プレミアムサポートプランを利用している顧客など、カスタマーサポートやカスタマーサクセスに関する特別な契約を持つ顧客には、カスタマーリエゾンまたはアカウントチームを通じて個別に影響を知らせましょう。
 
-### Long Incidents
+### 長期インシデント
 
-Incidents longer than two hours should be considered a long incident, and have different communication procedures as a result. When we know an incident will be extended, customer expectations have to be set appropriately, and customer notification fatigue due to content-less updates should be avoided. When in doubt, notify at the frequency which keeps updates meaningful. 
+2時間以上続くインシデントは長期インシデントと見なされ、異なるコミュニケーション手順が必要です。インシデントが長引くことがわかった場合、顧客の期待を適切に設定する必要があり、内容のない更新を受け取ることによる顧客の疲労を避ける必要があります。迷った場合は、意味のあるアップデートができる頻度で通知してください。
 
-- Don’t determine this within the first hour of an incident.
-- For incidents where we know a long running recovery, indicate this in an update when known.
-- If planning to reduce update frequency, continue to provide expectations of when the next update will be posted.
+- インシデント発生後、最初の1時間はこの決定は避けてください。
+- 回復に長時間を要するインシデントの場合、判明した時点で更新情報に示してください。
+- 更新頻度を減らす予定がある場合は、次の更新がいつ投稿されるかの見込みを引き続き提供してください。
 
-### Resolution
+### 解決
 
-Your final communication should be posted when full recovery of the incident has been confirmed by the Incident Commander. This update should include:
+最終的なコミュニケーションは、インシデントコマンダーによってインシデントからの完全な回復が確認された時点で投稿されるべきです。この更新には以下を含める必要があります：
 
-- Confirmation of full recovery
-- Clear indication of any data loss or lingering corruption.
-- If there are no lingering impacts, clearly note this in the update. 
+- 完全な回復を確認します。
+- データ損失や残存する破損を明確化します。
+- 残存する影響がない場合は、更新情報にこれを明確に記載します。
 
-Once this is posted, continue to follow the steps for [After an Incident](https://response.pagerduty.com/after/after_an_incident/) and the [Postmortem Process](https://response.pagerduty.com/after/post_mortem_process/). 
+これが投稿されたら、[インシデント後](https://response.pagerduty.com/after/after_an_incident/)と[ポストモーテムプロセス](https://response.pagerduty.com/after/post_mortem_process/)のステップに従い続けてください。
 
-## Quick Reference
+## クイックリファレンス
 
-![Quick reference rubric for external communications spanning from initial investigation communication to resolution.](../assets/img/misc/decision-tree.png)
+![初期調査のコミュニケーションから解決までの外部コミュニケーションのためのクイックリファレンス](../assets/img/misc/decision-tree.png)

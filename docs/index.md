@@ -31,6 +31,7 @@ hero_alt_text: Incident Response at PagerDuty
 重大インシデント発生中におけるプロセスおよび情報です。
 
 * [During an Incident](during/during_an_incident.md) - _インシデント発生時に何をすべきか、建設的に貢献する方法に関する情報_
+* [External Communication Guidelines](during/external_communication_guidelines.md) - _外部向けコミュニケーションのガイドライン_
 * [Security Incident Response](during/security_incident_response.md) - _セキュリティインシデントは、通常の運用インシデントとは異なる方法で対応されます_
 
 ## インシデント解決後

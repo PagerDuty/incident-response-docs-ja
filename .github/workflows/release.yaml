@@ -3,7 +3,6 @@ on:
     paths-ignore:
       - ".github/**"
       - "!.github/workflows/release.yaml"
-      - "**.md"
     branches:
       - master
 name: 🚀 Deploy website on push

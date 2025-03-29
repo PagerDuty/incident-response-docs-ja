@@ -66,7 +66,7 @@ hero_alt_text: Incident Response at PagerDuty
 * [Incident Commander Training](training/incident_commander.md) - _インシデント対応チームの指揮官（インシデントコマンダー）になるためのガイド_
 * [Deputy Training](training/deputy.md) - _副指揮官（Deputy）となり、インシデントコマンダーを支援する方法_
 * [Scribe Training](training/scribe.md) - _書記官（Scribe）になるためのガイド_
-* [Subject Matter Expert Training](training/subject_matter_expert.md) - _重大インシデントに関わるすべての参加者の責任と行動に関するガイド_
+* [Subject Matter Expert Training](training/subject_matter_expert.md) - _SME（Subject Matter Expert）、そして重大インシデントに関わるすべての参加者の責任と行動に関するガイド_
 * [Customer Liaison Training](training/customer_liaison.md) - _インシデント発生時に顧客向け連絡係（Customer Liaison）として行動する方法に関するガイド_
 * [Internal Liaison Training](training/internal_liaison.md) - _インシデント発生時に内部向け連絡係（Internal Liaison）として行動する方法に関するガイド_
 

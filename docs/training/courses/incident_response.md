@@ -1,1106 +1,1100 @@
 ---
 style: slides
 cover: assets/slides/incident_response/incident_response.001.jpeg
-title: Incident Response Training
-description: This is an open-source version of PagerDuty's Incident Response training course. What started as an internal course to train new Incident Commanders at PagerDuty has since developed into training that we now deliver publicly. Learn more about incident response and the role of an Incident Commander.
+title: インシデント対応トレーニング
+description: これはPagerDutyのインシデント対応トレーニングコースのオープンソース版です。PagerDutyの新任インシデントコマンダーを育成するための社内コースとして始まり、現在では一般公開されているトレーニングへと発展しました。インシデント対応とインシデントコマンダーの役割について詳しく学ぶことができます。
 pdf: /assets/pdf/pagerduty_incident_response_training_public.pdf
 ---
 
-!!!info "Incident Response Training Course (2018)"
-    This is an open-source version of "Incident Response Training", our PagerDuty training course for incident response and incident command. It started as an internal course to train new Incident Commanders and has since developed into one that we now deliver publicly. This is a snapshot of what the training looked like in 2018. The latest version is now part of our [PagerDuty University](https://university.pagerduty.com/) courses.
+!!!info "インシデント対応トレーニングコース (2018)"
+    これはPagerDutyのインシデント対応とインシデントコマンドに関するトレーニングコース「インシデント対応トレーニング」のオープンソース版です。新任のインシデントコマンダーを育成するための社内コースとして始まり、現在では一般公開されているトレーニングへと発展しました。これは2018年時点のトレーニングのスナップショットです。最新版は[PagerDuty University](https://university.pagerduty.com/)のコースの一部として提供されています。
 
-    It includes lots of introductory information on our process, and details on the Incident Commander role specifically. All the information is already available as part of our [public documentation](https://response.pagerduty.com), this is just a different way of presenting it that's hopefully more engaging. Feel free to use this as a base for training in your own organization.
+    このコースには、私たちのプロセスに関する多くの入門的な情報と、特にインシデントコマンダーの役割に関する詳細が含まれています。すべての情報は[公開ドキュメント](https://response.pagerduty.com)の一部として既に利用可能ですが、これはより魅力的な形で提示する別の方法です。ぜひあなたの組織でのトレーニングのベースとしてご活用ください。
 
-    The text presented here is a semi-accurate transcription of how the training was usually delivered. You can also watch a [video](#video) of an even older version of this course if you prefer.
+    ここに記載されているテキストは、通常のトレーニング実施内容をある程度正確に書き起こしたものです。もしお好みでしたら、このコースのさらに古いバージョンの[動画](#video)をご覧いただくこともできます。
 
 ---
 
-### Introduction
+### はじめに
 
 <input type="checkbox" id="001" /><label for="001">![001](../../assets/slides/incident_response/incident_response.001.jpeg)</label>
-_001. "Incident Response Training"._
+_001. "インシデント対応トレーニング"_
 
-Hi, I'm Rich, and welcome to "Incident Response Training". This is a shorter version of our internal training at PagerDuty, which we use to train up our new Incident Commanders. It's been slightly adapted for a wider audience, but the majority is exactly what we run ourselves. We're not going to be able to cover everything, otherwise we'd be here for a few days, but I'll cover some of the most important parts of our process. I'll try to keep this as short as I can.
+こんにちは、私はRichです。「インシデント対応トレーニング」へようこそ。これはPagerDutyの社内トレーニングの短縮版で、新任のインシデントコマンダーの育成に使用しているものです。より広い対象向けに若干アレンジしていますが、大部分は私たちが実際に実施しているものと全く同じです。すべてを網羅することはできません（そうすると数日かかってしまいます）が、プロセスの最も重要な部分をいくつか取り上げます。できるだけ簡潔に進めていきたいと思います。
 
-Actually, how long do we have? Can someone keep track of time for me? That would be great, thanks!
+ちなみに、どのくらい時間をかけていいですか？誰か時間を管理してくれませんか？そうしてもらえると助かります、ありがとうございます！
 
 ---
 
-### Learn How to Effectively Manage Incidents
+### インシデントを効果的に管理する方法を学ぶ
 
 <input type="checkbox" id="002" /><label for="002">![002](../../assets/slides/incident_response/incident_response.002.jpeg)</label>
-_002. Learn how to effectively manage incidents._
+_002. インシデントを効果的に管理する方法を学ぶ。_
 
-The goal of this session is to give you an understanding of how to effectively manage incidents within your organization. I'll describe the process we use at PagerDuty for managing critical incidents, and talk in more detail about a specific role called the "Incident Commander".
+このセッションの目的は、組織内でインシデントを効果的に管理する方法を理解していただくことです。PagerDutyで重大なインシデントを管理するために使用しているプロセスについて説明し、「インシデントコマンダー」と呼ばれる特定の役割について詳しく説明します。
 
-This isn't a sales pitch. I'm not on our sales team, and this isn't a talk about how to use PagerDuty to manage your incidents (although obviously it would be awesome if you did). The intent today is to introduce you to how we manage incidents internally at PagerDuty, and provide you with lots of practical information you can take away to your own organizations to either start or improve your own incident response processes.
+これは営業のプレゼンではありません。私は営業チームの者ではありませんし、これはPagerDutyを使ってインシデントを管理する方法についての説明でもありません（もちろん、使っていただけたら素晴らしいですが）。今日の目的は、PagerDutyでどのように社内のインシデントを管理しているかを紹介し、独自のインシデント対応プロセスを開始または改善するために、皆さんの組織に持ち帰ることができる実践的な情報を多く提供することです。
 
 ---
 
-### Replace Chaos with Calm
+### 混乱を冷静さに置き換える
 
 <input type="checkbox" id="003" /><label for="003">![003](../../assets/slides/incident_response/incident_response.003.jpeg)</label>
-_003. Replace chaos with calm._
+_003. 混乱を冷静さに置き換える。_
 
-Let's start with a quick question. How does incident response usually go in your organization today? Is it a smooth and streamlined process, or is it a lot of people talking over one another? For most of you it's probably going to be somewhere in the middle.
+簡単な質問から始めましょう。現在、あなたの組織でのインシデント対応はどのように行われていますか？スムーズで効率的なプロセスですか、それとも多くの人が互いの話を遮り合っているような状況ですか？ほとんどの方にとって、おそらくその中間くらいでしょう。
 
-We want less of the latter, and more of the former. We want to replace chaos with calm. Panic and chaos are not good during an incident, they only exacerbate things and causes more confusion. We want things to be calm and organized.
+私たちは後者を減らし、前者を増やしたいと考えています。混乱とパニックをなくし、冷静さに置き換えたいのです。パニックと混乱はインシデント時に良いものではありません。それらは事態を悪化させ、さらなる混乱を引き起こすだけです。私たちは物事を冷静に、そして組織的に進めたいと考えています。
 
 ---
 
-### What is Incident Response?
+### インシデント対応とは何か？
 
 <input type="checkbox" id="004" /><label for="004">![004](../../assets/slides/incident_response/incident_response.004.jpeg)</label>
-_004. What is incident response? [Docs Reference](../../before/what_is_an_incident/#what-is-incident-response)_
+_004. インシデント対応とは何か？ [ドキュメント参照](../../before/what_is_an_incident/#what-is-incident-response)_
 
-So when we talk about incident response, what we're really talking about is an organized approach to addressing and managing an incident. This is how we define incident response at PagerDuty. They key here is on the word _organized_. We don't want to be running around in a panic anytime an alert goes off. We want our response to be almost routine, and for everyone to work together like a well-oiled machine.
+では、インシデント対応について話すとき、私たちが本当に言及しているのは、インシデントに対処し管理するための組織的なアプローチです。これがPagerDutyでのインシデント対応の定義です。ここでのポイントは「組織的」という言葉にあります。アラートが鳴るたびにパニックに陥って走り回りたくはありません。対応がほぼ日常的なものとなり、全員が油の乗った機械のように協力して働くことを望んでいます。
 
-There's a quote I really like from an excellent book called [Incident Management for Operations](https://learning.oreilly.com/library/view/~/9781491917619/) that's appropriate here,
+[Incident Management for Operations](https://learning.oreilly.com/library/view/~/9781491917619/)という素晴らしい本からの引用で、ここで適切なものがあります：
 
-> Fire is not an emergency to the fire department . . . [Y]ou expect a rapid response from a group of professionals, skilled in the art of solving whatever issues you are having.
+> 消防署にとって火事は緊急事態ではない...あなたは、あなたが抱えている問題を解決することに熟練したプロフェッショナル集団からの迅速な対応を期待している。
 
 ---
 
-### Goal of Incident Response
+### インシデント対応の目的
 
 <input type="checkbox" id="005" /><label for="005">![005](../../assets/slides/incident_response/incident_response.005.jpeg)</label>
-_005. Goal of incident response. [Docs Reference](../../before/what_is_an_incident.md#what-is-incident-response)_
+_005. インシデント対応の目的。[ドキュメント参照](../../before/what_is_an_incident.md#what-is-incident-response)_
 
-It may surprise you to learn the goal of incident response isn’t just about solving the problem. Give a thousand monkeys a keyboard and enough time and they can probably solve your problem. That's not good incident response. We want to solve the problem in a way which limits the damage caused, and reduces the recovery time and costs. I don’t just mean _financial_ cost either, there’s a cost associated with engineer health too. Constantly waking people up at 3am can have a dramatic negative effect on their health and happiness.
+インシデント対応の目的が単に問題を解決することではないと知って驚くかもしれません。千匹の猿にキーボードを与えて十分な時間を与えれば、おそらく問題を解決できるでしょう。しかし、それは良いインシデント対応とは言えません。私たちは、被害を抑え、復旧時間とコストを削減する方法で問題を解決したいと考えています。ここでいうコストは単に金銭的なコストだけではありません。エンジニアの健康にも関わるコストがあります。常に深夜3時に人々を起こすことは、彼らの健康と幸福に大きな悪影響を及ぼす可能性があります。
 
-If financial impact is all you care about though, let's not forget that **people are expensive**. In a large organization, a phone bridge with 100 people sitting there mostly idle for several hours is not unheard of. If each of those people cost ~$100/hour, that’s $10K every hour! That’s _really_ expensive to the business.
+もし金銭的な影響だけを気にするのであれば、**人は高価である**ということを忘れないでください。大規模な組織では、100人が数時間ほとんど何もせずに電話会議に参加しているということは珍しくありません。それぞれの人が時給約100ドルだとすると、それは1時間あたり1万ドルです！それは企業にとって本当に高価なものです。
 
 ---
 
-### What is an Incident?
+### インシデントとは何か？
 
 <input type="checkbox" id="006" /><label for="006">![006](../../assets/slides/incident_response/incident_response.006.jpeg)</label>
-_006. What is an incident? [Docs Reference](../../before/what_is_an_incident.md#what-is-an-incident)_
+_006. インシデントとは何か？ [ドキュメント参照](../../before/what_is_an_incident.md#what-is-an-incident)_
 
-Before we can respond to an incident though, we need to [define what an incident actually is](../../before/what_is_an_incident.md). It sounds silly, but if you’re not sure whether something’s an incident, you don’t know whether to respond to it.
+しかし、インシデントに対応する前に、[インシデントが実際に何であるかを定義する](../../before/what_is_an_incident.md)必要があります。馬鹿げているように聞こえるかもしれませんが、何かがインシデントかどうかわからなければ、それに対応すべきかどうかもわかりません。
 
-Here is PagerDuty’s definition of an incident,
+これがPagerDutyのインシデントの定義です：
 
-> An unplanned disruption or degradation of service that is actively affecting customers' ability to use the product.
+> 顧客が製品を使用する能力に積極的に影響を与えている、計画外のサービスの中断または劣化。
 
-"Customers" here doesn't just refer to external customers, but can refer to internal customers too.
+ここでいう「顧客」は外部の顧客だけでなく、内部の顧客も指す場合があります。
 
-Your definition might be different, and that’s OK. I just wanted to give you an idea of the kind of definition that can get you started. You want your definition to be simple, no more than a sentence, and easily understood by anyone.
+あなたの定義は異なるかもしれませんし、それは問題ありません。私はただ、あなたが始めるのに役立つような定義の例を示したかっただけです。定義は簡単で、1文以内で、誰にでも理解できるものであるべきです。
 
-You may notice that this is quite a broad definition though. A typo technically fits this description. As does a full outage. Obviously these are very different scenarios. So we do have something else too.
+この定義がかなり広範であることにお気づきかもしれません。タイプミスでもこの説明に当てはまります。完全な停止状態もそうです。明らかにこれらは非常に異なるシナリオです。そのため、私たちには他のものもあります。
 
 ---
 
-### What is a Major Incident?
+### 重大インシデントとは何か？
 
 <input type="checkbox" id="007" /><label for="007">![007](../../assets/slides/incident_response/incident_response.007.jpeg)</label>
-_007. What is a major incident? [Docs Reference](../../before/what_is_an_incident.md#what-is-a-major-incident)_
+_007. 重大インシデントとは何か？ [ドキュメント参照](../../before/what_is_an_incident.md#what-is-a-major-incident)_
 
-We also have something we call a **major incident**. This is any incident where we require a coordinated response between teams. Again, this is just our definition at PagerDuty, feel free to use your own.
+私たちは**重大インシデント**と呼ぶものも定義しています。これは、チーム間の協調的な対応が必要なインシデントのことです。繰り返しになりますが、これはPagerDutyでの定義であり、あなた独自の定義を使用してください。
 
-The intention behind this definition is that sometimes incidents can be handled by a single team, maybe the owners of a service that's having trouble. That rarely requires a large response in and of itself. But as soon as they need to involve another team, whether it's customer support, or database administrators, then we declare it to be a major incident and kick off a much larger response. The _coordination_ is key here, and we’ll talk more about this later.
+この定義の意図は、時にはインシデントが単一のチーム、おそらく問題を抱えているサービスの所有者によって処理できるということです。それ自体では大規模な対応を必要としません。しかし、カスタマーサポートやデータベース管理者など、他のチームを巻き込む必要が出てきた時点で、私たちはそれを重大インシデントと宣言し、より大規模な対応を開始します。ここでの鍵は**協調**であり、これについては後ほど詳しく説明します。
 
-But this still covers quite a range of potential incidents. We can get more granular.
+しかし、これもまだかなり広範な潜在的なインシデントをカバーしています。もっと細かく分類することができます。
 
 ---
 
-### Severity Levels
+### 重大度レベル
 
 <input type="checkbox" id="008" /><label for="008">![008](../../assets/slides/incident_response/incident_response.008.jpeg)</label>
-_008. Severity levels. [Docs Reference](../../before/severity_levels.md)_
+_008. 重大度レベル。[ドキュメント参照](../../before/severity_levels.md)_
 
-We also use [severity levels](../../before/severity_levels.md) to determine how severe an incident is, and what type of response it gets. We use `SEV-5` through `SEV-1` for our levels, but you may use a different scheme, `P0` through `P5`, or maybe even emoji, 🔥 through 💩, etc.
+私たちは[重大度レベル](../../before/severity_levels.md)を使用して、インシデントの深刻さとそれに対する対応の種類を決定します。私たちは`SEV-5`から`SEV-1`までのレベルを使用していますが、あなたは異なる方式を使用するかもしれません。`P0`から`P5`まで、あるいは絵文字を使って🔥から💩までなど。
 
-Let's imagine you're looking at a graph of traffic to your website. You can typically determine severity based on how drastically your metrics are affected. So as your website traffic drops, the severity increases.
+ウェブサイトへのトラフィックのグラフを見ているとしましょう。通常、メトリクスがどの程度劇的に影響を受けているかによって重大度を判断できます。つまり、ウェブサイトのトラフィックが低下するにつれて、重大度が上がっていきます。
 
-You will usually reach a point where you've set some predefined target or watermark, where as soon as the metric passes, you automatically consider something a major incident. At PagerDuty it's the difference between a `SEV-3` and `SEV-2`, but it may be different for your organization. Then as things get even more dire, we get into our `SEV-2`'s and our `SEV-1`'s when things completely flatline.
+通常、事前に定義された目標や基準点に達すると、その時点で自動的に重大インシデントとみなされます。PagerDutyでは、それは`SEV-3`と`SEV-2`の違いですが、あなたの組織では異なる場合があります。そして、事態がさらに深刻になると、`SEV-2`や完全に停止状態となる`SEV-1`に入ります。
 
-Having pre-defined thresholds and metrics can allow you to have automatic triggers for your response process.
+事前に定義された閾値とメトリクスがあれば、対応プロセスの自動トリガーを設定することができます。
 
-???+ aside hide-arrow "We recommend using metrics tied to business impact."
-    Metrics can be very useful, and often work best when they're tied to _business impact_. For example, a metric we monitor at PagerDuty is "number of outbound notifications per second", at Amazon it could be "number of orders per second", at Netflix it might be "stream starts per second", etc. Monitoring these important business metrics will then let you use automation to determine the severity of an incident and the type of response you use.
+???+ aside hide-arrow "ビジネスへの影響に紐づいたメトリクスを推奨します。"
+    メトリクスは非常に有用で、特に_ビジネスへの影響_に紐づいている場合に最も効果を発揮します。例えば、PagerDutyでモニタリングしているメトリクスの1つは「1秒あたりの送信通知数」です。Amazonなら「1秒あたりの注文数」、Netflixなら「1秒あたりのストリーム開始数」などかもしれません。これらの重要なビジネスメトリクスをモニタリングすることで、インシデントの重大度とそれに応じた対応の種類を自動的に決定することができます。
 
-    If you use metrics that aren't tied to business impact (e.g. "CPU usage is high on a host"), then it's difficult, and sometimes impossible, to determine the severity of an incident associated with that metric.
+    ビジネスへの影響に紐づいていないメトリクス（例：「ホストのCPU使用率が高い」）を使用すると、そのメトリクスに関連するインシデントの重大度を判断することが難しく、時には不可能です。
 
-    You want to use a metric that lets you know how your business is doing, not how a particular piece of equipment is doing.
-
----
-
-### Anyone Can Trigger Incident Response
-
-_<input type="checkbox" id="009" /><label for="009">![009](../../assets/slides/incident_response/incident_response.009.jpeg)</label>_
-_009. Anyone can trigger incident response at any time._
-
-But sometimes you won't know the impact straight away. Or maybe your metric hasn't reached the predefined threshold yet. We still need a way for a human to jump in and call something a major incident.
-
-So even though we have automation at PagerDuty, we also have a mechanism whereby anyone can trigger our major incident response process at any time. This is very important for us. We've found that **lowering the barrier to triggering incident response has lead to a dramatic increase in the speed with which incidents are resolved**.
-
-We don't want people to sit on something because the official alarm hasn't gone off yet. If customer support gets lots of requests very quickly, it's a good sign there's something wrong, and we need them to be able to raise the alarm. We've even had interns trigger our incident response process in their first week. If the janitor walks past a graph and thinks it looks wrong, I want them to be able to trigger incident response.
-
-We were initially hesitant to introduce this, as we feared it would lead to lots of false positives. People triggering the alarm in an abundance of caution and it not really being an incident. But we've seen quite the opposite, people are pretty good at policing this themselves. Only twice have we had it be a false alarm, and both times it was warranted based on the information available at the time. Even if you do get a false positive now and then, you can use it as free practice.
+    特定の機器の状態ではなく、ビジネスの状態を把握できるメトリクスを使用したいのです。
 
 ---
 
-### Triggering Incidents via Chat
+### 誰でもインシデント対応を開始できる
+
+<input type="checkbox" id="009" /><label for="009">![009](../../assets/slides/incident_response/incident_response.009.jpeg)</label>
+_009. 誰でもいつでもインシデント対応を開始できる。_
+
+しかし、時には影響の大きさをすぐには把握できないことがあります。あるいは、メトリクスが事前に定義された閾値にまだ達していないかもしれません。それでも、人間が介入してメジャーインシデントを宣言する方法が必要です。
+
+そのため、PagerDutyでは自動化の仕組みがありますが、誰でもいつでも重大インシデント対応プロセスを開始できる仕組みも用意しています。これは私たちにとって非常に重要です。**インシデント対応を開始する障壁を下げることで、インシデントが解決されるスピードが劇的に向上する**ことがわかりました。
+
+公式のアラームがまだ鳴っていないからといって、人々が問題を抱えたまま座っているのは望ましくありません。カスタマーサポートに短時間で多くの問い合わせが来た場合、それは何か問題が起きている良い兆候であり、彼らがアラームを鳴らせる必要があります。入社1週目のインターンでさえ、インシデント対応プロセスを開始したことがあります。清掃員がグラフを見て何か変だと思ったら、インシデント対応を開始できるようにしたいのです。
+
+当初、これを導入することに躊躇しました。過剰な注意から多くの誤報が発生することを恐れたためです。しかし、実際にはまったく逆の結果となり、人々は自主的にこれをうまく管理しています。誤報は2回だけでしたが、その時点で入手可能な情報に基づけば、どちらも妥当な判断でした。たとえ時々誤報があったとしても、それを無料の訓練として活用することができます。
+
+---
+
+### チャットを通じたインシデントの開始
 
 <input type="checkbox" id="010" /><label for="010">![010](../../assets/slides/incident_response/incident_response.010.jpeg)</label>
-_010. Triggering incidents via chat. [Docs Reference](../../resources/chatops.md#ic-page)_
+_010. チャットを通じたインシデントの開始。[ドキュメント参照](../../resources/chatops.md#ic-page)_
 
-So how do we let humans trigger the process? We do it with a [chat command](../../resources/chatops.md), but don’t feel like that’s the only right way. I just wanted to demonstrate how we do it to give you an idea. You can do it however your want. Air horn, flashing light in the office, hire a mariachi band, etc.
+では、どのように人間がプロセスを開始できるようにしているのでしょうか？私たちは[チャットコマンド](../../resources/chatops.md)を使用していますが、これが唯一の正しい方法だと考える必要はありません。単なる一例として、私たちの方法をお見せしたいと思います。あなたの好きな方法で実装できます。エアホーン、オフィスの点滅ライト、マリアッチバンドを雇うなど、何でも構いません。
 
-The point is you want a way to trigger your response that's fast, easy, and available to everyone.
+重要なのは、誰もが利用できる、迅速で簡単な方法でインシデント対応を開始できるようにすることです。
 
 ---
 
-### Peacetime vs Wartime
+### 平時 vs 有事
 
 <input type="checkbox" id="011" /><label for="011">![011](../../assets/slides/incident_response/incident_response.011.jpeg)</label>
-_011. Peacetime vs Wartime. [Docs Reference](../../before/what_is_an_incident.md#mentality-shift)_
+_011. 平時 vs 有事。[ドキュメント参照](../../before/what_is_an_incident.md#mentality-shift)_
 
-Once an incident is triggered, we need to switch our mode of thinking. We need a [mentality shift](../../before/what_is_an_incident.md#mentality-shift). We want a distinction between “normal operations” and “there’s an incident in progress”. We need to switch decision making from peacetime to wartime. From day-to-day operations, to defending the business.
+インシデントが開始されたら、私たちは思考モードを切り替える必要があります。[メンタリティの転換](../../before/what_is_an_incident.md#mentality-shift)が必要です。「通常運用」と「インシデントが進行中」を区別したいのです。意思決定を平時から有事へと切り替える必要があります。日常業務から、ビジネスを守る体制へと移行するのです。
 
-Something that would be considered completely unacceptable during normal operations, such as deploying code without running any tests, might be perfectly acceptable during a major incident when you need to restore service quickly.
+通常運用時には完全に受け入れられないこと、例えばテストを一切実行せずにコードをデプロイすることが、重大インシデント時にはサービスを迅速に復旧するために完全に許容される場合があります。
 
-The way you operate, your role hierarchy, and the level of risk you’re willing to take will all change as we make this shift.
+運用方法、役割の階層、そしてリスクを取る程度は、この転換に伴ってすべて変化します。
 
 ---
 
-### Normal vs Emergency
+### 通常時 vs 緊急時
 
 <input type="checkbox" id="012" /><label for="012">![012](../../assets/slides/incident_response/incident_response.012.jpeg)</label>
-_012. Normal vs Emergency. [Docs Reference](../../before/what_is_an_incident.md#mentality-shift)_
+_012. 通常時 vs 緊急時。[ドキュメント参照](../../before/what_is_an_incident.md#mentality-shift)_
 
-Some people don’t like the peacetime/wartime analogy, so you can call it what you want. Normal/Emergency.
+平時/有事という例えが好ましくない人もいるでしょうから、好きな呼び方を使ってください。通常時/緊急時など。
 
 ---
 
 ### OK vs Not OK
 
 <input type="checkbox" id="013" /><label for="013">![013](../../assets/slides/incident_response/incident_response.013.jpeg)</label>
-_013. OK vs Not OK. [Docs Reference](../../before/what_is_an_incident.md#mentality-shift)_
+_013. OK vs Not OK。[ドキュメント参照](../../before/what_is_an_incident.md#mentality-shift)_
 
-Or OK/NOT OK. What you call it isn't as important as being able to make the mental shift.
+あるいはOK/NOT OKでも構いません。何と呼ぶかは、メンタルシフトができることほど重要ではありません。
 
 ---
 
-### Incident Command System
+### インシデントコマンドシステム
 
 <input type="checkbox" id="014" /><label for="014">![014](../../assets/slides/incident_response/incident_response.014.jpeg)</label>
-_014. Incident Command System (ICS). [Docs Reference](../../training/overview.md#national-incident-management-system-nims)_
+_014. インシデントコマンドシステム（ICS）。[ドキュメント参照](../../training/overview.md#national-incident-management-system-nims)_
 
-So let’s talk about our process a bit more. The way we do incident response at PagerDuty isn’t something we invented ourselves, it is heavily based on the [Incident Command System](https://en.wikipedia.org/wiki/Incident_Command_System), usually abbreviated to ICS.
+では、私たちのプロセスについてもう少し詳しく説明しましょう。PagerDutyでのインシデント対応の方法は、私たちが独自に発明したものではありません。[インシデントコマンドシステム](https://en.wikipedia.org/wiki/Incident_Command_System)（通常ICSと略される）に大きく基づいています。
 
-ICS was developed after some [devastating wildfires in Southern California](https://en.wikipedia.org/wiki/Laguna_Fire) in 1970. Thousands of firefighters responded, but found it difficult to work together. They knew how to fight fires individually, but lacked a common framework to work effectively as a larger group.
+ICSは1970年に南カリフォルニアで発生した[壊滅的な山火事](https://en.wikipedia.org/wiki/Laguna_Fire)の後に開発されました。数千人の消防士が対応にあたりましたが、協力して活動することが困難でした。個々の消防活動は知っていても、より大きな集団として効果的に活動するための共通のフレームワークが欠けていたのです。
 
-After the fires, an interagency group called [FIRESCOPE](https://en.wikipedia.org/wiki/FIRESCOPE) (Which believe it or not is an acronym for "FIrefighting REsources of Southern California Organized for Potential Emergencies") was formed and set out to develop two systems for managing wildland fire. One of those systems became known as ICS, and eventually became a national model for command structures at any major incident.
+火災の後、[FIRESCOPE](https://en.wikipedia.org/wiki/FIRESCOPE)（信じられないかもしれませんが、"FIrefighting REsources of Southern California Organized for Potential Emergencies"の頭字語です）と呼ばれる機関間グループが結成され、山火事を管理するための2つのシステムを開発することになりました。そのシステムの1つがICSとして知られるようになり、最終的にはあらゆる重大インシデントの指揮構造のための全国的なモデルとなりました。
 
-In 2004, the [National Incident Management System (NIMS)](https://en.wikipedia.org/wiki/National_Incident_Management_System) was established by FEMA, and is now used as the standard for emergency management by all public agencies in the United States. NIMS defines several operational systems as part of it, of which ICS is one.
+2004年には、[国家インシデント管理システム（NIMS）](https://en.wikipedia.org/wiki/National_Incident_Management_System)がFEMAによって確立され、現在では米国のすべての公的機関が緊急事態管理の標準として使用しています。NIMSはその一部として複数の運用システムを定義しており、ICSはそのうちの1つです。
 
-It’s used by everyone from the local fire department responding to a house fire, to the US government responding to a natural disaster. It provides a standardized response framework that everyone is familiar with.
+地域の消防署が家屋火災に対応する場合から、米国政府が自然災害に対応する場合まで、あらゆる場面で使用されています。誰もが精通している標準化された対応フレームワークを提供します。
 
-NIMS and ICS are the basis of the process we use at PagerDuty, however we have heavily modified it for our needs. Turns out that things can be streamlined a bit when human life isn't on the line.
+NIMSとICSは、PagerDutyで使用しているプロセスの基礎となっていますが、私たちのニーズに合わせて大幅に修正しています。人命が危機に瀕していない場合、物事をかなり合理化できることがわかったのです。
 
 ---
 
-### Incident Response Around The World
+### 世界中のインシデント対応
 
 <input type="checkbox" id="015" /><label for="015">![015](../../assets/slides/incident_response/incident_response.015.jpeg)</label>
-_015. Incident response around the world. [Docs Reference](../../training/overview.md#incident-response-around-the-world)_
+_015. 世界中のインシデント対応。[ドキュメント参照](../../training/overview.md#incident-response-around-the-world)_
 
-It's worth noting that even though our process is based on the US systems, NIMS and ICS, there are many similar systems in use all over the world. While many are also based on ICS, some were developed separately, yet offer many of the same features.
+私たちのプロセスが米国のシステムであるNIMSとICSに基づいているとはいえ、世界中で多くの類似システムが使用されていることは注目に値します。多くはICSに基づいていますが、中には独自に開発されたものもあり、それでも多くの同様の機能を提供しています。
 
-I particularly like [the UK system](https://en.wikipedia.org/wiki/Gold%E2%80%93silver%E2%80%93bronze_command_structure), simply because it has a role called the "Gold Commander", which just sounds like a Bond villain.
+私は特に[英国のシステム](https://en.wikipedia.org/wiki/Gold%E2%80%93silver%E2%80%93bronze_command_structure)が好きです。単純に「ゴールドコマンダー」という役割があるからです。まるでボンドの悪役のような名前ですよね。
 
-When developing our process at PagerDuty, we looked at a few of the other systems in use around the world, and chose the bits we liked the most to add to our own.
+PagerDutyでプロセスを開発する際、世界中で使用されている他のシステムもいくつか調べ、最も気に入った部分を選んで自分たちのものに加えました。
 
-???+ aside hide-arrow "Emergency Management Around the World"
-    If you're interested in learning more about the systems in use by other countries, we have [links to some official resources](../../resources/reading.md#official-resources).
+???+ aside hide-arrow "世界中の緊急事態管理"
+    他の国で使用されているシステムについてもっと知りたい場合は、[公式リソースへのリンク](../../resources/reading.md#official-resources)があります。
 
-    There's also a book available from the US FEMA website, called "[Comparative Emergency Management: Understanding Disaster Policies, Organizations, and Initiatives from Around the World](https://training.fema.gov/hiedu/aemrc/booksdownload/compemmgmtbookproject/)" where it compares the systems used by about 30 different countries.
+    また、米国FEMAのウェブサイトから入手可能な「[Comparative Emergency Management: Understanding Disaster Policies, Organizations, and Initiatives from Around the World](https://training.fema.gov/hiedu/aemrc/booksdownload/compemmgmtbookproject/)」という本では、約30カ国で使用されているシステムを比較しています。
 
 ---
 
-### Roles
+### 役割
 
 _<input type="checkbox" id="016" /><label for="016">![016](../../assets/slides/incident_response/incident_response.016.jpeg)</label>_
-_016. Roles of incident response._
+_016. インシデント対応の役割。_
 
-So let's talk about the [roles involved in our process](../../before/different_roles.md). I'm going to introduce the roles one by one, but I don't want you to get scared by the number that will be on the slide by the end. We didn't start with this many roles, and we don't have people filling all the roles in every incident. This is just showing the available roles, and defining what they are. The process and roles will grow and shrink to fit the size of the incident at hand.
+では、[私たちのプロセスに関わる役割](../../before/different_roles.md)について説明しましょう。役割を1つずつ紹介していきますが、最後のスライドに表示される役割の数に驚かないでください。私たちはこれだけの役割から始めたわけではありませんし、すべてのインシデントでこれらの役割すべてを埋める必要もありません。これは利用可能な役割を示し、それらを定義しているだけです。プロセスと役割は、対象となるインシデントの規模に応じて拡大縮小します。
 
-While we don’t use exactly the same roles as ICS, we picked out the ones that matter for us in order to get our role structure.
+ICSと全く同じ役割を使用しているわけではありませんが、私たちに必要な役割を選び出して、独自の役割構造を作り上げました。
 
-* First up is the **Incident Commander**, usually abbreviated to IC. They're the person in charge and the most important role in the process. They make all the decisions, and all information flows up to them. What they say goes. I'm going to be talking more about this role in a moment, so we'll continue on with the others for now.
+* まず最初は**インシデントコマンダー（Incident Commander）**、通常ICと略されます。彼らが責任者であり、プロセスで最も重要な役割です。すべての決定を下し、すべての情報が彼らに集まります。彼らの言うことが絶対です。この役割については後ほど詳しく説明しますので、今は他の役割の説明を続けましょう。
 
-* Next up we have the **Deputy**. This is basically a backup Incident Commander. They're training as an IC and will be listening to all the same information. They help to make sure nothing gets missed by the IC, and acts as a hot-swap standby should the IC want to handover command. This is one of those roles you won't need if you're just starting out. For a long time our Deputy and Scribe would be the same person.
+* 次は**副指揮官（Deputy）**です。これは基本的にバックアップのインシデントコマンダーです。インシデントコマンダーとしてトレーニングを受けており、同じ情報をすべて聞いています。インシデントコマンダーが見落としがないよう支援し、インシデントコマンダーが指揮を交代したい場合のホットスワップスタンバイとして機能します。これは始めたばかりの時には必要ない役割の1つです。長い間、私たちの副指揮官と書記官は同じ人物でした。
 
-* Then we have the **Scribe**. The scribe's job is to keep an accurate timeline of events. What has happened, when it happened, and the key decisions that have been made. We use Slack for this, and the Scribe will be writing down notes into a Slack room, which gets us nicely timestamped data. It's worth noting that they're **not doing a direct dictation** of a voice call. It's not "John said this, Mary said this". It's more like "We're deciding between A and B, we've decided on A".
+* 次に**書記官（Scribe）**です。書記官の仕事は、出来事の正確な時系列を記録することです。何が起こったか、いつ起こったか、そして重要な決定が何だったかを記録します。私たちはSlackを使用しており、書記官はSlackルームにメモを書き込みます。これにより、きちんとタイムスタンプの付いたデータが得られます。重要なのは、これは音声会議の**直接的な書き起こしではない**ということです。「ジョンがこう言った、メアリーがこう言った」ではありません。むしろ「AとBの間で決定を下し、Aを選択した」といった感じです。
 
-Together, these roles are called the Command Staff.
+これらの役割を合わせて指揮スタッフと呼びます。
 
-* Next we have the **Customer Liaison**. This is a member of our support team, and their job is to handle the two-way interaction with our customers. So they'll update customers as to what is going on, whether that's via email, tweet, or updating our status page. But they'll also let us know what customers are saying too. If we're getting 100's of support requests, or no one has raised a ticket at all. Since this can be useful information in tracking down a cause, and determining the level of risk we can take during our recovery.
+* 次は**カスタマーリエゾン（Customer Liaison）**です。これは私たちのサポートチームのメンバーで、顧客との双方向のやり取りを担当します。メール、ツイート、またはステータスページの更新を通じて、何が起きているかを顧客に知らせます。また、顧客が何を言っているかも私たちに知らせます。数百件のサポートリクエストが来ているのか、それとも誰も問い合わせを上げていないのか。これは原因の追跡や、復旧時にどの程度のリスクを取れるかを判断する上で有用な情報となるからです。
 
-* The **Internal Liaison** is a relatively new role in our process. Their job is to handle all the interaction with internal teams, such as our executives, or our marketing teams, and so on. We have a separate Slack channel for incident updates, to which the Internal Liaison will post regular status updates, and answer any questions from the rest of the organization. This keeps those questions out of our main response, but allows people to still get answers. The internal liaison will also page other teams as necessary if they're needed on the response. Again, this isn't a role you'll need for most companies, for a while this was also handled by our Deputy/Scribe role.
+* **インターナルリエゾン（Internal Liaison）**は、私たちのプロセスでは比較的新しい役割です。彼らの仕事は、経営陣やマーケティングチームなど、社内チームとのやり取りをすべて処理することです。インシデントのアップデート用に別のSlackチャンネルがあり、インターナルリエゾンはそこに定期的な状況アップデートを投稿し、組織の他のメンバーからの質問に答えます。これにより、それらの質問を主要な対応から切り離しつつ、人々は引き続き回答を得ることができます。インターナルリエゾンは、必要に応じて他のチームを呼び出すこともします。これも、ほとんどの企業では必要のない役割です。長い間、これも副指揮官/書記官の役割が担当していました。
 
-Together, these are the liaisons.
+これらはリエゾン（連絡担当者）と呼ばれます。
 
-* Finally, we have the **Subject Matter Experts**, or SME's. These are the people who will actually be fixing the problem. They'll be the ones logging into servers, changing code, and running commands.
+* 最後に、**SME（Subject Matter Expert / 対象領域の専門家）**がいます。これらは実際に問題を解決する人々です。サーバーにログインし、コードを変更し、コマンドを実行する人々です。
 
-Today, I’m going to focus on one role in particular, that of the Incident Commander.
+今日は、特に1つの役割、インシデントコマンダーの役割に焦点を当てて説明します。
 
 ---
 
-### Incident Commander
+### インシデントコマンダー
 
 <input type="checkbox" id="017" /><label for="017">![017](../../assets/slides/incident_response/incident_response.017.jpeg)</label>
-_017. Incident commander. [Docs Reference](../../training/incident_commander.md)_
+_017. インシデントコマンダー。[ドキュメント参照](../../training/incident_commander.md)_
 
-The incident commander is one of the most important roles you can have. Even if you don’t have deputy, scribe, customer liaison, etc. The Incident Commander is one you should get first (well, after the SME’s of course, you probably need someone to solve your problem before you need someone to coordinate the response).
+インシデントコマンダーは最も重要な役割の1つです。副指揮官、書記官、カスタマーリエゾンなどがいなくても、インシデントコマンダーは最初に確保すべき役割です（もちろん、SMEの後です。問題を解決する人が必要になる前に、対応を調整する人が必要になることはありません）。
 
 ---
 
-### Single Source of Truth
+### 唯一の情報源
 
 <input type="checkbox" id="018" /><label for="018">![018](../../assets/slides/incident_response/incident_response.018.jpeg)</label>
-_018. Single source of truth._
+_018. 唯一の情報源。_
 
-They’re the single source of truth during an incident, and are the ones in charge. The big cheese. They make all decisions, and no action should be performed unless the IC has said so.
+彼らはインシデント中の唯一の情報源であり、責任者です。大ボスです。すべての決定を下し、インシデントコマンダーが承認しない限り、いかなる行動も取られるべきではありません。
 
 ---
 
-### Highest Ranking Person
+### 最高位の人物
 
 <input type="checkbox" id="019" /><label for="019">![019](../../assets/slides/incident_response/incident_response.019.jpeg)</label>
-_019. Highest ranking person._
+_019. 最高位の人物。_
 
-No matter their day-to-day role, and IC is always becomes the highest ranking person on the response. They're running the show. Remember what we talked about earlier with the mentality shift? Well, this is one of the things that will change during an incident.
+日常の役割に関係なく、インシデントコマンダーは常に対応における最高位の人物となります。彼らが指揮を執ります。先ほどメンタリティの転換について話しましたが、これはインシデント中に変化する事柄の1つです。
 
-???+ aside hide-arrow "Is the Incident Commander a dictator?"
-    Only in the sense that they are in charge and their decisions cannot be overruled. They do not rule by force, or go on power trips and order people around for the sake of it. A good Incident Commander will **listen** to their experts and make the best decision they can based on the information available. Incident Commanders should show empathy towards all responders.
+???+ aside hide-arrow "インシデントコマンダーは独裁者なのか？"
+    彼らが責任者であり、その決定は覆されないという意味でのみそうです。彼らは力で支配したり、権力を振りかざして人々を命令するためだけに命令したりはしません。優れたインシデントコマンダーは、専門家の意見を**聞き**、入手可能な情報に基づいて最善の決定を下します。インシデントコマンダーは、すべての対応者に対して共感を示すべきです。
 
 ---
 
-### Higher than the CEO
+### CEOよりも上位
 
 <input type="checkbox" id="020" /><label for="020">![020](../../assets/slides/incident_response/incident_response.020.jpeg)</label>
-_020. Higher than the CEO._
+_020. CEOよりも上位。_
 
-Even if the CEO joins the response, the IC still outranks them in an incident response situation. **This is absolutely critical for successful incident response, but it does require buy-in from your executives.** Please don't surprise your CEO with this, it will not go well for you.
+CEOが対応に加わった場合でも、インシデントコマンダーはインシデント対応の状況では彼らよりも上位にあります。**これは成功するインシデント対応にとって絶対に重要ですが、経営陣の理解を得る必要があります。**CEOにこれを事前に説明せずに驚かせないでください。うまくいきません。
 
-Whether this works for you will depend on your organization. This is how we do it at PagerDuty and it works well for us, but I can imagine it not being easy to get this sort of buy-in in other organizations. I used to work in the airline industry, and I don't think this rule would fly there (Get it? Airline industry. Fly. Hello? This thing on?).
+これがあなたの組織でうまくいくかどうかは、組織次第です。これはPagerDutyでの方法であり、私たちにとってはうまく機能していますが、他の組織ではこのような理解を得ることが容易ではないかもしれないことは想像できます。私は以前、航空業界で働いていましたが、このルールはそこでは通用しないでしょう（聞こえますか？航空業界。ハロー？このマイク入ってますか？）
 
 ---
 
-### Not a Resolver
+### 解決者ではない
 
 <input type="checkbox" id="021" /><label for="021">![021](../../assets/slides/incident_response/incident_response.021.jpeg)</label>
-_021. Not a resolver._
+_021. 解決者ではない。_
 
-Importantly, the IC doesn't resolve the incident, they coordinate and delegate all tasks. They're the conductor of the orchestra, they're not playing an instrument. They're not acting as a resolver, and shouldn't be looking at graphs, or logging into servers.
+重要なのは、インシデントコマンダーはインシデントを解決するのではなく、タスクを調整し委任することです。彼らはオーケストラの指揮者であり、楽器を演奏しているわけではありません。グラフを見たり、サーバーにログインしたりする解決者としての役割は果たしません。
 
-This can be especially hard sometimes if the IC is an engineer in their day-to-day role, as they may naturally want to jump in to try and help, but that urge must be resisted if they're acting as an IC. If they absolutely are the only person who can solve the problem, then they should handover to another Incident Commander and assume the role of a Subject Matter Expert instead. We'll talk a bit more about this scenario later.
+これは特に、インシデントコマンダーが日常業務ではエンジニアである場合に難しい場合があります。彼らは自然と助けに入りたくなるかもしれませんが、インシデントコマンダーとして行動している場合、その衝動は抑制しなければなりません。もし彼らが絶対に問題を解決できる唯一の人物である場合、別のインシデントコマンダーに指揮を引き継ぎ、代わりにSMEの役割を引き受けるべきです。このシナリオについては後ほど詳しく説明します。
 
 ---
 
 ### BSOD
 
 _<input type="checkbox" id="022" /><label for="022">![022](../../assets/slides/incident_response/incident_response.022.jpeg)</label>_
-_022. Uh oh!_
+_022. あらら、まずいですね！_
 
-Oh dear, that’s not good. Did something go wrong? Seems we have ourselves an incident!
+おっと、これは良くありませんね。何か問題が起きたのでしょうか？インシデントが発生したようです！
 
-So what do you do when things break in the middle of the night? What's the first step to responding to an incident?
+では、深夜に何かが壊れたときはどうすればよいのでしょうか？インシデントに対応する最初のステップは何でしょうか？
 
-It turns out that the first step in any incident response is always the same, whether you're a small startup or a large enterprise. Whether there's 25 cents on the line, or 25 billion dollars.
+実は、インシデント対応の最初のステップは常に同じです。小さなスタートアップであろうと大企業であろうと。25セントが危機に瀕していようと、250億ドルが危機に瀕していようと。
 
 ---
 
-### Don't Panic
+### パニックにならない
 
 <input type="checkbox" id="023" /><label for="023">![023](../../assets/slides/incident_response/incident_response.023.jpeg)</label>
-_023. Don't panic._
+_023. パニックにならない。_
 
-**Don’t panic.** It elevates stress, and causes others to panic. It’ll end up hurting your incident response a lot more.
+**パニックにならない。**パニックはストレスを高め、他の人々もパニックに陥らせます。結果として、インシデント対応をより一層妨げることになります。
 
-_It's OK to panic on the inside._ We're only human after all. It's a natural reaction to panic in these sorts of situations a little bit. Everything about getting paged is designed to get adrenaline flowing. Loud pager sounds and so on. Just try not to outwardly show panic, because it will cause others to do the same. Act calm, and others will follow suit.
+_内心パニックになるのは構いません。_ 結局のところ、私たちは人間です。このような状況でパニックになるのは自然な反応です。ページャーの音など、呼び出されるときのすべてのことはアドレナリンを分泌させるように設計されています。ただし、外見上パニックを見せないようにしてください。他の人々も同じようにパニックになってしまうからです。冷静に振る舞えば、他の人々もそれに倣うでしょう。
 
-Those with experience will stay calm, and that can make the difference between a chaotic incident, and one that resolves smoothly. So don’t panic!
+経験豊富な人々は冷静さを保ち、それが混沌としたインシデントと、スムーズに解決するインシデントの違いを生み出すことがあります。だから、落ち着いてください！
 
 ---
 
-### IC Introduction
+### インシデントコマンダーの自己紹介
 
 <input type="checkbox" id="024" /><label for="024">![024](../../assets/slides/incident_response/incident_response.024.jpeg)</label>
-_024. "Hi, I'm Rich, I'm the Incident Commander". [Docs Reference](../../training/incident_commander.md#start-of-call-announcement)_
+_024. "こんにちは、Richです。インシデントコマンダーを務めます"。[ドキュメント参照](../../training/incident_commander.md#start-of-call-announcement)_
 
-But today we're lucky to have an IC here.
+しかし今日は、ここにインシデントコマンダーがいます。
 
-> Hi, I'm Rich, I'm the Incident Commander.
+> こんにちは、Richです。インシデントコマンダーを務めます。
 
-Every call should start like this. Well, use your own name and not mine, but you get the idea.
+すべての会議はこのように始めるべきです。まあ、私の名前ではなく自分の名前を使ってください。でも要点はわかりますよね。
 
-There are a few important things here with the way I phrased this.
+この言い方には、いくつかの重要なポイントがあります。
 
-??? aside  "What if you join a call and there's no IC?"
-    It doesn't always work out that the first person to join the call is the incident commander. So what do you do in that case? Some guides will recommend the first person who joins acts as the Incident Commander, regardless of training. ICS usually works this way, where the first person on-site acts as the IC until someone more qualified arrives. We tried that and found it just doesn't work in practice. For example, let's say that the first person to join your response call becomes the acting IC. After an incident occurs, how long do you think it will be before one of your responders joins the call?
+??? aside "会議に参加したときにインシデントコマンダーがいない場合はどうするか？"
+    最初に会議に参加した人がインシデントコマンダーになるというわけではありません。では、その場合どうすればよいのでしょうか？一部のガイドでは、トレーニングの有無に関係なく、最初に参加した人がインシデントコマンダーとして行動することを推奨しています。ICSは通常このように機能し、より適任者が到着するまで、最初に現場に到着した人がインシデントコマンダーとして行動します。私たちもそれを試してみましたが、実際にはうまく機能しないことがわかりました。例えば、最初に対応会議に参加した人が暫定的なインシデントコマンダーになるとします。インシデントが発生した後、対応者の誰かが会議に参加するまでどのくらいかかると思いますか？
 
-    Yeah, turns out it's about 10 minutes. Because people are afraid of being the IC. You can't force someone to be an IC, and we prefer to make sure the acting IC at least has the training. It may add a few minutes to the start of an incident, but it makes it go smoother and quicker overall. If a trained IC joins the call and there's isn't an existing IC, they will take on the role. They ask "Is there an IC on the call?.... hearing nothing, this is X, I'm the Incident Commander".
+    そう、約10分かかります。なぜなら、人々はインシデントコマンダーになることを恐れているからです。誰かにインシデントコマンダーを強制することはできません。私たちは少なくともトレーニングを受けた人がインシデントコマンダーを務めることを好みます。インシデントの開始が数分遅れるかもしれませんが、全体としてはより円滑で迅速な対応が可能になります。トレーニングを受けたインシデントコマンダーが会議に参加し、既存のインシデントコマンダーがいない場合、彼らがその役割を引き受けます。「会議にインシデントコマンダーはいますか？...返事がないようなので、私、Xがインシデントコマンダーを務めます」というように。
 
-    It's also worth noting that the on-call IC doesn't automatically take over when they join. Whoever is the active IC on the call is in charge until they perform a handover.
+    また、オンコールのインシデントコマンダーが参加したときに自動的に引き継ぐわけではないことも注目に値します。会議で現在インシデントコマンダーを務めている人が、引き継ぎを行うまでは指揮を執ります。
 
 ---
 
-### Introduce Yourself
+### 自己紹介をする
 
 <input type="checkbox" id="025" /><label for="025">![025](../../assets/slides/incident_response/incident_response.025.jpeg)</label>
-_025. Introduce yourself._
+_025. 自己紹介をする。_
 
-Firstly, I introduced myself by name. I didn't just say "Hi, I'm the IC". I'm not an emotionless robot.
+まず、私は名前で自己紹介しました。単に「こんにちは、インシデントコマンダーです」とは言いませんでした。私は感情のないロボットではありません。
 
-Introductions are important so that people know who you are. They’ll usually be referring to you as "IC", rather than by name, but it still humanizes you more. If you introduce yourself by name people will treat you differently and it'll help to make things go a little bit smoother.
+自己紹介は、人々があなたが誰であるかを知るために重要です。通常、彼らは名前ではなく「インシデントコマンダー」としてあなたを呼ぶことになりますが、それでもあなたをより人間的に感じさせます。名前で自己紹介すると、人々はあなたを異なる方法で扱い、物事がより円滑に進むのに役立ちます。
 
-You’ll find soon that a lot of the job of an IC involves psychology and phrasing more than technical expertise.
+インシデントコマンダーの仕事の多くは、技術的な専門知識よりも心理学とフレーズの選び方に関係していることがすぐにわかるでしょう。
 
 ---
 
-### Say Incident Commander
+### インシデントコマンダーと言う
 
 <input type="checkbox" id="026" /><label for="026">![026](../../assets/slides/incident_response/incident_response.026.jpeg)</label>
-_026. Say "Incident Commander"._
+_026. "インシデントコマンダー"と言う。_
 
-Then I said that I'm the "Incident Commander". I didn't abbreviate to IC, since new people might not understand the lingo yet. Stating it that way made it very clear. We want to make sure we **always use clear language**. Additionally, saying the word "Commander" here will subconsciously instill in people that you're in charge.
+そして、私は「インシデントコマンダー」と言いました。新しい人々がまだ専門用語を理解していない可能性があるため、インシデントコマンダーと略さなかったのです。このように言うことで、非常に明確になります。**常に明確な言葉を使用したい**のです。さらに、ここで「コマンダー」という言葉を使うことで、無意識のうちにあなたが責任者であることを人々に印象付けます。
 
 ---
 
-### Good Communication
+### 良好なコミュニケーション
 
 <input type="checkbox" id="027" /><label for="027">![027](../../assets/slides/incident_response/incident_response.027.jpeg)</label>
-_027. Good communication is essential._
+_027. 良好なコミュニケーションが不可欠。_
 
-Good communication is essential. A breakdown in communication can hamper the entire response process. One of your jobs as an IC is to keep the lines of communication clear and maintain discipline. Don’t throw weird or unfamiliar acronyms into the discussion.
+良好なコミュニケーションは不可欠です。コミュニケーションの崩壊は、対応プロセス全体を妨げる可能性があります。インシデントコマンダーとしてのあなたの仕事の1つは、コミュニケーションラインを明確に保ち、規律を維持することです。奇妙な、あるいは馴染みのない頭字語を議論に持ち込まないでください。
 
 ---
 
-### Acronym Overload
+### 略語の過剰使用
 
 <input type="checkbox" id="028" /><label for="028">![028](../../assets/slides/incident_response/incident_response.028.jpeg)</label>
-_028. Acronym overload._
+_028. 略語の過剰使用。_
 
-Too many acronyms and internal lingo will upset newcomers and adds cognitive overhead. As shown in this completely realistic example.
+略語や内部用語が多すぎると、新参者を混乱させ、認知的負荷を増やします。この完全に現実的な例が示すように。
 
-It takes much longer to say "Let's get the Incident Commander on the response call, then get a bacon, lettuce, and tomato sandwich for all the Subject Matter Experts". But it's much clearer what is being asked for.
+「インシデントコマンダー（IC）を対応会議に呼んで、それから対象領域の専門家（SME）全員にベーコン、レタス、トマトのサンドイッチ（BLT）を用意しよう」と言うのは、かなり時間がかかります。しかし、何が求められているのかはずっと明確です。
 
 ---
 
-### Clear is Better Than Concise
+### 明確さは簡潔さより重要
 
 <input type="checkbox" id="029" /><label for="029">![029](../../assets/slides/incident_response/incident_response.029.jpeg)</label>
-_029. Clear is better than concise. [Docs Reference](../../before/call_etiquette.md#lingo)_
+_029. 明確さは簡潔さより重要。[ドキュメント参照](../../before/call_etiquette.md#lingo)_
 
-Clear instructions are more important than concise instructions. You want to **favor explicit and clear communication over all else**. If you have the choice between taking 5 seconds and abbreviating, or taking 30 seconds and making it clear, take 30 seconds. Don’t give a long essay, but make sure the instructions are unambiguous.
+明確な指示は、簡潔な指示よりも重要です。**他のすべてに優先して、明示的で明確なコミュニケーションを重視する**べきです。5秒で済む略語を使うか、30秒かけて明確にするかの選択肢がある場合は、30秒かけてください。長い説明は避けますが、指示が曖昧にならないようにしてください。
 
-There's a tendency to want to rush through an incident, that every second counts, and that you need to use abbreviations to get the fastest possible response. Unfortunately you'll find that using unfamiliar and unclear language will almost always prolong an incident.
+インシデントを急いで処理しようとする傾向があり、1秒1秒が重要で、最速の対応を得るために略語を使用する必要があると考えがちです。しかし、馴染みのない不明確な言葉を使用すると、ほとんどの場合インシデントを長引かせることになります。
 
 ---
 
-### What's Wrong?
+### 何が問題なのか？
 
 <input type="checkbox" id="030" /><label for="030">![030](../../assets/slides/incident_response/incident_response.030.jpeg)</label>
-_030. What's wrong? [Docs Reference](../../training/incident_commander.md#size-up)_
+_030. 何が問題なのか？[ドキュメント参照](../../training/incident_commander.md#size-up)_
 
-OK, so how do we actually start solving our problem?
+さて、実際に問題を解決し始めるにはどうすればよいでしょうか？
 
-The first step is to collect information from your Subject Matter Experts (SME) for their services/area of ownership. Ask what's wrong, and gather the symptoms of the incident. Is it only affecting one system? Is it affecting everything? Was there a specific metric that triggered an alarm?
+最初のステップは、SME（対象領域の専門家）から、彼らのサービス/担当領域に関する情報を収集することです。何が問題なのか、インシデントの症状は何かを尋ねます。1つのシステムだけに影響しているのか、すべてに影響しているのか、特定のメトリクスがアラームを引き起こしたのか？
 
-We call this “[sizing up](../../training/incident_commander.md#size-up)”. We're trying to get an idea of the scope of the incident.
+これを「[状況把握](../../training/incident_commander.md#size-up)」と呼びます。インシデントの範囲を把握しようとしているのです。
 
 ---
 
-### What Actions Can We Take?
+### どのようなアクションを取れるか？
 
 <input type="checkbox" id="031" /><label for="031">![031](../../assets/slides/incident_response/incident_response.031.jpeg)</label>
-_031. What actions can we take? [Docs Reference](../../training/incident_commander.md#stabilize)_
+_031. どのようなアクションを取れるか？[ドキュメント参照](../../training/incident_commander.md#stabilize)_
 
-Next we want to ask our experts what they want to do to fix their systems. Remember, the IC isn't coming up with solutions, we want to ask the people who are the experts for their services what they want to do to. They will have a much better idea of the actions that can be taken. We want to collect proposed repair actions.
+次に、専門家たちに、彼らのシステムを修復するために何をしたいのかを尋ねます。覚えておいてください、インシデントコマンダーは解決策を考え出すのではありません。サービスの専門家に、彼らが取れるアクションについて尋ねたいのです。彼らの方がはるかに良く理解しているはずです。修復のための提案を集めます。
 
 ---
 
-### What Risks Are Involved?
+### どのようなリスクが伴うか？
 
 <input type="checkbox" id="032" /><label for="032">![032](../../assets/slides/incident_response/incident_response.032.jpeg)</label>
-_032. What are the risks involved?_
+_032. どのようなリスクが伴うか？_
 
-Importantly, we also want to make sure we ask what risks are involved with the proposed actions. "What impact will that have?", "What are the risks involved?", "How confident are you it will work?".
+重要なのは、提案されたアクションに伴うリスクについても必ず尋ねることです。「それによってどのような影響がありますか？」「どのようなリスクが伴いますか？」「うまくいく確信はどのくらいありますか？」
 
-Without this information, we can't make an informed decision. For example, if we need to restart our servers to fix a problem, we could either reboot them all at once and be done in 30 seconds, or we could do a rolling restart and take 10 minutes. On the surface of it, the first option sounds like the best.
+この情報がなければ、十分な情報に基づいた決定を下すことができません。例えば、問題を解決するためにサーバーを再起動する必要がある場合、すべてのサーバーを一度に再起動して30秒で終わらせるか、ローリング再起動を行って10分かけるか、という選択肢があります。表面的には、最初の選択肢が最適に見えます。
 
-But, if we ask for the risks involved, we'll learn that the first option will cause downtime for everyone in those 30s, whereas the second option, while slower, will result in no downtime for end users. This can change the decision you make, so it's important to get the information.
+しかし、リスクについて尋ねると、最初の選択肢ではその30秒の間、全ユーザーにダウンタイムが発生するのに対し、2番目の選択肢は時間はかかるものの、エンドユーザーにダウンタイムが発生しないことがわかります。この情報によって、あなたの決定が変わる可能性があります。だからこそ、情報を得ることが重要なのです。
 
 ---
 
-### Make a Decision
+### 決定を下す
 
 <input type="checkbox" id="033" /><label for="033">![033](../../assets/slides/incident_response/incident_response.033.jpeg)</label>
-_033. Make a decision._
+_033. 決定を下す。_
 
-Once we have a collection of actions and their associated risks, it's time to make a decision. Sometimes there's an obvious path forward, with one option being clearly better. But sometimes you're presented with two equally bad options.
+アクションとそれに伴うリスクを収集したら、決定を下す時です。ある時は、1つの選択肢が明らかに優れているという場合もあります。しかし、時には同くらい悪い2つの選択肢を突きつけられることもあります。
 
-There’s no golden rule here I can give you, it’ll be up to context and your company culture. But my advice if you can't decide between two options is to literally flip a coin. **Making the wrong decision is better than making no decision.** Making no decision doesn't help to make forward progress, you learn nothing new and the incident is still going on. Making a decision, even if it's the "wrong" one will give you more information. If it turns out to be wrong, you can then put all your resources into the other option.
+ここで私が提供できる黄金律はありません。状況とあなたの会社の文化次第です。しかし、2つの選択肢の間で決められない場合は、文字通りコインを投げることをお勧めします。**間違った決定を下すことは、決定を下さないことよりも良い**のです。決定を下さないことは前進の助けにはなりません。何も新しい情報は得られず、インシデントはまだ続いています。たとえ「間違った」決定であっても、より多くの情報を得ることができます。それが間違いだと判明した場合は、他の選択肢に全リソースを投入できます。
 
-A wrong decision gives you more useful information, making no decision gives you nothing. You want to avoid [decision paralysis](https://xkcd.com/1801/) at all costs, as it can prolong your incident further.
+間違った決定からはより有用な情報が得られますが、決定を下さないことからは何も得られません。[意思決定の麻痺（decision paralysis）](https://xkcd.com/1801/)は何としても避けなければなりません。それはインシデントをさらに長引かせる可能性があるからです。
 
-???+ aside hide-arrow "'Do nothing' is an acceptable decision."
-    I should note that the above advice is intended for the situation when you can't decide between two options. "Do nothing" is a perfectly acceptable decision if that's the course of action you want to take. It is sometimes appropriate to get more information by waiting and seeing what changes.
+???+ aside hide-arrow "「何もしない」も許容される決定です。"
+    上記のアドバイスは、2つの選択肢の間で決められない状況を想定したものであることに注意してください。「何もしない」というのは、それがあなたが取りたい行動である場合は、完全に許容される決定です。待って様子を見ることでより多くの情報を得ることが適切な場合もあります。
 
 ---
 
-### Gain Consensus
+### 合意を得る
 
 <input type="checkbox" id="034" /><label for="034">![034](../../assets/slides/incident_response/incident_response.034.jpeg)</label>
-_034. Gain consensus._
+_034. 合意を得る。_
 
-Once we've made a decision, we need to gain consensus for our plan. But wait, why? Didn't I say earlier that the IC is basically a dictator and everyone should follow their instructions? While technically true, we want to be sure we give a chance to listen to any potential problems our experts may have with the plan. We don't want people to come back later and say things like "I knew that wouldn't work". We want to make sure we stop the [hindsight 20/20 problem](https://en.wikipedia.org/wiki/Hindsight_bias). It demotivates responders, and wastes time.
+決定を下したら、その計画について合意を得る必要があります。でも待ってください。先ほどインシデントコマンダーは基本的に独裁者で、全員が彼らの指示に従うべきだと言っていませんでしたか？技術的にはその通りですが、専門家たちが計画に対して持っているかもしれない潜在的な問題点を聞く機会を確保したいのです。後になって「それがうまくいかないことはわかっていた」というような発言をされたくありません。[後知恵バイアス（hindsight bias）](https://en.wikipedia.org/wiki/Hindsight_bias)の問題を防ぎたいのです。それは対応者のやる気を失わせ、時間を無駄にします。
 
-But gaining consensus amongst a large group of people can be a bit difficult.
+しかし、大人数の間で合意を得るのは少し難しい場合があります。
 
 ---
 
-### Blue Background
+### 青い背景
 
 <input type="checkbox" id="035" /><label for="035">![035](../../assets/slides/incident_response/incident_response.035.jpeg)</label>
-_035. This background is blue._
+_035. この背景は青です。_
 
-Let's look at a quick example to show what I mean,
+簡単な例を見てみましょう：
 
-> I propose that this background is blue. Does everyone agree?
+> この背景は青だと提案します。全員同意しますか？
 
-???+aside hide-arrow "Audience participation!"
-    This is where I would usually get few people from the audience nodding or quietly saying "Yes". I'll point to about 5 or 6 people who did nothing and ask them one by one if they agree. Until it gets uncomfortable.
+???+aside hide-arrow "聴衆参加！"
+    ここで通常は、数人の聴衆がうなずいたり、小声で「はい」と言ったりするのを待ちます。何も反応しない5、6人を指さして、一人一人に同意するかどうかを尋ねます。不快になるまで続けます。
 
-See how long it’s taking us to reach consensus? **Distributed consensus is hard**, you’ll be there forever trying to agree on the proposed actions.
+合意に達するのにどれだけ時間がかかるか見てください？**分散した合意を得るのは難しい**もので、提案されたアクションについて合意を得ようとすると永遠にかかってしまいます。
 
-Let's try it a different way,
+別の方法を試してみましょう：
 
-> I propose that this background is blue. Are there any strong objections? ... Hearing none, the background is blue, let's proceed.
+> この背景は青だと提案します。強い反対はありますか？...反対がないようなので、背景は青です。進めましょう。
 
 ---
 
-### Any Strong Objections?
+### 強い反対はありますか？
 
 <input type="checkbox" id="036" /><label for="036">![036](../../assets/slides/incident_response/incident_response.036.jpeg)</label>
-_036. Are there any strong objections? [Docs Reference](../../training/incident_commander.md#gaining-consensus-polling-during-a-decision)_
+_036. 強い反対はありますか？[ドキュメント参照](../../training/incident_commander.md#gaining-consensus-polling-during-a-decision)_
 
-See how much faster that was? I **implicitly got the consensus of everyone in the room**, so none of you could come back later and say you didn't think the background was blue, because I gave you all a chance to object.
+これがどれだけ速かったか見てください？部屋にいる全員の**暗黙の合意を得た**ので、誰も後になって背景が青ではないと言うことはできません。全員に反対する機会を与えたからです。
 
-Doing it this way optimizes for the 99% case. Most of the time there won’t be any objections and you can just continue. But likewise, we don't really care if people agree with us. We care if people _disagree_, that's the information we need the most. If you ask everyone to agree, you may get one person saying "No" with a really important point, but you can't hear them because everyone else is saying "Yes".
+この方法は99%のケースに最適化されています。ほとんどの場合、反対はないので、そのまま続けることができます。同様に、人々が同意するかどうかは気にしません。私たちが気にするのは人々が_反対_するかどうかです。それが最も必要な情報です。全員に「はい」と言ってもらおうとすると、本当に重要な指摘をしようとする1人が「いいえ」と言っているのに、他の全員が「はい」と言っているために聞こえなくなってしまう可能性があります。
 
 ---
 
-### Strong
+### 強い
 
 <input type="checkbox" id="037" /><label for="037">![037](../../assets/slides/incident_response/incident_response.037.jpeg)</label>
-_037. STRONG objections._
+_037. 強い反対。_
 
-This is one of the most useful phrases in your toolkit as an IC as it allows you to get consensus on a decision very quickly, and prevents the hindsight problem from popping up later. The way we phrased it though is important, the word "**strong**" subconsciously instills in people that we're still in an incident situation, and normal concerns might not apply.
+これはインシデントコマンダーとしてのツールキットの中で最も有用なフレーズの1つです。決定に関する合意を非常に速く得ることができ、後になって後知恵の問題が発生するのを防ぐことができます。しかし、私たちの言い方は重要です。「**強い**」という言葉は、私たちがまだインシデント状況にあり、通常の懸念が当てはまらない可能性があることを無意識のうちに人々に印象付けます。
 
-Make sure to leave enough of a pause for people to raise any objections they may have. It's no good asking for strong objections then moving on. All responders need to have the opportunity to raise a concern.
+反対を表明する機会を十分に設けるようにしてください。強い反対を求めてすぐに進めてしまうのは良くありません。すべての対応者が懸念を表明する機会を持つ必要があります。
 
-So now that we have consensus, we need to execute the plan, that means assigning the task to someone. Before we do that though, I have a quick question.
+さて、合意が得られたので、タスクを誰かに割り当てる必要があります。その前に、簡単な質問があります。
 
 ---
 
-### How Long Have I Been Talking?
+### 私はどのくらい話していますか？
 
 <input type="checkbox" id="038" /><label for="038">![038](../../assets/slides/incident_response/incident_response.038.jpeg)</label>
-_038. How long have I been talking?_
+_038. 私はどのくらい話していますか？_
 
-At the start, I asked if someone could keep track of the time for me. Did anyone actually do that? Can anyone tell me exactly how long I've been talking?
+最初に、時間を管理してくれる人を探しましたが、実際に誰かがやってくれましたか？私が正確にどのくらい話しているか、誰か言えますか？
 
-Probably not. But why not? I clearly asked.
+おそらくできないでしょう。でも、なぜできないのでしょうか？私ははっきりと頼みましたよね。
 
-It's likely because of how I phrased the question.
+それは、私の質問の仕方に問題があったからです。
 
 ---
 
-### Bystander Effect
+### 傍観者効果
 
 <input type="checkbox" id="039" /><label for="039">![039](../../assets/slides/incident_response/incident_response.039.jpeg)</label>
-_039. Bystander effect._
+_039. 傍観者効果。_
 
-I said "Can someone...". This is called the [bystander effect](https://en.wikipedia.org/wiki/Bystander_effect). Everyone assumed someone else was doing it, so no one ended up doing it. If by some chance, someone actually did do it, you won't know who it is anyway, or if they've even started.
+私は「誰か...」と言いました。これは[傍観者効果](https://en.wikipedia.org/wiki/Bystander_effect)と呼ばれます。全員が他の誰かがやってくれると思い込んで、結果として誰もやらないという状況です。もし運良く誰かが実際にやってくれたとしても、それが誰なのか、あるいはそもそも始めているのかどうかもわかりません。
 
-A good example of this is if there's a medical emergency, and you shout "Somebody call 911!", you'll find that no one does, because everyone assumes someone else is doing it. If you're ever in that situation, you want to point to someone and say "You, call 911". Then it'll get done.
+例えば、医療緊急事態が発生し、「誰か911に電話して！（日本の場合であれば119）」と叫んだ場合、誰も電話しないことがわかるでしょう。全員が他の誰かがやっていると思い込むからです。そのような状況では、誰かを指さして「あなた、911に電話して」と言う必要があります。そうすれば確実に実行されます。
 
-???+ aside hide-arrow "Localization"
-    If you're outside the US, substitute 911 for whatever your local emergency number is. You probably don't want to be shouting "You, call 911" if you're in Europe for example.
+だから、私がすべきだったのは、部屋の誰かを指さして次のように言うことでした：
 
-So what I should've done was point to someone in the room and say,
+> あなた、時間を管理して、30分経ったら小さく手を振って知らせてください。今から始めます。わかりましたか？
 
-> You, please keep track of the time and give me a little wave when we get to 30 minutes, starting now. Understood?
-
-See how different that was?
+これがどれだけ違うか見てください。
 
 ---
 
-### Assigning Tasks
+### タスクの割り当て
 
 <input type="checkbox" id="040" /><label for="040">![040](../../assets/slides/incident_response/incident_response.040.jpeg)</label>
-_040. Assigning tasks. [Docs Reference](../../training/incident_commander.md#assigning-tasks)_
+_040. タスクの割り当て。[ドキュメント参照](../../training/incident_commander.md#assigning-tasks)_
 
-In the context of an incident, that might look like this. It's a little more verbose than "Can someone investigate the cause?", but it's a lot clearer what I want to happen. Brings us back to clear is better than concise from earlier.
-
-Several important things happened in this exchange as I was assigning the task.
+インシデントの文脈では、それは次のようになります。「原因を調査できる人はいますか？」というよりも、はるかに詳細です。先ほどの「明確さは簡潔さより重要」に戻りますが、タスクを割り当てる際にいくつかの重要なことが起こりました。
 
 ---
 
-### Assign Specific People
+### 特定の人に割り当てる
 
 <input type="checkbox" id="041" /><label for="041">![041](../../assets/slides/incident_response/incident_response.041.jpeg)</label>
-_041. Assign tasks to a specific person._
+_041. タスクは特定の人に割り当てる。_
 
-First, the task was assigned **directly to a specific person**. It’s ok to assign it to a role to “DBA on-call…”, etc. But it must be a single individual. Don't assign things to a group, because they won't get done.
+まず、タスクは**直接特定の人に**割り当てられました。「オンコールのDBA...」などのように役割に割り当てることもできますが、それは単一の個人でなければなりません。グループにタスクを割り当てないでください。実行されないからです。
 
 ---
 
-### Time Limit
+### 時間制限
 
 <input type="checkbox" id="042" /><label for="042">![042](../../assets/slides/incident_response/incident_response.042.jpeg)</label>
-_042. Time-box all tasks._
+_042. すべてのタスクに時間制限を設ける。_
 
-Second, the task was given a time-limit. This means the SME knows exactly how long until I come back to them for an answer, so they won’t be surprised or caught off guard. It sets the expectations.
+次に、タスクには時間制限が設けられました。これにより、SMEは私が答えを求めて戻ってくるまでの正確な時間を知ることができ、不意を突かれたり、準備不足になったりすることはありません。期待値を設定します。
 
 ---
 
-### Acknowledgement
+### 確認
 
 <input type="checkbox" id="043" /><label for="043">![043](../../assets/slides/incident_response/incident_response.043.jpeg)</label>
-_043. Get acknowledgement._
+_043. 確認を得る。_
 
-Finally, I confirmed that they had understood the instructions and are going to carry them out. So I don’t come back in 5 minutes and find they never started, or have additional questions.
+最後に、指示を理解し、実行することを確認しました。そのため、5分後に戻ってきて、彼らが開始していなかったり、追加の質問があったりということはありません。
 
 ---
 
-### Followup
+### フォローアップ
 
 <input type="checkbox" id="044" /><label for="044">![044](../../assets/slides/incident_response/incident_response.044.jpeg)</label>
-_044. Followup._
+_044. フォローアップ。_
 
-Then after the time is up, we can simply ask for the results of their task. Of course they will always have the right answer the first time and will never need any additional time to investigate, right?
+そして時間が経過した後、タスクの結果を尋ねることができます。もちろん、彼らは常に最初から正しい答えを持っており、追加の調査時間を必要とすることは決してないでしょう、そうですよね？
 
 ---
 
-### Need More Time?
+### もっと時間が必要？
 
 <input type="checkbox" id="045" /><label for="045">![045](../../assets/slides/incident_response/incident_response.045.jpeg)</label>
-_045. What if they need more time?_
+_045. もっと時間が必要な場合は？_
 
-It's not always going to be the case that things get done within the timeframe. So what do you do if, after 5 minutes, they need more time?
+物事が常に時間内に完了するとは限りません。5分後に、もっと時間が必要だと言われた場合はどうしますか？
 
-Don’t just give them another arbitrary time limit, because they’ll keep coming back and you’re just going to be wasting time giving them 5 minutes chunks for an hour. Instead, ask your experts how long they need.
+単に別の任意の時間制限を与えるのではなく、1時間かけて5分ずつ時間を与え続けることになるだけなので、その代わりに専門家たちに必要な時間を尋ねてください。
 
 ---
 
-### More Time
+### 時間の延長
 
 <input type="checkbox" id="046" /><label for="046">![046](../../assets/slides/incident_response/incident_response.046.jpeg)</label>
-_046. More time._
+_046. 時間の延長。_
 
-This isn't going to be like in the movies, where you ask how long someone needs, they say two hours and you slam you fist on a table and say "You've got one!". You need to **trust in your experts** to give you accurate estimates, and give them the time they need. Putting people under unreasonable pressure is only going to lead to mistakes being made.
+これは映画のようにはいきません。誰かが2時間必要だと言ったときに、テーブルを叩いて「1時間しかない！」とは言いません。専門家たちが正確な見積もりを提供してくれると**信頼**し、必要な時間を与える必要があります。不当なプレッシャーをかけることは、ミスを引き起こすことにしかなりません。
 
-???+ aside hide-arrow "You can do this the first time too."
-    You can also just ask your experts how long they need the first time you hand out the task instead of picking a time yourself. Sometimes we've found it easier to give a time-limit ourselves if it's an action that's been done before and we have a rough idea of how long it should take. But there's nothing wrong with asking how long someone needs as you assign the task either.
+???+ aside hide-arrow "初回からこれができます。"
+    タスクを最初に割り当てるときにも、時間制限を自分で設定する代わりに、専門家たちに必要な時間を尋ねることができます。以前に行われたことのあるアクションで、おおよその所要時間がわかっている場合は、自分で時間制限を設定する方が簡単だと感じることもあります。しかし、タスクを割り当てる際に誰かに必要な時間を尋ねることも、まったく問題ありません。
 
 ---
 
-### Solving Incidents (1)
+### インシデント解決までの流れ 1
 
 <input type="checkbox" id="047" /><label for="047">![047](../../assets/slides/incident_response/incident_response.047.jpeg)</label>
-_047. Flow chart for solving incidents._
+_047. インシデント解決のフローチャート_
 
-And we just keep following this pattern until the incident is resolved.
+インシデントが解決するまで、このパターンを繰り返します。
 
-1. Ask for a status from your experts.
-1. Decide on an action based on what you’re told, gaining consensus for the plan.
-1. Assign the task out.
-1. Follow up with the tasks once done, and repeat if there are still problems.
+1. 専門家からステータスを確認する
+1. 報告された情報に基づいて行動を決定し、計画について合意を得る
+1. タスクを割り当てる
+1. タスク完了後にフォローアップし、問題が残っている場合は繰り返す
 
 ---
 
-### Solving Incidents (2)
+### インシデント解決までの流れ 2
 
 <input type="checkbox" id="048" /><label for="048">![048](../../assets/slides/incident_response/incident_response.048.jpeg)</label>
-_048. Another flow chart for solving incidents.._
+_048. インシデント解決のもう1つのフローチャート_
 
-More generally, we’re following [this cycle](../../training/incident_commander.md#handling-incidents) for each incident. We size-up the situation, stabilize things (that's the loop we just showed), keep everyone updated as to what's going on, then verify the situation is fixed before ending the response. If it's not fixed, we start again.
+より一般的には、各インシデントに対して[このサイクル](../../training/incident_commander.md#handling-incidents)に従います。状況を把握し、安定化させ（先ほど示したループ）、進行状況を全員に伝え、状況が修正されたことを確認してから対応を終了します。修正されていない場合は、再度最初から始めます。
 
 ---
 
-### Ignore the IC
+### インシデントコマンダーを無視する
 
 _<input type="checkbox" id="049" /><label for="049">![049](../../assets/slides/incident_response/incident_response.049.jpeg)</label>_
-_049. "Ignore the IC, do what I say!"_
+_049. 「みんなインシデントコマンダーを無視して、私の言うことを聞きなさい！」_
 
-Uh oh, an executive has joined the response and is trying to override the IC’s decisions. That’s not great.
+おっと、経営幹部が対応に加わり、インシデントコマンダーの決定を覆そうとしています。これは良くない状況です。
 
-Remember that the IC is the ultimate authority in incident response, their decisions are the ones that matter. So how do you handle the awkward situation when someone tries to override those decisions?
+インシデント対応においてはインシデントコマンダーが最高権限を持ち、その決定が重要であることを忘れないでください。では、誰かがその決定を覆そうとする厄介な状況にどう対処すればよいでしょうか？
 
-We have a top tip here, a great question to keep in your tool belt as an incident commander. A simple question that can immediately diffuse this situation.
+ここで重要なヒントがあります。インシデントコマンダーとして持っておくべき素晴らしい質問です。この状況を即座に解消できるシンプルな質問があります。
 
 ---
 
-### Do You Wish To Take Command?
+### 指揮を取りたいですか？
 
 <input type="checkbox" id="050" /><label for="050">![050](../../assets/slides/incident_response/incident_response.050.jpeg)</label>
-_050. Do you wish to take command? [Docs Reference](../../training/incident_commander.md#executive-swoop-overriding-the-incident-commander)_
+_050. 指揮を取りたいですか？ [ドキュメント参照](../../training/incident_commander.md#executive-swoop-overriding-the-incident-commander)_
 
-> Do you wish to take command?
+> 指揮を取りたいですか？
 
-Watch how quickly they don’t answer with “yes”.
+「はい」と答えない速さに注目してください。
 
-If they do, great! You’re off the hook and can respond with,
+もし「はい」と答えた場合は素晴らしい！あなたは責任から解放され、次のように対応できます：
 
-> Understood. Everyone on the call be advised, I'm handing over command to executive A. They are now the Incident Commander.
+> 了解しました。会議参加者の皆様にお知らせします。私は指揮権を経営幹部Aに移譲します。彼が新しいインシデントコマンダーとなります。
 
-But most of the time they’ll say either say "No"", or not answer at all, in which case you can continue on as normal, perhaps saying,
+しかし、ほとんどの場合「いいえ」と答えるか、まったく答えません。その場合は通常通り続行し、場合によっては次のように言うことができます：
 
-> In that case, please cause no further interruptions or I will have to remove you from the call.
+> その場合は、これ以上の中断は控えていただくか、会議から退出していただく必要があります。
 
-But "Do you wish to take command?" is the most useful phrase for dealing with that kind of executive hostile takeover.
+「指揮を取りたいですか？」は、このような経営幹部による敵対的な乗っ取りに対処する最も有用なフレーズです。
 
 ---
 
-### Executive Swoop
+### エグゼクティブの襲来
 
 <input type="checkbox" id="051" /><label for="051">![051](../../assets/slides/incident_response/incident_response.051.jpeg)</label>
-_051. Executive swoop._
+_051. エグゼクティブの襲来_
 
-This is a class of problem we call Executive Swoop. Well, actually it's "Executive Swoop and Poop", but I was asked not to put that on the slide.
+これは「エグゼクティブの襲来（Excecutive Swoop）」と呼ばれる問題の一種です。実際には「Excecutive Swoop and Poop」ですが、スライドにはそう書かないように言われました。
 
-The previous example isn't typical though. It's rare for someone to come in and purposefully start causing a problem like that.
+ただし、先ほどの例は典型的ではありません。誰かが意図的にそのような問題を引き起こすことは稀です。
 
-We're going to look at some more common examples of executive swoop next, but it's worth noting that **none of these happen maliciously**. No executive joins with the intent of hindering the process, they’re trying to motivate people and find out what’s going on. It’s their business too! Making sure your executives understand why these things are a problem is important, so be sure to followup after an incident if these things happen.
+エグゼクティブの襲来について、より一般的な例を次に見ていきますが、**これらは悪意を持って行われるものではない**ことに注意してください。経営幹部は対応を妨げる意図を持って参加するのではなく、人々を動機づけ、状況を把握しようとしています。それは彼らのビジネスでもあるのです！これらの行動が問題となる理由を経営幹部に理解してもらうことが重要です。そのため、このような事態が発生した場合は、インシデント後に必ずフォローアップしてください。
 
 ---
 
-### Let's Resolve This in 10 Minutes
+### 10分で解決しましょう
 
 <input type="checkbox" id="052" /><label for="052">![052](../../assets/slides/incident_response/incident_response.052.jpeg)</label>
-_052. Let's try and resolve this in 10 minutes._
+_052. 10分で解決を試みましょう_
 
-> Let's try and resolve this in 10 minutes please!
+> 10分以内に解決を試みましょう！
 
-This one definitely wasn't said by anyone at PagerDuty ever. Nope. Definitely not.
+これは確実にPagerDutyの誰も言ったことがないセリフです。絶対に。
 
-On the surface this seems pretty benign. The executive is merely trying to motivate staff and encourage them to solve the problem quickly, right?
+表面的には、かなり無害に見えます。経営幹部は単にスタッフを動機づけ、問題を迅速に解決するよう促しているだけですよね？
 
-Unfortunately, that's not how others on the call are going to interpret it. Instead they're more likely to be sarcastically thinking "Well, I was going to take an hour, but since you've said that, OK I'll do it in 10 minutes". It assumes people aren’t already working as hard as possible to solve the problem. It demotivates responders, and adds additional stress.
+残念ながら、会議の他の参加者はそのようには解釈しません。代わりに、「1時間かけるつもりだったけど、そう言うなら10分でやってみるか」と皮肉っぽく考える可能性が高いです。これは、人々がすでに問題解決のために最善を尽くしているという前提を無視しています。対応者のやる気を削ぎ、さらなるストレスを加えることになります。
 
-Your job as IC is to nip this in the bud and keep things on track.
+インシデントコマンダーとしてのあなたの仕事は、これを芽のうちに摘み、軌道に戻すことです。
 
 ---
 
-### Keep Comments Until The End
+### コメントは最後まで控えてください
 
 <input type="checkbox" id="053" /><label for="053">![053](../../assets/slides/incident_response/incident_response.053.jpeg)</label>
-_053. Keep your comments until the end. [Docs Reference](../../training/incident_commander.md#executive-swoop-anti-motivation)_
+_053. コメントは最後まで控えてください [ドキュメント参照](../../training/incident_commander.md#executive-swoop-anti-motivation)_
 
-To keep things moving, you need to remind the executive of what's going on, and direct questions to be handled at a later time. It may come across slightly abrupt, but it gets the point across quickly and allows you to keep moving. Most people will pick up on the subtext here.
+物事を進めるために、経営幹部に現在の状況を思い出させ、質問は後で対応するよう指示する必要があります。少し突っ慳貪に聞こえるかもしれませんが、要点を素早く伝え、前に進むことができます。ほとんどの人は暗黙のメッセージを理解するでしょう。
 
-> We're in the middle of an incident, please keep your comments until the end.
+> インシデント対応中です。コメントは最後まで控えてください。
 
-Remember, **don't be mean**, just state the facts and keep things flowing. We're not trying to shame people or make them feel bad, we're trying to keep our incident moving towards a resolution.
+忘れないでください。**意地悪にならず**、事実を述べて物事を進めましょう。人々を恥じ入らせたり気分を害したりすることが目的ではなく、インシデントを解決に向けて進めることが目的です。
 
 ---
 
-### Spreadsheet of Affected Customers
+### 影響を受けた顧客のスプレッドシート
 
 <input type="checkbox" id="054" /><label for="054">![054](../../assets/slides/incident_response/incident_response.054.jpeg)</label>
-_054. Can I get a spreadsheet of affected customers?_
+_054. 影響を受けた顧客のスプレッドシートが欲しい_
 
-> Can I get a spreadsheet of all affected customers?
+> 影響を受けた顧客全員のスプレッドシートを作成できますか？
 
-Another one that's definitely never been mentioned on any PagerDuty incident response call ever.
+これも確実にPagerDutyのインシデント対応会議で一度も出てきていないセリフです。
 
-An exec joins the call and wants to get a list of impacted customers. The problem is that in order to find that out, we'll need to take someone away from the effort of responding to the incident, at a time when we need them most. If you can spare the resources, then feel free to dedicate some to finding the information. But more often than not you wont have the resources to spare. So we can just tell the executive that.
+経営幹部が会議に参加し、影響を受けた顧客のリストを取得したいと考えています。問題は、その情報を見つけるために、最も必要とされている時に誰かをインシデント対応から外さなければならないことです。リソースに余裕があれば、情報収集に人員を割り当てることは自由です。しかし、ほとんどの場合、割くリソースはないでしょう。そのため、経営幹部にそのことを伝えればよいのです。
 
 ---
 
-### The Incident Takes Priority
+### インシデントが優先
 
 <input type="checkbox" id="055" /><label for="055">![055](../../assets/slides/incident_response/incident_response.055.jpeg)</label>
-_055. The incident takes priority. [Docs Reference](../../training/incident_commander.md#executive-swoop-wants-information)_
+_055. インシデントが優先 [ドキュメント参照](../../training/incident_commander.md#executive-swoop-wants-information)_
 
-> We can either get you that list, or fix the incident. Not both. The incident takes priority.
+> リストを作成するか、インシデントを解決するか、どちらか一方しかできません。インシデントが優先です。
 
-Note how this isn't phrased as a question, it wasn't "We can either get you that list or fix the incident, which do you want?". The **incident commander has already made the decision**, they're simply letting the executive know what it is.
+これが質問形式ではないことに注目してください。「リストを作成するか、インシデントを解決するか、どちらがよいですか？」とは言っていません。**インシデントコマンダーはすでに決定を下しており**、単にその決定を経営幹部に伝えているだけです。
 
-Remember that the IC is still in charge, you don't want to cede decision making to someone else during an incident.
+インシデントコマンダーが依然として指揮を執っていることを忘れないでください。インシデント中に他の人に意思決定を譲りたくはありません。
 
 ---
 
-### Really a SEV-1?
+### 本当にSEV-1？
 
 <input type="checkbox" id="056" /><label for="056">![056](../../assets/slides/incident_response/incident_response.056.jpeg)</label>
-_056. Is this really a SEV-1?_
+_056. 本当にSEV-1なの？_
 
-> Is this really a SEV-1?
+> これは本当にSEV-1なのですか？
 
-Oh look, it's another one that's never ever happened at PagerDuty. We used to have a really big problem with this one. We'd start incident response calls, then spend the first 10 minutes arguing over whether it was a `SEV-3` or a `SEV-2`. By the time we were finished, we would be 10 minutes into a `SEV-1` and have made no progress.
+ああ、これもPagerDutyで一度も起きていないことです。以前は、この問題で本当に大変でした。インシデント対応会議を始めると、最初の10分間は`SEV-3`なのか`SEV-2`なのかを議論していました。議論が終わる頃には、`SEV-1`の状態で10分が経過し、何の進展もないという状況でした。
 
-So now we have a rule. We don't discuss incident severity during the call. If we can't decide between two, we always assume it's the higher severity and move on.
+そこで今では、ルールを設けています。会議中は重大度について議論しません。2つの重大度の間で決められない場合は、常により高い重大度を想定して進めます。
 
-Don't litigate severities during an incident. It's a waste of time.
+インシデント中に重大度について議論するのは時間の無駄です。
 
 ---
 
-### Treating as a SEV-1
+### SEV-1として扱う
 
 <input type="checkbox" id="057" /><label for="057">![057](../../assets/slides/incident_response/incident_response.057.jpeg)</label>
-_057. We're treating this as a SEV-1. [Docs Reference](../../training/incident_commander.md#executive-swoop-questioning-severity)_
+_057. SEV-1として扱います [ドキュメント参照](../../training/incident_commander.md#executive-swoop-questioning-severity)_
 
-So the IC will need to make it clear we don’t discuss, and that we’re treating it as a `SEV-1`. It may turn out to be a `SEV-4`, who knows, it doesn’t matter. That's a discussion for the postmortem.
+そのため、インシデントコマンダーは議論しないことを明確にし、`SEV-1`として扱うことを伝える必要があります。結果的に`SEV-4`かもしれませんが、誰が知るでしょうか、それは重要ではありません。それはポストモーテムでの議論です。
 
-> We do not discuss incident severity during the call. We're treating this as a SEV-1.
+> 会議中は重大度について議論しません。これをSEV-1として扱います。
 
-Once you’ve spun up the gears of incident response, you may as well finish the process, if anything it just gives you all more practice.
+インシデント対応のプロセスを開始したら、最後まで実行する価値があります。少なくとも、それは全員にとって良い練習になります。
 
 ---
 
-### Notify Stakeholders
+### ステークホルダーへの通知
 
 <input type="checkbox" id="058" /><label for="058">![058](../../assets/slides/incident_response/incident_response.058.jpeg)</label>
-_058. Notify stakeholders._
+_058. ステークホルダーへの通知_
 
-Pretty much all of these examples of executive swoop can be pre-empted by **involving stakeholders in the process**, giving them a way to stay up to date.
+これらのエグゼクティブの襲来の例のほとんどは、**ステークホルダーをプロセスに巻き込み**、最新情報を把握する方法を提供することで事前に防ぐことができます。
 
-At PagerDuty we have a separate Slack room just for incident updates. It's less noisy than our main response room, and gives succinct updates for folks who want it. This allows execs to stay in the loop, and also ask questions without affecting the main response. In our process, the Internal Liaison is responsible for monitoring and updating that channel.
+PagerDutyでは、インシデントのアップデート専用のSlackルームを別途設けています。メインの対応ルームよりもノイズが少なく、必要な人々に簡潔なアップデート情報を提供します。これにより、経営幹部は状況を把握し続けることができ、メインの対応に影響を与えることなく質問することもできます。私たちのプロセスでは、インターナルリエゾンがそのチャンネルの監視とアップデートを担当します。
 
-Stakeholders are not allowed to talk on our response call, or in our main incident response chat room. They must take all discussion to the updates room or via the Internal Liaison. The Incident Commander is responsible for keeping our primary communication channels free of those types of discussions or questions, and direct people towards the Internal Liaison.
-
+ステークホルダーは、対応会議やメインのインシデント対応チャットルームでの発言は許可されていません。すべての議論はアップデートルームまたはインターナルリエゾンを通じて行う必要があります。インシデントコマンダーは、主要なコミュニケーションチャンネルをこれらの種類の議論や質問から解放し、人々をインターナルリエゾンに導く責任があります。
 
 ---
 
-### Belligerent Responder
+### 反抗的な対応者
 
 <input type="checkbox" id="059" /><label for="059">![059](../../assets/slides/incident_response/incident_response.059.jpeg)</label>
-_059. The belligerent responder._
+_059. 反抗的な対応者_
 
-There are other things than can hinder your response though that don't fall under the category of executive swoop. This one we call the belligerent responder. It was originally called _The Drunk Engineer_, but again, I was asked not to put that in the slide.
+エグゼクティブの襲来のカテゴリーには入らない、対応を妨げる他の要因もあります。これを私たちは反抗的な対応者と呼んでいます。元々は「酔っ払いエンジニア」と呼ばれていましたが、これもスライドには載せないように言われました。
 
-There are plenty of awkward situations that can present themselves on response calls. There can be big ego’s and strong opinions. What do you do when someone on the call is being belligerent and hampering the response process?
+対応会議では、様々な厄介な状況が発生する可能性があります。大きな自尊心や強い意見が存在することがあります。会議で誰かが反抗的になり、対応プロセスを妨げている場合、どうすればよいでしょうか？
 
-You need to be firm, and let them know what will happen if they continue.
+毅然とした態度で、継続した場合の結果を伝える必要があります。
 
 ---
 
-### Disruptive
+### 妨害行為
 
 <input type="checkbox" id="060" /><label for="060">![060](../../assets/slides/incident_response/incident_response.060.jpeg)</label>
-_060. You're being disruptive. [Docs Reference](../../training/incident_commander.md#the-belligerent-responder)_
+_060. 妨害行為をしています [ドキュメント参照](../../training/incident_commander.md#the-belligerent-responder)_
 
-> You're being disruptive. Please stop, or I will have to remove you from the call.
+> あなたは妨害行為をしています。やめていただくか、会議から退出していただく必要があります。
 
-State the facts, **give them a way out to save face**, but state what will happen if they don’t. No second chances, follow through on the action if they don’t respond. It can be harsh, but that’s what needs to be done.
+事実を述べ、**面子を保つ方法を提供し**、続けた場合の結果を伝えます。二度目のチャンスはなく、応じない場合は行動を実行します。厳しいかもしれませんが、それが必要なことです。
 
-Again, we've phrased this in a particular way. We said "I will have to remove you", rather than "I will remove you". It makes it seem like the decision is out of your hands and that you'll be forced to do it. It can make it less personal and less likely to cause awkward problems after the call is over.
+ここでも特定の言い方をしていることに注意してください。「あなたを退出させます」ではなく、「退出していただく必要があります」と言っています。これにより、決定があなたの手を離れており、強制的にそうせざるを得ないように見えます。これにより、より個人的な問題になりにくく、会議後に厄介な問題が発生する可能性が低くなります。
 
 ---
 
-### Do Responders Get Tired?
+### 対応者は疲れるのか？
 
 <input type="checkbox" id="061" /><label for="061">![061](../../assets/slides/incident_response/incident_response.061.jpeg)</label>
-_061. Do responders get tired?_
+_061. 対応者は疲れるのか？_
 
-Another problem that can pop up during a response is when we have long running incidents.
+対応中に発生する可能性のある別の問題は、長時間のインシデントの場合です。
 
-Do we use the same IC for a 12 hour incident? Do IC's even get tired? Well, of course they do! They're people too. This is another human cost associated with incident response that you want to try and minimize.
+12時間のインシデントで同じインシデントコマンダーを使用しますか？インシデントコマンダーは疲れないのでしょうか？もちろん疲れます！彼らも人間です。これはインシデント対応に関連する、最小限に抑えたい人的コストのもう1つの例です。
 
-All of the roles in the response process can be mentally fatiguing. When you get tired you start to forget things and make mistakes, so it's important to try and keep a fresh perspective as often as you can.
+対応プロセスにおけるすべての役割は、精神的に疲労する可能性があります。疲れると物事を忘れたり間違えたりし始めるので、できるだけ頻繁に新鮮な視点を保つように努めることが重要です。
 
 ---
 
-### Handovers Are Encouraged
+### 引き継ぎを推奨
 
 <input type="checkbox" id="062" /><label for="062">![062](../../assets/slides/incident_response/incident_response.062.jpeg)</label>
-_062. Handovers are encouraged._
+_062. 引き継ぎを推奨_
 
-For this reason, we **actively encourage handovers** in our process. Usually every hour or so is what we recommend, but it's at the discretion of the people involved. 3 hours would be the absolute upper limit where we would start requiring a handover.
+このため、私たちのプロセスでは**積極的に引き継ぎを推奨**しています。通常は1時間ごとを推奨していますが、関係者の裁量に委ねられています。3時間が引き継ぎを要求する絶対的な上限となります。
 
-???+ aside hide-arrow "Make sure to rest after handing over."
-    It can be very tempting after handing over command to want to stay on the call and listen in, to try and stay on top of things and see how things are going. **Avoid this at all costs.** Once handing over your role to someone else, you should leave the response call and all associated chat rooms. Take a break away from anything related to the incident.
+???+ aside hide-arrow "引き継ぎ後は休息を取ってください"
+    指揮を引き継いだ後も、会議に残って状況を把握し続けたいという誘惑に駆られることがあります。**これは絶対に避けてください。**他の人に役割を引き継いだら、対応会議とすべての関連チャットルームから退出するべきです。インシデントに関連するすべてのことから離れて休憩を取ってください。
 
-    You may be required to take the role again later if the incident is very long running. If you've stayed listening in the entire time, then while you would be up to speed, you would still be fatigued and would not be able to respond as efficient as if you'd taken a real break.
+    インシデントが非常に長引いた場合、後で再びその役割を担当する必要が出てくるかもしれません。ずっと聞いていた場合、状況は把握できているかもしれませんが、依然として疲労しており、本当の休憩を取った場合ほど効率的に対応できないでしょう。
 
-Handing over command is important, and really easy. Get the new IC up to speed out-of-band from the main discussion. We privately message on Slack for example. If you have a deputy, then it's even better, because they would already be on the call and up to speed.
+指揮の引き継ぎは重要で、とても簡単です。メインの議論とは別に、新しいインシデントコマンダーに状況を説明します。例えば、Slackでプライベートメッセージを使用します。副指揮官がいる場合はさらに良いでしょう。なぜなら、彼らはすでに会議に参加していて状況を把握しているからです。
 
-Then you handover.
+そして引き継ぎを行います。
 
 ---
 
-### Handover
+### 引き継ぎ
 
 <input type="checkbox" id="063" /><label for="063">![063](../../assets/slides/incident_response/incident_response.063.jpeg)</label>
-_063. Handover. [Docs Reference](../../training/incident_commander.md#transfer-of-command)_
+_063. 引き継ぎ [ドキュメント参照](../../training/incident_commander.md#transfer-of-command)_
 
-State that you are handing over command, and then the new IC begins as if it were a new call. Simple!
+指揮を引き継ぐことを宣言し、新しいインシデントコマンダーは新しい会議を始めるかのように開始します。シンプルです！
 
-Since we want to be able to handover, it's important to have as many trained IC's as you can. The more you have, the better. Ideally you want enough for at least a daily rotation.
+引き継ぎができるようにするためには、できるだけ多くの訓練されたインシデントコマンダーを持つことが重要です。多ければ多いほど良いです。理想的には、少なくとも日次のローテーションができる程度は必要です。
 
-??? aside "How do you get lots of trained Incident Commands?"
-    This is a question we get a lot, and not something we have a golden solution for. Many people are hesitant to take on the responsibilities of being an IC in addition to their current work and on-call responsibilities, which is a perfectly valid concern. One of the best ways we found to increase the pool of Incident Commanders is to encourage folks outside of normal engineering teams to take on the role. Those who wouldn't normally be part of an on-call rotation. Not only can they provide an outside perspective during incidents that is sometimes missing, but it can also help to build further empathy with others in the organization who regularly go on-call.
+??? aside "多くの訓練されたインシデントコマンダーをどのように確保するか？"
+    これは頻繁に受ける質問ですが、完璧な解決策はありません。多くの人々は、現在の業務とオンコール責任に加えてインシデントコマンダーの責任を引き受けることに躊躇します。これは完全に妥当な懸念です。インシデントコマンダーのプールを増やすための最良の方法の1つは、通常のエンジニアリングチーム以外の人々にもその役割を担うよう促すことです。通常のオンコールローテーションに参加しない人々を対象とします。彼らは時として欠けている外部の視点をインシデント中に提供できるだけでなく、定期的にオンコールを行う組織内の他の人々との共感を築くのにも役立ちます。
 
 ---
 
-### Anti-Patterns
+### アンチパターン
 
 _<input type="checkbox" id="064" /><label for="064">![064](../../assets/slides/incident_response/incident_response.064.jpeg)</label>_
-_064. Anti-Patterns. [Docs Reference](../../resources/anti_patterns.md)_
+_064. アンチパターン [ドキュメント参照](../../resources/anti_patterns.md)_
 
-Let’s talk about some [anti-patterns](../../resources/anti_patterns.md). Things which seem like they would help incident response, but really don’t. Knowing these now will save you the headaches and growing pains we went through.
+[アンチパターン](../../resources/anti_patterns.md)について話しましょう。インシデント対応に役立つように見えるが、実際にはそうではないものです。これらを今知っておくことで、私たちが経験した頭痛の種や成長の痛みを避けることができます。
 
 ---
 
-### Getting Everyone on the Call
+### 全員を会議に参加させる
 
 <input type="checkbox" id="065" /><label for="065">![065](../../assets/slides/incident_response/incident_response.065.jpeg)</label>
-_065. Getting everyone on the call. [Docs Reference](../../resources/anti_patterns.md#getting-everyone-on-the-call)_
+_065. 全員を会議に参加させる [ドキュメント参照](../../resources/anti_patterns.md#getting-everyone-on-the-call)_
 
-Believe it or not, we used to page every single engineer at PagerDuty whenever we had a `SEV-2`. I'm not joking. It was horrible. It worked great when we only had 5 engineers, less so when we had 50.
+信じられないかもしれませんが、以前のPagerDutyでは`SEV-2`が発生するたびに、すべてのエンジニアにページを送っていました。冗談ではありません。エンジニアが5人しかいなかった時は素晴らしく機能しましたが、50人になるとそうはいきませんでした。
 
-It's important to **maintain an effective [span of control](../../training/glossary.md#span-of-control)** during an incident. No one person should have more than ~7 people reporting to them. Any more than that and you have too many cooks in the kitchen.
+インシデント中は効果的な[管理の範囲](../../training/glossary.md#span-of-control)を維持することが重要です。一人の人に報告する人数は~7人を超えないようにします。それ以上になると、厨房に料理人が多すぎる状態になります。
 
-Waking up 30 engineers at 3am causes untold damage. Please don't do it.
+午前3時に30人のエンジニアを起こすことは、計り知れない損害を引き起こします。絶対にやめましょう。
 
 ---
 
-### Not Letting Responders Leave
+### 対応者を退出させない
 
 <input type="checkbox" id="066" /><label for="066">![066](../../assets/slides/incident_response/incident_response.066.jpeg)</label>
-_066. Not letting responders leave. [Docs Reference](../../resources/anti_patterns.md#forcing-everyone-to-stay-on-the-call)_
+_066. 対応者を退出させない [ドキュメント参照](../../resources/anti_patterns.md#forcing-everyone-to-stay-on-the-call)_
 
-Remember I mentioned at the beginning that one of our goals is to reduce the cost associated with an incident? That includes the human cost. Waking people up at 3am is costly. But keeping those people on a call in which they can’t do anything is even worse.
+冒頭で、インシデントに関連するコストを削減することが目標の1つだと述べたことを覚えていますか？それには人的コストも含まれます。午前3時に人々を起こすことはコストがかかります。しかし、何もできない会議に人々を留めておくことはさらに悪いことです。
 
-So if some responders are no longer needed, let them leave the call. Your co-workers time is more costly than servers, don’t burn them out!
+そのため、一部の対応者がもう必要なくなった場合は、会議から退出させましょう。同僚の時間はサーバーよりもコストがかかります。彼らを燃え尽きさせないでください！
 
-I would recommend you not list everyone you want to leave the call, since you might miss people. Better to say who you want to stay, that way it also solidifies who you want to stay too. For example,
+退出してほしい人全員をリストアップすることはお勧めしません。誰かを見落とす可能性があるからです。代わりに、残ってほしい人を言うほうが良いでしょう。そうすることで、残ってほしい人も明確になります。例えば：
 
-> Operations, Support, and Rich, please stay on the call. Everyone else, feel free to drop off at your discretion.
+> オペレーション、サポート、そしてRichは残ってください。他の皆さんは、適宜退出して構いません。
 
 ---
 
-### Too Frequent Status Updates
+### 頻繁すぎるステータスアップデート
 
 <input type="checkbox" id="067" /><label for="067">![067](../../assets/slides/incident_response/incident_response.067.jpeg)</label>
-_067. Too frequent status updates. [Docs Reference](../../resources/anti_patterns.md#too-frequent-status-updates)_
+_067. 頻繁すぎるステータスアップデート [ドキュメント参照](../../resources/anti_patterns.md#too-frequent-status-updates)_
 
-Executives especially love frequent status updates. But providing them too frequently can cause things to get out of hand. If it takes 5 minutes to write an update, and they want an update every 5 minutes, you can start to see how long it's going to take to solve the incident.
+特に経営幹部は頻繁なステータスアップデートを好みます。しかし、アップデートを頻繁に提供しすぎると、事態が制御不能になる可能性があります。アップデートを書くのに5分かかり、5分ごとにアップデートを求められると、インシデントの解決にどれだけ時間がかかるかが見えてきます。
 
-At PagerDuty, we keep our internal updates to about once every 20-30 minutes. Writing the update takes away time from solving the incident, so that needs to be balanced. This cadence has worked well for us.
+PagerDutyでは、内部アップデートを20-30分ごとに行っています。アップデートを書くことはインシデントの解決から時間を奪うため、バランスを取る必要があります。このケイデンスは私たちにとってうまく機能しています。
 
 ---
 
-### Being Overly Focussed On An Issue
+### 問題に過度に焦点を当てる
 
 <input type="checkbox" id="068" /><label for="068">![068](../../assets/slides/incident_response/incident_response.068.jpeg)</label>
-_068. Being overly focussed on an issue. [Docs Reference](../../resources/anti_patterns.md#being-too-focussed-on-the-problem-in-front-of-you)_
+_068. 問題に過度に焦点を当てる [ドキュメント参照](../../resources/anti_patterns.md#being-too-focussed-on-the-problem-in-front-of-you)_
 
-The IC is generally the person who has the bigger picture of what's going on. But there can be a tendency for responders to become too focussed on the problem they see in front of them, rather than taking the bigger picture into account.
+インシデントコマンダーは通常、何が起きているかの全体像を把握している人です。しかし、対応者が全体像を考慮せずに、目の前の問題に過度に焦点を当ててしまう傾向があります。
 
-This usually presents itself on an incident call with an SME constantly bringing up the same issue without listening to instructions from the incident commander, and having tunnel vision for the specific issue on their system.
+これは通常、インシデント会議でSMEがインシデントコマンダーの指示を聞かずに同じ問題を繰り返し持ち出し、自分のシステムの特定の問題への視野狭窄に陥っている場合に現れます。
 
-Try not to get tunnel vision or chase red herrings. Always keep the bigger picture in mind.
+視野狭窄に陥ったり、真の問題から気を逸らすものを追いかけたりしないようにしましょう。常に全体像を念頭に置いてください。
 
 ---
 
-### Requiring Deeply Technical ICs
+### 深い技術知識を持つインシデントコマンダーを要求する
 
 <input type="checkbox" id="069" /><label for="069">![069](../../assets/slides/incident_response/incident_response.069.jpeg)</label>
-_069. Requiring deeply technical incident commanders. [Docs Reference](../../resources/anti_patterns.md#requiring-incident-commanders-to-have-deep-technical-knowledge)_
+_069. 深い技術知識を持つインシデントコマンダーを要求する [ドキュメント参照](../../resources/anti_patterns.md#requiring-incident-commanders-to-have-deep-technical-knowledge)_
 
-We used to require that all of our Incident Commanders be experienced engineers with deep technical knowledge of all PagerDuty systems. **This was one of our bigger mistakes.** Remember that IC's aren't responders, they aren't the ones actually fixing the problem, so they don't need deep technical knowledge. IC's are experts at coordinating the response, not at solving technical issues. You should be relying on your SMEs for that.
+以前は、すべてのインシデントコマンダーがPagerDutyのすべてのシステムについて深い技術知識を持つ経験豊富なエンジニアであることを要求していました。**これは私たちの大きな間違いの1つでした。**インシデントコマンダーは対応者ではなく、実際に問題を修正する人ではないため、深い技術知識は必要ないことを覚えておいてください。インシデントコマンダーは対応の調整のエキスパートであり、技術的な問題を解決するエキスパートではありません。そのためにはSMEに頼るべきです。
 
-**Removing the restriction on technical knowledge led to a dramatic increase in our pool of available incident commanders**, and didn't have any effect on our ability to respond to incidents. We now have ICs from all across the organization, with even more currently in training.
+**技術知識の制限を取り除いたことで、利用可能なインシデントコマンダーのプールが劇的に増加し**、インシデントへの対応能力には何の影響もありませんでした。現在では組織全体からインシデントコマンダーを迎え、さらに多くの人が研修中です。
 
-It's already hard enough to get people to want to be an IC, so don't add further unnecessary restrictions to your pool.
+ただでさえインシデントコマンダーになりたい人を見つけることは難しいので、不必要な制限を追加しないようにしましょう。
 
 ---
 
-### Taking on Multiple Roles
+### 複数の役割を引き受ける
 
 <input type="checkbox" id="070" /><label for="070">![070](../../assets/slides/incident_response/incident_response.070.jpeg)</label>
-_070. Taking on multiple roles. [Docs Reference](../../resources/anti_patterns.md#trying-to-take-on-multiple-roles)_
+_070. 複数の役割を引き受ける [ドキュメント参照](../../resources/anti_patterns.md#trying-to-take-on-multiple-roles)_
 
-In past PagerDuty incidents, we've had instances where the Incident Commander has started to assume the Subject Matter Expert role and attempted to solve the problem themselves. This typically happens when an engineer is the IC, and the incident is something to do with a system they helped to build. It's very tempting to say "I know how to fix this!" and jump in and solve the problem yourself. But you cannot do that as an IC.
+過去のPagerDutyのインシデントでは、インシデントコマンダーがSMEの役割を引き受け、自分で問題を解決しようとした例がありました。これは通常、エンジニアがインシデントコマンダーで、インシデントが自分が構築を手伝ったシステムに関連している場合に発生します。「これなら修正方法がわかる！」と言って、自分で問題を解決しようとするのは非常に魅力的です。しかし、インシデントコマンダーとしてそれをしてはいけません。
 
-Inevitably, the incident will be bigger than you think, and while you're trying to fix you little fire, there's another one happening in another service and you've lost sight of the bigger picture.
+必然的に、インシデントは想定よりも大きくなり、あなたが小さな火事を消そうとしている間に、別のサービスで別の火事が発生し、全体像を見失ってしまいます。
 
-You cannot take on another role at the same time as being an Incident Commander. If you absolutely are the only person who can solve the problem, then handover to another IC and assume the role of an SME for the remainder of the incident.
+インシデントコマンダーでありながら、同時に別の役割を引き受けることはできません。もし本当にあなたが問題を解決できる唯一の人物である場合は、別のインシデントコマンダーに引き継ぎ、インシデントの残りの時間はSMEとして活動してください。
 
 ---
 
-### Litigating Policy
+### ポリシーの議論
 
 <input type="checkbox" id="071" /><label for="071">![071](../../assets/slides/incident_response/incident_response.071.jpeg)</label>
-_071. Litigating policy during an incident. [Docs Reference](../../resources/anti_patterns.md#discussing-process-and-policy-decisions-during-the-incident-call)_
+_071. インシデント中にポリシーを議論する [ドキュメント参照](../../resources/anti_patterns.md#discussing-process-and-policy-decisions-during-the-incident-call)_
 
-Just like with severities, policy and processes should not be discussed during an incident. The current process should be followed, and any concerns should be raised afterwards, either during a postmortem or directly to the team managing the incident response process.
+重大度と同様に、ポリシーとプロセスについてもインシデント中に議論すべきではありません。現在のプロセスに従い、懸念事項はポストモーテムの際か、インシデント対応プロセスを管理するチームに直接伝えるべきです。
 
-Trying to change the process during an incident is only going to prolong the current incident. That's not the time to have that discussion.
+インシデント中にプロセスを変更しようとすることは、現在のインシデントを長引かせるだけです。それを議論する時ではありません。
 
 ---
 
-### Averse to Process Changes
+### プロセス変更への抵抗
 
 <input type="checkbox" id="072" /><label for="072">![072](../../assets/slides/incident_response/incident_response.072.jpeg)</label>
-_072. Being averse to process changes. [Docs Reference](../../resources/anti_patterns.md#being-averse-to-policy-and-process-changes)_
+_072. プロセス変更への抵抗 [ドキュメント参照](../../resources/anti_patterns.md#being-averse-to-policy-and-process-changes)_
 
-Finally, once a stable process is in place and incidents are getting resolved, there can be lots of hesitation and resistance to changing that process. "If it ain't broke don't fix it". As your company grows, your response will need to change. Holding on to your old processes and practices for too long can hinder your incident response going forward. Don't be reckless, of course, but try to introduce sensible changes and don't be afraid to make changes which might slow things down in the short-term, but will make things faster in the long-run. These are the hardest changes to make, but ultimately the most worthwhile.
+最後に、安定したプロセスが確立され、インシデントが解決されるようになると、そのプロセスを変更することへの躊躇や抵抗が多く見られます。「うまく動いているものは変えない」という考えです。会社が成長するにつれて、対応も変化する必要があります。古いプロセスや慣行を長く保持しすぎると、今後のインシデント対応の妨げになる可能性があります。もちろん無謀になってはいけませんが、賢明な変更を導入するよう努め、短期的には物事を遅くするかもしれないが長期的には物事を速くする変更を恐れないでください。これらは最も実行が難しい変更ですが、最終的には最も価値のある変更となります。
 
 ---
 
-### Resolved
+### 解決
 
 _<input type="checkbox" id="073" /><label for="073">![073](../../assets/slides/incident_response/incident_response.073.jpeg)</label>_
-_073. Resolved._
+_073. 解決_
 
-OK, so if all goes well, you're incident will get resolved. That means we're all done and we can go home, right?!
+OK、すべてがうまくいけば、インシデントは解決されます。これで全部終わりで、家に帰れますよね？！
 
-Well, not quite yet. There's still one more thing we need to do.
+まあ、まだそうではありません。まだやるべきことが1つあります。
 
 ---
 
-### Don't Neglect The Postmortem
+### ポストモーテムを怠らない
 
 <input type="checkbox" id="074" /><label for="074">![074](../../assets/slides/incident_response/incident_response.074.jpeg)</label>
-_074. Don't neglect the postmortem. [Docs Reference](../../resources/anti_patterns.md#neglecting-the-post-mortem-and-followup-activities)_
+_074. ポストモーテムを怠らない [ドキュメント参照](../../resources/anti_patterns.md#neglecting-the-post-mortem-and-followup-activities)_
 
-We need to do a [postmortem](../../after/post_mortem_process.md). Or after-action review, learning review, retrospective, incident report, etc. Whatever you want to call it, the name doesn't matter as much as actually doing one!
+[ポストモーテム](../../after/post_mortem_process.md)を実施する必要があります。アクション後レビュー、学習レビュー、レトロスペクティブ、インシデントレポートなど、呼び方は何でも構いません。名前は実際に行うことほど重要ではありません！
 
-Don't make the mistake of neglecting a postmortem after an incident. Without a postmortem you fail to recognize what you're doing right, where you could improve, and most importantly, how to avoid making the same exact mistakes next time around. A well-designed, blameless postmortem allows teams to continuously learn, and serves as a way to iteratively improve your infrastructure and incident response process.
+インシデント後にポストモーテムを怠るという間違いを避けましょう。ポストモーテムがなければ、何が正しく行われ、どこを改善できるか、そして最も重要な、次回同じ間違いを避ける方法を認識できません。適切に設計された非難のないポストモーテムにより、チームは継続的に学習でき、インフラストラクチャとインシデント対応プロセスを反復的に改善する方法として機能します。
 
-Postmortems are an important followup action and should never be missed. Even if you triggered an incident and then decided it was a false alarm, you should still do a brief postmortem. You just mobilized a response when you didn't need to, so you want to identify how you can make sure that doesn't happen again.
+ポストモーテムは重要なフォローアップアクションであり、決して省略すべきではありません。インシデント対応を開始して誤報だと判断した場合でも、簡単なポストモーテムを行うべきです。不必要な対応を動員したのですから、それが再び起こらないようにする方法を特定したいはずです。
 
 ---
 
-### Create the Postmortem
+### ポストモーテムの作成
 
 <input type="checkbox" id="075" /><label for="075">![075](../../assets/slides/incident_response/incident_response.075.jpeg)</label>
-_075. Create the postmortem. [Docs Reference](../../after/post_mortem_template.md)_
+_075. ポストモーテムの作成 [ドキュメント参照](../../after/post_mortem_template.md)_
 
-The first step is to create the postmortem itself. This is the job of the Incident Commander. I don't mean they're going to write the entire postmortem, they're just going to create the [initial template](../../after/post_mortem_template.md). We want to make sure that a link exists so that when people ask "When will we know what went wrong?" you have something to give them.
+最初のステップは、ポストモーテム自体を作成することです。これはインシデントコマンダーの仕事です。ポストモーテム全体を書くという意味ではなく、[初期テンプレート](../../after/post_mortem_template.md)を作成するだけです。人々が「何がうまくいかなかったのか、いつわかるの？」と尋ねてきたときに渡せるリンクが存在することを確認したいのです。
 
 ---
 
-### Pick an Owner
+### オーナーの選定
 
 <input type="checkbox" id="076" /><label for="076">![076](../../assets/slides/incident_response/incident_response.076.jpeg)</label>
-_076. Pick an owner._
+_076. オーナーの選定_
 
-Then the IC needs to assign an owner. Remember how we assigned tasks to specific individuals? It’s no different with a postmortem. Make sure there’s a clear owner, and that it's an **individual** and not a team. The most surefire way to make sure a postmortem doesn't get completed is to assign it to a team instead of a specific person.
+次にインシデントコマンダーはオーナーを割り当てる必要があります。特定の個人にタスクを割り当てたことを覚えていますか？ポストモーテムも同じです。明確なオーナーがいることを確認し、それが**個人**であってチームではないようにしてください。特定の人ではなくチームに割り当ててしまうと、ポストモーテムはほぼ確実に完了しません。
 
-The person you assign is responsible for completing the postmortem, but they don't have to do it all themselves. They can delegate out sections as they see fit. But you need someone on the hook for making sure it gets finished.
+割り当てられた人がポストモーテムの完了に責任を持ちますが、すべてを自分でやる必要はありません。必要に応じてセクションを委任することができます。しかし、完了を確実にする責任者が必要です。
 
-As with assigning other tasks, you also want to give them a deadline, and make sure they've understood that they're responsible for completing the postmortem.
+他のタスクの割り当てと同様に、期限を設定し、ポストモーテムの完了に責任があることを理解していることを確認する必要があります。
 
 ---
 
-### Blameless
+### 非難のない
 
 <input type="checkbox" id="077" /><label for="077">![077](../../assets/slides/incident_response/incident_response.077.jpeg)</label>
-_077. Blameless._
+_077. 非難のない_
 
-Importantly, postmortems need to be **blameless**. If someone made a mistake, you just spent lots of money training them to never do it again. **You can’t fire your way to reliability.**
+重要なことですが、ポストモーテムは**非難のない**ものでなければなりません。誰かがミスをしたとしたら、あなたは二度とそれを繰り返さないよう訓練するために多額のお金を費やしたということです。**信頼性は解雇によって達成できません。**
 
-Let's say Bob ran a command which deleted your entire database. Your postmortem shouldn't be "Bob made a mistake and should be fired or have his access revoked!". The postmortem should be "Why is our system configured in a way which  allowed a single user to delete the entire database?".
+例えば、Bobがデータベース全体を削除するコマンドを実行したとします。ポストモーテムは「Bobがミスを犯したので解雇されるか、アクセス権を剥奪されるべきだ！」とすべきではありません。ポストモーテムは「なぜシステムが単一のユーザーがデータベース全体を削除できるように構成されているのか？」とすべきです。
 
-If you name and shame people in a postmortem, it demotivates everyone. Next time someone makes a mistake, they're not going to own up to it, because they'll be afraid of getting shamed too. You want people to bring up problems, because then you get to fix them quickly.
+ポストモーテムで人を名指しして恥をかかせると、全員のやる気を削ぎます。次に誰かミスをしたとき、同じように恥をかかされることを恐れて、認めようとしないでしょう。問題を提起してもらいたいのです。そうすれば素早く修正できるからです。
 
 ---
 
-### Review the Process
+### プロセスのレビュー
 
 <input type="checkbox" id="078" /><label for="078">![078](../../assets/slides/incident_response/incident_response.078.jpeg)</label>
-_078. Review the process too!_
+_078. プロセスもレビュー！_
 
-Don’t forget to also review the process as part of the postmortem. How can you change the process to make it better? What isn’t working out well? Just as it’s important to learn from and fix mistakes in your software, you want to do the same for your incident response process.
+ポストモーテムの一環として、プロセスのレビューも忘れないでください。プロセスをより良くするためにどのように変更できるでしょうか？何がうまく機能していないでしょうか？ソフトウェアの間違いから学び、修正することが重要なように、インシデント対応プロセスについても同じことをしたいのです。
 
 ---
 
-### Practice
+### 練習
 
 _<input type="checkbox" id="079" /><label for="079">![079](../../assets/slides/incident_response/incident_response.079.jpeg)</label>_
-_079. Practice makes perfect._
+_079. 練習が完璧を作る_
 
-Finally, you want to practice your incident response process as much as you can. **You don't want to be doing it for the first time during a real incident.** Reading about it is one thing, but going through the motions is very different.
+最後に、できるだけインシデント対応プロセスを練習したいと思います。**実際のインシデントで初めて実践するのは大変です。**読むことと実際に実践することは全く異なります。
 
-Start by running mock incidents. Then treat your smaller incidents as if they're larger ones. If you trigger incident response and find it's not a real incident, treat it like one anyway since it's free practice.
+模擬インシデントから始めましょう。そして、小さなインシデントを大きなインシデントのように扱います。インシデント対応を開始して、実際のインシデントではないとわかった場合でも、無料の練習として同じように扱います。
 
-At PagerDuty, we run something called [Failure Friday](https://www.pagerduty.com/blog/failure-friday-at-pagerduty/) where we purposefully inject failure into our systems to test their resilience. We treat this like a major incident, with an incident commander and everything. It allows us to practice while we're not under the stress of a normal incident.
+PagerDutyでは、[Failure Friday](https://www.pagerduty.com/blog/failure-friday-at-pagerduty/)と呼ばれるものを実施しています。システムの回復力をテストするために意図的に障害を注入します。これを重大なインシデントとして扱い、インシデントコマンダーなど全てを含めて対応します。これにより、通常のインシデントのストレスがない状態で練習することができます。
 
-We also play a game called [Keep Talking And Nobody Explodes](https://www.keeptalkinggame.com). Yes, that's right, we play video games at work. But we've found that this game really helps to simulate a lot of the things an incident commander has to deal with, and is a great way to get some stress free practice.
+また、[Keep Talking And Nobody Explodes](https://www.keeptalkinggame.com)というゲームもプレイします。はい、その通り、仕事中にビデオゲームをプレイします。しかし、このゲームはインシデントコマンダーが対処しなければならない多くのことをシミュレートし、ストレスのない練習を得るための素晴らしい方法であることがわかりました。
 
-The bottom line is to practice as much as you can, so that when you do have the inevitable incident, your response is just routine.
+要するに、できるだけ多く練習して、避けられないインシデントが発生したときに、対応が単なる日常的な作業となるようにしましょう。
 
 ---
 
-### Open-Source Response Docs
+### オープンソースの対応ドキュメント
 
 <input type="checkbox" id="080" /><label for="080">![080](../../assets/slides/incident_response/incident_response.080.jpeg)</label>
-_080. Our open-source incident response documentation._
+_080. 私たちのオープンソースのインシデント対応ドキュメント_
 
-This was just a brief taste of the training we run at PagerDuty for our own Incident Commanders. We had nowhere near enough time to cover everything.
+これは、PagerDutyで私たちが自社のインシデントコマンダー向けに実施しているトレーニングのほんの一部です。全てをカバーするには時間が足りませんでした。
 
-Good news though! We have published our entire incident response process online. It is an exact copy of our internal documentation only with things like phone numbers removed. It's complete free to use, and is open-sourced under an Apache 2 license so you can use it in your own organizations. [It's on GitHub](https://github.com/PagerDuty/incident-response-docs) and we do accept pull requests if you spot any mistakes or have improvement suggestions.
+しかし良いニュースがあります！私たちは完全なインシデント対応プロセスをオンラインで公開しています。これは電話番号などを削除した以外は、内部ドキュメントの完全なコピーです。完全に無料で使用でき、Apache 2ライセンスの下でオープンソース化されているため、あなたの組織でも使用できます。[GitHubにあります](https://github.com/PagerDuty/incident-response-docs)し、間違いを見つけたり改善提案があったりする場合はプルリクエストも受け付けています。
 
-Everything I've talked about today can be found in the documentation, and there's lots of great [additional reading material](../../resources/reading.md) if you want to learn more.
+今日お話ししたことはすべてドキュメントに記載されており、さらに詳しく学びたい場合は素晴らしい[追加の読み物](../../resources/reading.md)もあります。
 
 ---
 
-### Response Docs Image
+### 対応ドキュメントの画像
 
 <input type="checkbox" id="081" /><label for="081">![081](../../assets/slides/incident_response/incident_response.081.jpeg)</label>
-_081. Response docs screenshot._
+_081. 対応ドキュメントのスクリーンショット_
 
-It looks pretty too.
+見た目もいい感じですよ。
 
 ---
 
-### Summary
+### まとめ
 
 <input type="checkbox" id="082" /><label for="082">![082](../../assets/slides/incident_response/incident_response.082.jpeg)</label>
-_082. Summary._
+_082. まとめ_
 
-Incident command training is useful in so many situations outside of a server exploding in the night. It can be applicable to many different things in your life, whether it's staying calm after a fender bender on the highway, or jumping into action to help during a major natural disaster. In my own life I've regularly compared the role of a parent with that of an Incident Commander. You'd be surprised at how useful it can be in everyday situations.
+インシデントコマンド研修は、夜中にサーバーが爆発するような状況以外でも多くの場面で役立ちます。高速道路での接触事故後の冷静さの維持から、大規模な自然災害時の支援まで、人生のさまざまな場面で適用できます。私自身の生活でも、親の役割とインシデントコマンダーの役割を頻繁に比較しています。日常的な状況でどれほど役立つか、驚くかもしれません。
 
-Anyway, with that, I'll leave you with a quick summary of the main things we discussed today. Thanks!
+さて、今日議論した主なポイントを簡単にまとめて終わりにしたいと思います。ありがとうございました！
 
-???+ aside hide-arrow "Questions?"
-    If you have questions about this training material, feel free to ask me on Twitter, I'm [@r_adams](https://twitter.com/r_adams).
+???+ aside hide-arrow "質問がありますか？"
+    このトレーニング資料について質問がある場合は、X（旧Twitter）で私に自由に質問してください。[@r_adams](https://x.com/r_adams)です。
 
 ---
 
-### Image Credits
+### 画像クレジット
 
 <input type="checkbox" id="083" /><label for="083">![083](../../assets/slides/incident_response/incident_response.083.jpeg)</label>
-_083. Image credits._
+_083. 画像クレジット_
 
-???+ aside hide-arrow "Image Credits"
-    Here are the credits for all the images used throughout this training material.
+???+ aside hide-arrow "画像クレジット"
+    このトレーニング資料全体で使用された画像のクレジットです。
 
 ---
 
 ### PagerDuty University
 
 <input type="checkbox" id="084" /><label for="084">![084](../../assets/slides/incident_response/incident_response.084.jpeg)</label>
-_084. PagerDuty University._
+_084. PagerDuty University_
 
 ???+ aside hide-arrow "PagerDuty University"
-    Shameless plug: If you're interested in our longer courses on this and other topics, including how to use PagerDuty to do it, we offer a variety of different training programs as part of [PagerDuty University](https://university.pagerduty.com/) — from private full-day courses at your own offices, to public instructor-led training.
+    こっそり宣伝：このトピックや他のトピックについての長期コース（PagerDutyを使用した方法を含む）に興味がある場合は、[PagerDuty University](https://university.pagerduty.com/)の一部として様々なトレーニングプログラムを提供しています - あなたのオフィスでのプライベートな1日コースから、公開のインストラクター主導のトレーニングまで。
 
 ---
 
-### Video
+### ビデオ
 
 _<input type="checkbox" id="085" /><label for="085"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/BI7nfkoTmiA?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></label>_
 
 ???+ aside hide-arrow full-width "PagerDuty Summit Series Chicago 2017"
-    As a special bonus for making it to the end, here's a recording of an earlier version of this training given at a PagerDuty event in September 2017. The material will differ slightly from that shown on this website, as we have made changes and refined the content since then. But it should give you a decent idea of how the course is usually presented.
+    最後まで見ていただいた特典として、2017年9月のPagerDutyイベントで行われた、このトレーニングの初期バージョンの録画をご覧いただけます。その後コンテンツを改良し変更を加えているため、このウェブサイトに掲載されている内容とは若干異なりますが、通常このコースがどのように提供されているかの良い参考になるはずです。

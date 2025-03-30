@@ -17,7 +17,7 @@ description: 私たちのドキュメントに時々出てくる奇妙な言葉�
 特定のシステムの問題を解決するのを手伝うことができるインシデント会議の参加者です。SME（以下参照）とも呼ばれます。[詳細情報](../before/different_roles.md)
 
 ### SME（Subject Matter Expert）
-「Subject Matter Expert（対象領域の専門家）」の略で、特定のサービスや主題の専門家であり、インシデントコマンダーに情報を提供し、特定のシステムの解決アクションを実行できる人です。[詳細情報](../before/different_roles.md)
+「Subject Matter Expert（対象分野の専門家）」の略で、特定のサービスや主題の専門家であり、インシデントコマンダーに情報を提供し、特定のシステムの解決アクションを実行できる人です。[詳細情報](../before/different_roles.md)
 
 ### コマンドスタッフ（Command Staff）
 コマンドスタッフは、インシデントコマンダー、副指揮官、書記官で構成されています。

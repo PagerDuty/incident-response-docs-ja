@@ -26,7 +26,7 @@ description: あなたは今、インシデントに関する会議に初めて�
 * **Ack/Rog（了解）** - "I have received and understood" - メッセージを受け取り、理解しました。
 * **Say Again（復唱せよ）** - "Repeat your last message" - 最後に言ったことをもう一度言ってください。
 * **Standby（待機せよ）** - "Please wait a moment for the next response" - 次の対応まで少しお待ちください。
-* **Wilco（従おう）** - "Will comply" - 指示に従います。
+* **Wilco（従う）** - "Will comply" - 指示に従います。
 
 なお、新しい略語を作るのは避け、常に暗黙的であるよりも明示的であることを心がけてください。略語を使って時間を節約しようとして、相手がその略語を知らなかったために誤解が生じるよりも、物事を明確にするほうがよいはずです。
 

@@ -3,7 +3,7 @@ cover: assets/img/covers/incident_response_docs.png
 hero: assets/img/headers/iStock-1097331490-3992x2242-e4f3f2d.png
 hero_alt_text: Incident Response at PagerDuty
 ---
-この文書は、PagerDutyのインシデント対応プロセスの一部をカバーしています。これは、PagerDuty社内で重大なインシデントが発生した場合や、新入社員がオンコールの責務を担う準備をする際に使用される社内文書の簡略版です。インシデントへの備えだけでなく、インシデント発生中および発生後の対応についても情報を提供しています。オンコール要員や運用中のインシデント対応プロセスに関わる人たち（または正式なインシデント対応プロセスを導入したいと考えている人々）が使用することを想定しています。この文書が何であり、なぜ存在するのかについての詳細は、[About](about.md) ページを参照してください。
+この文書は、PagerDutyのインシデント対応プロセスの一部をカバーしています。これは、PagerDuty社内で重大なインシデントが発生した場合や、新入社員がオンコールの責務を担う準備をする際に使用される社内文書の簡略版です。インシデントへの備えだけでなく、インシデント発生中および発生後の対応についても情報を提供しています。オンコール要員や運用中のインシデント対応プロセスに関わる人たち（または正式なインシデント対応プロセスを導入したいと考えている人たち）が利用することを想定しています。この文書が何であり、なぜ存在するのかについての詳細は、[About](about.md) ページを参照してください。
 
 !!! tip "何から始めたらわからない方へ"
     インシデント対応が初めてで、まだ組織内に正式なプロセスがない場合は、まず [Getting Started](getting_started.md) ページを参照し、最初にやることの簡単なリストを確認することをお勧めします。 さらに、[Training Course](training/courses/incident_response.md) ページで、当社のプロセス概要について詳しい情報を得ることもできます。
@@ -18,7 +18,7 @@ hero_alt_text: Incident Response at PagerDuty
 
 ## インシデント発生前
 
-インシデント発生前に知っておくべき情報。実際のインシデント発生時には、これらを読んでいる余裕はないでしょう。
+インシデント発生前に知っておくべき情報。実際のインシデント発生中は、これらを読んでいる余裕はないでしょう。
 
 * [What is an Incident?](before/what_is_an_incident.md) - _インシデント対応について語る前に、インシデントとは実際に何なのかを定義する必要があります_
 * [Severity Levels](before/severity_levels.md) - _自社の重大度レベル分類に関する情報。SEV-3とSEV-1の違いは何か？ どのような対応が必要になるのか?_
@@ -45,7 +45,7 @@ hero_alt_text: Incident Response at PagerDuty
 
 ## 危機対応
 
-インシデント対応は、技術的なインシデントへの対処だけではありません。危機はいつでも起こり得ます。あなたはそれに対して備えができていますか？ 最悪の事態への対処の仕方によって、現在の顧客や潜在顧客の目には、自社のブランドやその価値がどう映るかが決まります。
+インシデント対応は、技術的なインシデントへの対処だけではありません。危機はいつでも起こり得ます。あなたの組織では備えができていますか？ 最悪の事態への対処の仕方によって、現在の顧客や潜在顧客の目には、自社のブランドやその価値がどう映るかが決まります。
 
 * [Introduction](crisis/crisis_intro.md) - _危機対応の概要と、この文書の対象者について_
 * [Terminology](crisis/terms.md) - _このガイドで使用される主な用語と概念の一覧_
@@ -65,8 +65,8 @@ hero_alt_text: Incident Response at PagerDuty
 
 * [Incident Commander Training](training/incident_commander.md) - _インシデント対応チームの指揮官（インシデントコマンダー）になるためのガイド_
 * [Deputy Training](training/deputy.md) - _副指揮官（Deputy）となり、インシデントコマンダーを支援する方法_
-* [Scribe Training](training/scribe.md) - _書記係（Scribe）になるためのガイド_
-* [Subject Matter Expert Training](training/subject_matter_expert.md) - _重大インシデントに関わるすべての参加者の責任と行動に関するガイド_
+* [Scribe Training](training/scribe.md) - _書記官（Scribe）になるためのガイド_
+* [Subject Matter Expert Training](training/subject_matter_expert.md) - _SME（Subject Matter Expert）、そして重大インシデントに関わるすべての参加者の責任と行動に関するガイド_
 * [Customer Liaison Training](training/customer_liaison.md) - _インシデント発生時に顧客向け連絡係（Customer Liaison）として行動する方法に関するガイド_
 * [Internal Liaison Training](training/internal_liaison.md) - _インシデント発生時に内部向け連絡係（Internal Liaison）として行動する方法に関するガイド_
 

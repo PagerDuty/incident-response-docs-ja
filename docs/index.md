@@ -3,7 +3,7 @@ cover: assets/img/covers/incident_response_docs.png
 hero: assets/img/headers/iStock-1097331490-3992x2242-e4f3f2d.png
 hero_alt_text: Incident Response at PagerDuty
 ---
-この文書は、PagerDutyのインシデント対応プロセスの一部をカバーしています。これは、PagerDuty社内で重大なインシデントが発生した場合や、新入社員がオンコールの責務を担う準備をする際に使用される社内文書の簡略版です。インシデントへの備えだけでなく、インシデント発生中および発生後の対応についても情報を提供しています。オンコール要員や運用中のインシデント対応プロセスに関わる人たち（または正式なインシデント対応プロセスを導入したいと考えている人たち）が利用することを想定しています。この文書が何であり、なぜ存在するのかについての詳細は、[About](about.md) ページを参照してください。
+この文書は、PagerDutyのインシデント対応プロセスの一部をカバーしています。これは、PagerDuty社内で重大なインシデントが発生した場合や、新入社員がオンコールの責務を担う準備をする際に使用される社内文書の簡略版です。インシデントへの備えだけでなく、インシデント発生中および発生後の対応についても情報を提供しています。オンコール要員や運用中のインシデント対応プロセスに関わる人々（または正式なインシデント対応プロセスを導入したいと考えている人々）が利用することを想定しています。この文書が何であり、なぜ存在するのかについての詳細は、[About](about.md) ページを参照してください。
 
 !!! tip "何から始めたらわからない方へ"
     インシデント対応が初めてで、まだ組織内に正式なプロセスがない場合は、まず [Getting Started](getting_started.md) ページを参照し、最初にやることの簡単なリストを確認することをお勧めします。 さらに、[Training Course](training/courses/incident_response.md) ページで、当社のプロセス概要について詳しい情報を得ることもできます。
@@ -22,7 +22,7 @@ hero_alt_text: Incident Response at PagerDuty
 
 * [What is an Incident?](before/what_is_an_incident.md) - _インシデント対応について語る前に、インシデントとは実際に何なのかを定義する必要があります_
 * [Severity Levels](before/severity_levels.md) - _自社の重大度レベル分類に関する情報。SEV-3とSEV-1の違いは何か？ どのような対応が必要になるのか?_
-* [Different Roles for Incidents](before/different_roles.md) - _インシデント発生時の役割（インシデントコマンダー(IC)、記録係など）に関する情報_
+* [Different Roles for Incidents](before/different_roles.md) - _インシデント発生時の役割（インシデントコマンダー(IC)、書記官など）に関する情報_
 * [Incident Call Etiquette](before/call_etiquette.md) - _インシデント会議のエチケットガイドライン（会議に参加する前にご確認ください）_
 * [Complex Incidents](before/complex_incidents.md) - _大規模で複雑なインシデントへの対処に関するガイド_
 
@@ -67,8 +67,8 @@ hero_alt_text: Incident Response at PagerDuty
 * [Deputy Training](training/deputy.md) - _副指揮官（Deputy）となり、インシデントコマンダーを支援する方法_
 * [Scribe Training](training/scribe.md) - _書記官（Scribe）になるためのガイド_
 * [Subject Matter Expert Training](training/subject_matter_expert.md) - _SME（Subject Matter Expert）、そして重大インシデントに関わるすべての参加者の責任と行動に関するガイド_
-* [Customer Liaison Training](training/customer_liaison.md) - _インシデント発生時に顧客向け連絡係（Customer Liaison）として行動する方法に関するガイド_
-* [Internal Liaison Training](training/internal_liaison.md) - _インシデント発生時に内部向け連絡係（Internal Liaison）として行動する方法に関するガイド_
+* [Customer Liaison Training](training/customer_liaison.md) - _インシデント発生時に顧客向け連絡係（Customer Liaison）として行動するためのガイド_
+* [Internal Liaison Training](training/internal_liaison.md) - _インシデント発生時に内部向け連絡係（Internal Liaison）として行動するためのガイド_
 
 ### トレーニングコース
 

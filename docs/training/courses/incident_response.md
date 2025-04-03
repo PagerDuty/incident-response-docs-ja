@@ -668,7 +668,7 @@ _050. あなたが指揮を取りたいですか？ [ドキュメント参照](.
 <input type="checkbox" id="051" /><label for="051">![051](../../assets/slides/incident_response/incident_response.051.jpeg)</label>
 _051. エグゼクティブの襲来_
 
-これは「エグゼクティブの襲来（Excecutive Swoop）」と呼ばれる問題の一種です。実際には「Excecutive Swoop and Poop」ですが、スライドにはそう書かないように言われました。
+これは「エグゼクティブの襲来（Executive Swoop）」と呼ばれる問題の一種です。実際には「Executive Swoop and Poop」ですが、スライドにはそう書かないように言われました。
 
 ただし、先ほどの例は典型的ではありません。誰かが意図的にそのような問題を引き起こすことは稀です。
 

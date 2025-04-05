@@ -1,4 +1,4 @@
 mkdocs
 pymdown-extensions
 pygments
-git+https://github.com/pagerduty/mkdocs-theme-pagerduty.git@master
+git+https://github.com/pagerduty/mkdocs-theme-pagerduty-ja.git@master

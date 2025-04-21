@@ -37,4 +37,4 @@ jobs:
           protocol: ftps
           port: 21
           local-dir: site/
-          server-dir: ops-guides/response/
+          server-dir: opsguides/response/

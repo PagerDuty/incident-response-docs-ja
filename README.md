@@ -3,7 +3,7 @@
 
 ----
 
-The Japanese version is available at https://www.pagerduty.co.jp/ops-guides/response/ 🎉
+The Japanese version is available on https://response.pagerduty.co.jp/ 🎉
 
 ----
 

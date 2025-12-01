@@ -26,7 +26,7 @@ PagerDutyの重大なインシデント対応プロセスについて学ぶこ�
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/yoY_pDxc0TA?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## 国家インシデント管理システム（NIMS）
-私たちのインシデント対応プロセスは、[米国国家インシデント管理システム（NIMS）](https://www.fema.gov/national-incident-management-system)に緩やか基づいています。これは以下のように説明されています：
+私たちのインシデント対応プロセスは、[米国国家インシデント管理システム（NIMS）](https://www.fema.gov/national-incident-management-system)に緩やかに基づいています。これは以下のように説明されています：
 
   _脅威や危険に関わるインシデント（原因、規模、場所、複雑さを問わず）を管理するために、あらゆるレベルの政府機関、非政府組織、民間セクターがシームレスに協力するための体系的、積極的なアプローチであり、生命、財産、環境への害を減らすことを目的としています。_
 

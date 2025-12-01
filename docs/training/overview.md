@@ -49,7 +49,7 @@ NIMSは米国のインシデント対応フレームワークですが、多く�
 
 ### イギリス
 
-イギリスの緊急サービスは、主要な作戦のために[** Gold-Silver-Bronze Command Structure **](https://en.wikipedia.org/wiki/Gold%E2%80%93silver%E2%80%93bronze_command_structure)と呼ばれるコマンド階層を使用しています。このフレームワークには、戦略的（ゴールド）、戦術的（シルバー）、運用的（ブロンズ）コマンド決定を担当する3つのレベルが含まれています。
+イギリスの緊急サービスは、主要な作戦のために[**Gold-Silver-Bronze Command Structure**](https://en.wikipedia.org/wiki/Gold%E2%80%93silver%E2%80%93bronze_command_structure)と呼ばれるコマンド階層を使用しています。このフレームワークには、戦略的（ゴールド）、戦術的（シルバー）、運用的（ブロンズ）コマンド決定を担当する3つのレベルが含まれています。
 
 もっと学びたい場合は、以下の有用な読み物があります：
 
@@ -69,7 +69,7 @@ NIMSは米国のインシデント対応フレームワークですが、多く�
 
 ### オーストラリア
 
-オーストラリアは[** Australasian Inter-Service Incident Management System (AIIMS) **](https://en.wikipedia.org/wiki/Australasian_Inter-Service_Incident_Management_System)と呼ばれるシステムを使用しています。これは米国で使用されているNIMSフレームワークの派生物です。ICSに基づいていますが、AIIMSは他のフレームワークよりも_管理範囲_に大きな焦点を当てています。ニュージーランドのシステムと同様に、使用されている用語にはいくつかの違いがあります（例えば、「インシデントコマンダー」の代わりに「インシデントコントローラー」）が、ICSを知っている人にはまだ馴染みがあるはずです。
+オーストラリアは[**Australasian Inter-Service Incident Management System (AIIMS)**](https://en.wikipedia.org/wiki/Australasian_Inter-Service_Incident_Management_System)と呼ばれるシステムを使用しています。これは米国で使用されているNIMSフレームワークの派生物です。ICSに基づいていますが、AIIMSは他のフレームワークよりも_管理範囲_に大きな焦点を当てています。ニュージーランドのシステムと同様に、使用されている用語にはいくつかの違いがあります（例えば、「インシデントコマンダー」の代わりに「インシデントコントローラー」）が、ICSを知っている人にはまだ馴染みがあるはずです。
 
 もっと学びたい場合は、以下の有用な読み物があります：
 
@@ -77,7 +77,7 @@ NIMSは米国のインシデント対応フレームワークですが、多く�
 
 ### カナダ
 
-カナダは独自の[** インシデントコマンドシステム **](https://www.icscanada.ca/images/upload/ICS%20OPS%20Description2012.pdf)（PDF）を使用しています。その標準は[ICS Canada](https://www.icscanada.ca/en/home.html)と呼ばれる組織のネットワークによって維持されています。彼らのウェブサイトには、州に応じてカナダでのローカルトレーニングコースを見つける方法に関する情報のコレクションがあります。
+カナダは独自の[**インシデントコマンドシステム**](https://www.icscanada.ca/images/upload/ICS%20OPS%20Description2012.pdf)（PDF）を使用しています。その標準は[ICS Canada](https://www.icscanada.ca/en/home.html)と呼ばれる組織のネットワークによって維持されています。彼らのウェブサイトには、州に応じてカナダでのローカルトレーニングコースを見つける方法に関する情報のコレクションがあります。
 
 もっと学びたい場合は、以下の有用な読み物があります：
 
